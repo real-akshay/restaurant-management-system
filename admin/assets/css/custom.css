@@ -1,0 +1,8 @@
+button[name='add-to-cart'] {
+     background: none;
+     border: none;
+     padding: 0;
+     cursor: pointer;
+    
+}
+

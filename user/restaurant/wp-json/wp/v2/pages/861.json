@@ -1,0 +1,432 @@
+
+        <style>
+
+            /*dark 1*/
+            #nd_rst_steps_container h5 span{background-color: #2d2d2d;  }
+            #nd_rst_cal_occa_section { background-color: #2d2d2d; }
+            #nd_rst_booking_step_datas_form label span { background-color: #2d2d2d; }
+            #nd_rst_booking_step_resume_all_info { background-color: #2d2d2d; }
+            #nd_rst_checkout_step_resume_all_info { background-color: #2d2d2d; }
+            .nd_rst_ul_restaurant li.nd_rst_bg_color_blue { background-color: #2d2d2d;}
+            .nd_rst_ul_occasion li.nd_rst_bg_color_blue {background-color: #2d2d2d;}
+            #nd_rst_time_section .nd_rst_time.nd_rst_bg_color_blue { background-color: #2d2d2d; }
+            .nd_rst_toogle_icon { background-color: #2d2d2d; }
+
+            /*color 1*/
+            #nd_rst_steps_container .nd_rst_step_active h5 span { background-color: #c0a58a; }
+            .nd_rst_legend_selected span { background-color: #c0a58a; }
+            .nd_rst_legend_not_available span { background-color: #c0a58a; }
+            .nd_rst_cal_active.nd_rst_calendar_date{ background-color: #c0a58a !important; }
+            #nd_rst_time_section p { background-color: #c0a58a; }
+            #nd_rst_btn_go_to_booking { background-color: #c0a58a; }
+            #nd_rst_booking_step_datas_form button { background-color: #c0a58a;}
+            .nd_rst_checkout_container_3 button { background-color: #c0a58a; }
+            #nd_rst_checkout_step_datas_form button,#nd_rst_checkout_step_datas_form input[type="submit"] { background-color: #c0a58a; }
+            .nd_rst_cal_not_set:after { background-color: #c0a58a; }
+
+            /*color 2*/
+            .nd_rst_legend_current span { background-color: #b66565; }
+            .nd_rst_cal_today.nd_rst_calendar_date{ background-color: #b66565; }
+
+        </style>
+
+            <div id="nd_rst_component_container" class="nd_rst_section nd_rst_padding_30 nd_rst_box_sizing_border_box nd_rst_border_1_solid_grey">
+
+               
+                <input id="nd_rst_action_return" type="hidden" name="nd_rst_action_return" value="https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/restaurants/modern-restaurant/">
+
+
+                <!--START step index-->
+                <div id="nd_rst_steps_container" class="nd_rst_section nd_rst_text_align_center">
+                    <div class="nd_rst_float_left nd_rst_width_20_percentage "><div class="nd_rst_section nd_rst_height_1"></div></div>
+                    <div class="nd_rst_float_left nd_rst_width_20_percentage nd_rst_single_step nd_rst_step_first nd_rst_step_active">
+                        <h5 class="nd_options_color_grey"><span>1</span>BROWSE</h5>
+                    </div>
+                    <div class="nd_rst_float_left nd_rst_width_20_percentage nd_rst_single_step nd_rst_step_booking">
+                        <h5 class="nd_options_color_grey"><span>2</span>DETAILS</h5>
+                    </div>
+                    <div class="nd_rst_float_left nd_rst_width_20_percentage nd_rst_single_step nd_rst_step_checkout">
+                        <h5 class="nd_options_color_grey"><span>3</span>CONFIRM</h5>
+                    </div>
+                    <div class="nd_rst_float_left nd_rst_width_20_percentage "><div class="nd_rst_section nd_rst_height_1"></div></div>
+                </div>
+                <!--END step index-->
+
+
+                
+
+                <div class="nd_rst_section nd_rst_booking_container_all">
+                <div class="nd_rst_section nd_rst_booking_container_1">
+                
+
+
+
+
+
+                <div id="nd_rst_rest_guests_legend_section" class="nd_rst_section">
+
+                    <!--START RESTAURANT-->
+                    <script type="text/javascript">
+         
+                      jQuery(document).ready(function() {
+
+                        jQuery( function ( $ ) {
+
+
+                            $(".nd_rst_rest_single").click(function() {
+
+                                $(".nd_rst_ul_restaurant").removeClass("nd_rst_display_none");
+
+                            }); 
+
+
+                            $(".nd_rst_ulli_restaurant").click(function() {
+
+                                $(".nd_rst_rest_single").removeClass("nd_rst_display_block");
+                                $(".nd_rst_ulli_restaurant").removeClass("nd_rst_bg_color_blue");
+                                var nd_rst_rest_select = $(this).attr("data-restaurant");
+                                $(this).addClass("nd_rst_bg_color_blue");
+
+                                $("#nd_rst_restaurant").val(nd_rst_rest_select);
+                                
+                                var nd_rst_calendar_date_select = $("#nd_rst_date").val();
+                                $(".nd_rst_rest_single").addClass("nd_rst_display_none");
+                                $(".nd_rst_rest_single_"+nd_rst_rest_select).addClass("nd_rst_display_block");
+                                $(".nd_rst_ul_restaurant").addClass("nd_rst_display_none");
+
+                            }); 
+                          
+                        });
+
+                      });
+
+                    </script>
+
+                    <div id="nd_rst_section_restaurant" class="nd_rst_section  ">
+                        <label class="" for="nd_rst_restaurant">Restaurant</label>
+                        
+                        <div class="nd_rst_section nd_rst_position_relative">
+                            
+            <div class="nd_rst_rest_single  nd_rst_rest_single_1311 ">
+
+                
+                <div class="nd_rst_section nd_rst_position_relative nd_rst_restaurant_image">
+                    <img class="nd_rst_section" src="https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/02/restaurant-01.jpg">
+
+                    <div class="nd_rst_restaurant_image_filter nd_rst_position_absolute nd_rst_left_0 nd_rst_height_100_percentage nd_rst_width_100_percentage nd_rst_box_sizing_border_box">
+
+                        <div class="nd_rst_position_absolute nd_rst_bottom_20 nd_rst_restaurant_image_content">
+                            <h3>Hill Restaurant</h3>    
+                        </div>
+
+                    </div>
+
+                </div>
+                
+
+            </div>
+            <div class="nd_rst_rest_single nd_rst_display_none nd_rst_rest_single_1312 ">
+
+                
+                <div class="nd_rst_section nd_rst_position_relative nd_rst_restaurant_image">
+                    <img class="nd_rst_section" src="https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/02/restaurant-02.jpg">
+
+                    <div class="nd_rst_restaurant_image_filter nd_rst_position_absolute nd_rst_left_0 nd_rst_height_100_percentage nd_rst_width_100_percentage nd_rst_box_sizing_border_box">
+
+                        <div class="nd_rst_position_absolute nd_rst_bottom_20 nd_rst_restaurant_image_content">
+                            <h3>Modern Restaurant</h3>    
+                        </div>
+
+                    </div>
+
+                </div>
+                
+
+            </div>
+                            <ul class="nd_rst_ul_restaurant nd_rst_display_none"><li data-restaurant="1311" class="nd_rst_ulli_restaurant  nd_rst_bg_color_blue  ">Hill Restaurant</li><li data-restaurant="1312" class="nd_rst_ulli_restaurant  ">Modern Restaurant</li></ul>
+                        </div>
+                        
+                        <input readonly class="nd_rst_display_none_important" type="number" name="nd_rst_restaurant" id="nd_rst_restaurant" value="1311">
+
+                    </div>
+                    <!--END RESTAURANT-->
+
+
+                    
+
+                    
+                        
+
+
+                        
+
+
+
+                    <div id="nd_rst_guests_legend_section" class="nd_rst_section">
+                        <!--START GUESTS-->
+                        <div id="nd_rst_guests_section" class="nd_rst_section">
+                            
+                            <h3 class="">Guests</h3>
+
+                            <div class=" nd_rst_section">
+
+                                <div class=" nd_rst_guest_number  nd_rst_section">
+                                    <h1 class="nd_rst_guests_number nd_rst_margin_0 nd_rst_padding_0">1</h1> 
+
+
+                                    <div class=" nd_rst_guest_number_add  nd_rst_width_50_percentage">
+                                        <button class="nd_rst_guests_increase" type="button">Add</button>
+                                    </div>
+
+                                    <div class=" nd_rst_guest_number_remove  nd_rst_width_50_percentage">
+                                        <button class="nd_rst_guests_decrease" type="button">Remove</button>
+                                    </div>
+
+
+                                </div>
+
+                                
+
+                            </div>
+
+                            <input readonly class="nd_rst_display_none_important" type="number" name="nd_rst_guests" id="nd_rst_guests" min="1" value="1">
+
+                        </div>
+                        <script type="text/javascript">
+         
+                          jQuery(document).ready(function() {
+
+                            jQuery( function ( $ ) {
+
+                              $(".nd_rst_guests_increase").click(function() {
+                                var value = $(".nd_rst_guests_number").text();
+                                        
+                                if ( value < 10 ){
+                                    value++;
+                                    $(".nd_rst_guests_number").text(value);
+                                    $("#nd_rst_guests").val(value);   
+
+                                    var nd_rst_calendar_date_select = $("#nd_rst_date").val();
+                                } 
+
+                              }); 
+
+                              $(".nd_rst_guests_decrease").click(function() {
+                                var value = $(".nd_rst_guests_number").text();
+                                
+                                if ( value > 1 ) {
+                                  value--;
+                                  $(".nd_rst_guests_number").text(value);
+                                  $("#nd_rst_guests").val(value);
+
+                                  var nd_rst_calendar_date_select = $("#nd_rst_date").val();
+                                }
+                                
+                              }); 
+                              
+                            });
+
+                          });
+
+                        </script>
+                        <!--END GUESTS-->
+
+                        <!--START LEGEND-->
+                        <div id="nd_rst_legend_section" class="nd_rst_section">
+                            <p class="nd_rst_legend_current"><span></span>Current Day</p>
+                            <p class="nd_rst_legend_selected"><span></span>Selected Day</p>
+                            <p class="nd_rst_legend_not_available"><span></span>Not Available</p>
+                        </div>
+                        <!--END LEGEND-->
+
+
+                    </div>
+                    </div>
+
+
+
+                    <div id="nd_rst_cal_occa_section" class="nd_rst_section">
+
+                        <h1 id="nd_rst_calendar_word_bg">Occasion</h1>
+                            <div id="nd_rst_datepicker_dev"></div>
+                            <input readonly class="nd_rst_display_none_important" type="text" name="nd_rst_date" id="nd_rst_date" value="2025-04-11">
+
+                            <script type="text/javascript">
+                            //<![CDATA[
+                            jQuery(document).ready(function() {
+
+                              jQuery( function ( $ ) {
+
+                                  $( "#nd_rst_datepicker_dev" ).datepicker({
+                                    defaultDate : "2025-04-11",
+                                    minDate: 0,
+                                    altField: "#nd_rst_date",
+                                    altFormat: "yy-mm-dd",
+                                    firstDay: 0,
+                                    dateFormat: "yy-mm-dd",
+                                    monthNames: ["January","February","March","April","May","June", "July","August","September","October","November","December"],
+                                    monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "Maj", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+                                    dayNamesMin: ["S","M","T","W","T","F", "S"],
+                                    nextText: "NEXT",
+                                    prevText: "PREV",
+                                    changeMonth: false,
+                                    numberOfMonths: 1
+                                  });
+                                  
+                              });
+
+                            });
+                            //]]>
+                          </script>
+
+                          <style>
+                            /* color */
+                            #nd_rst_datepicker_dev .ui-datepicker-today { background-color: #b66565; }
+                            #nd_rst_datepicker_dev .ui-datepicker-current-day { background-color: #c0a58a; }
+                            #nd_rst_datepicker_dev .ui-state-disabled span{ color: #7e7e7e !important; }
+                          </style>
+
+                            
+                        <!--START OCCASION-->
+                        <script type="text/javascript">
+             
+                          jQuery(document).ready(function() {
+
+                            jQuery( function ( $ ) {
+
+
+                                $(".nd_rst_occas_single").click(function() {
+
+                                    $(".nd_rst_ul_occasion").removeClass("nd_rst_display_none");
+
+                                }); 
+
+
+                                $(".nd_rst_ulli_occasion").click(function() {
+
+                                    $(".nd_rst_occas_single").removeClass("nd_rst_display_block");
+                                    $(".nd_rst_ulli_occasion").removeClass("nd_rst_bg_color_blue");
+                                    var nd_rst_occas_select = $(this).attr("data-occasion");
+                                    $(this).addClass("nd_rst_bg_color_blue");
+
+                                    $("#nd_rst_occasion").val(nd_rst_occas_select);
+
+                                    $(".nd_rst_occas_single").addClass("nd_rst_display_none");
+                                    $(".nd_rst_occas_single_"+nd_rst_occas_select).addClass("nd_rst_display_block");
+                                    $(".nd_rst_ul_occasion").addClass("nd_rst_display_none");
+
+                                }); 
+                              
+                            });
+
+                          });
+
+                        </script>
+                        <div id="nd_rst_occasion_section" class="nd_rst_section">
+                            <div id="nd_rst_occasion_cont" class="nd_rst_section  ">
+                                <h3 class="">Occasion :</h3>
+
+                                <div id="nd_rst_occasion_cont_change" class="nd_rst_section nd_rst_position_relative"><div class="nd_rst_occas_single  nd_rst_occas_single_0">not set</div><div class="nd_rst_occas_single  nd_rst_display_none  nd_rst_occas_single_1">anniversary</div><div class="nd_rst_occas_single  nd_rst_display_none  nd_rst_occas_single_2">celebration</div><div class="nd_rst_occas_single  nd_rst_display_none  nd_rst_occas_single_3">work</div><ul class="nd_rst_ul_occasion nd_rst_display_none"><li data-occasion="0" class="nd_rst_ulli_occasion  nd_rst_bg_color_blue  ">not set</li><li data-occasion="1" class="nd_rst_ulli_occasion   ">anniversary</li><li data-occasion="2" class="nd_rst_ulli_occasion   ">celebration</li><li data-occasion="3" class="nd_rst_ulli_occasion   ">work</li></ul>
+                                </div>
+                            
+                            </div>
+
+                            <input readonly class="nd_rst_display_none_important" type="text" name="nd_rst_occasion" id="nd_rst_occasion" value="0">
+
+                        </div>
+                        <!--END OCCASION-->
+
+                    </div>
+
+
+
+
+
+                    <!--START TIME-->
+                    <script type="text/javascript">
+         
+                      jQuery(document).ready(function() {
+
+                        jQuery( function ( $ ) {
+
+                          $(".nd_rst_time").click(function() {
+
+                            $(".nd_rst_time").removeClass("nd_rst_bg_color_blue");
+                            var nd_rst_calendar_time_select = $(this).attr("data-time");
+                            $(this).addClass("nd_rst_bg_color_blue");
+
+                            $("#nd_rst_time").val(nd_rst_calendar_time_select);
+
+                          }); 
+                          
+                        });
+
+                      });
+
+                    </script>
+
+                    <div id="nd_rst_time_section" class="nd_rst_section">
+                        <h3 class="">Time :</h3>
+                    
+                        <ul id="nd_rst_all_time_slots_container" class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_list_style_none">
+                            
+    <div class="nd_rst_section nd_rst_all_time_slots_single"><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time nd_rst_bg_color_blue" data-time="9:00">9:00 am</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="9:30">9:30 am</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="10:00">10:00 am</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="10:30">10:30 am</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="11:00">11:00 am</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="11:30">11:30 am</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="12:00">12:00 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="12:30">12:30 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="13:00">1:00 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="13:30">1:30 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="14:00">2:00 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="14:30">2:30 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="15:00">3:00 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="15:30">3:30 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="16:00">4:00 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="16:30">4:30 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="17:00">5:00 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="17:30">5:30 pm</p></li><li class="nd_rst_display_inline_block"><p class="nd_rst_margin_0 nd_rst_padding_0 nd_rst_bg_color_ccc nd_rst_margin_right_10 nd_rst_time" data-time="18:00">6:00 pm</p></li>
+       <div class="nd_rst_section nd_rst_height_20"></div>
+        <input readonly class="nd_rst_display_none_important" type="text" name="nd_rst_time" id="nd_rst_time" value="9:00">
+
+
+        <script type="text/javascript">
+     
+          jQuery(document).ready(function() {
+
+            jQuery( function ( $ ) {
+
+                 $("#nd_rst_btn_go_to_booking").removeClass("nd_rst_display_none_important"); 
+
+                 $(".nd_rst_all_time_slots_single li:first-child p").trigger( "click" );
+              
+            });
+
+          });
+
+        </script>
+
+
+        </div>
+                        </ul>
+                    </div>
+                    <!--END TIME-->
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+
+
+
+
+                    <div id="nd_rst_btn_go_to_booking_container" class="nd_rst_section">
+                        <button class="nd_options_first_font" id="nd_rst_btn_go_to_booking" onclick="nd_rst_go_to_booking()">BOOK A TABLE</button>
+                    </div>
+
+
+
+
+                
+                </div>
+
+            </div>
+            </div>
+
+        {"id":861,"date":"2019-01-25T11:46:14","date_gmt":"2019-01-25T11:46:14","guid":{"rendered":"http:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/?page_id=861"},"modified":"2019-02-07T08:49:43","modified_gmt":"2019-02-07T08:49:43","slug":"book-a-table","status":"publish","type":"page","link":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/book-a-table\/","title":{"rendered":"Book a Table"},"content":{"rendered":"<p>[vc_row css=&#8221;.vc_custom_1548416771682{margin-top: 60px !important;margin-bottom: 60px !important;}&#8221;][vc_column][vc_column_text][\/vc_column_text][\/vc_column][\/vc_row][vc_row full_width=&#8221;stretch_row&#8221; parallax=&#8221;content-moving&#8221; parallax_image=&#8221;547&#8243; css=&#8221;.vc_custom_1548245096415{margin-top: 70px !important;padding-top: 100px !important;padding-bottom: 100px !important;}&#8221; el_class=&#8221;nd_options_vc_parallax_filter_2_5&#8243;][vc_column width=&#8221;1\/4&#8243;]<div style=\"background-color:; height: 10px;\" class=\"nicdark_section  \"><\/div>\n\n  \n    <!--START FOCUS NUMBER-->\n  <div style=\"\" class=\"  nd_options_section nd_options_box_sizing_border_box\">\n    \n    <div class=\"nd_options_float_left\">\n      <h1 style=\"color:#ffffff;\" class=\"nd_options_font_size_60 nd_options_font_weight_normal\">02<\/h1>\n    <\/div>\n\n    <div class=\"nd_options_float_left nd_options_margin_left_20\">\n      <div class=\"nd_options_section nd_options_height_5\"><\/div>\n      <div class=\"nd_options_section nd_options_height_2\"><\/div>\n      <div class=\"nd_options_section nd_options_height_2\"><\/div>\n      <p class=\"nd_options_letter_spacing_2 nd_options_line_height_14\" style=\"color:#ffffff;\">NUMBER<\/p>\n      <div class=\"nd_options_section nd_options_height_10\"><\/div>\n      <p class=\"nd_options_letter_spacing_2 nd_options_line_height_14\" style=\"color:#ffffff;\">RESTAURANTS<\/p>\n    <\/div> \n\n  <\/div>\n  <!--END FOCUS NUMBER-->\n\n   <div style=\"background-color:; height: 10px;\" class=\"nicdark_section  \"><\/div>[\/vc_column][vc_column width=&#8221;1\/4&#8243;]<div style=\"background-color:; height: 10px;\" class=\"nicdark_section  \"><\/div>\n\n  \n    <!--START FOCUS NUMBER-->\n  <div style=\"\" class=\"  nd_options_section nd_options_box_sizing_border_box\">\n    \n    <div class=\"nd_options_float_left\">\n      <h1 style=\"color:#ffffff;\" class=\"nd_options_font_size_60 nd_options_font_weight_normal\">56<\/h1>\n    <\/div>\n\n    <div class=\"nd_options_float_left nd_options_margin_left_20\">\n      <div class=\"nd_options_section nd_options_height_5\"><\/div>\n      <div class=\"nd_options_section nd_options_height_2\"><\/div>\n      <div class=\"nd_options_section nd_options_height_2\"><\/div>\n      <p class=\"nd_options_letter_spacing_2 nd_options_line_height_14\" style=\"color:#ffffff;\">NEW FOOD<\/p>\n      <div class=\"nd_options_section nd_options_height_10\"><\/div>\n      <p class=\"nd_options_letter_spacing_2 nd_options_line_height_14\" style=\"color:#ffffff;\">MENU DISHES<\/p>\n    <\/div> \n\n  <\/div>\n  <!--END FOCUS NUMBER-->\n\n   <div style=\"background-color:; height: 10px;\" class=\"nicdark_section  \"><\/div>[\/vc_column][vc_column width=&#8221;1\/4&#8243;]<div style=\"background-color:; height: 10px;\" class=\"nicdark_section  \"><\/div>\n\n  \n    <!--START FOCUS NUMBER-->\n  <div style=\"\" class=\"  nd_options_section nd_options_box_sizing_border_box\">\n    \n    <div class=\"nd_options_float_left\">\n      <h1 style=\"color:#ffffff;\" class=\"nd_options_font_size_60 nd_options_font_weight_normal\">73<\/h1>\n    <\/div>\n\n    <div class=\"nd_options_float_left nd_options_margin_left_20\">\n      <div class=\"nd_options_section nd_options_height_5\"><\/div>\n      <div class=\"nd_options_section nd_options_height_2\"><\/div>\n      <div class=\"nd_options_section nd_options_height_2\"><\/div>\n      <p class=\"nd_options_letter_spacing_2 nd_options_line_height_14\" style=\"color:#ffffff;\">YEARS OF<\/p>\n      <div class=\"nd_options_section nd_options_height_10\"><\/div>\n      <p class=\"nd_options_letter_spacing_2 nd_options_line_height_14\" style=\"color:#ffffff;\">EXPERIENCE<\/p>\n    <\/div> \n\n  <\/div>\n  <!--END FOCUS NUMBER-->\n\n   <div style=\"background-color:; height: 10px;\" class=\"nicdark_section  \"><\/div>[\/vc_column][vc_column width=&#8221;1\/4&#8243;]<div style=\"background-color:; height: 10px;\" class=\"nicdark_section  \"><\/div>\n\n  \n    <!--START FOCUS NUMBER-->\n  <div style=\"\" class=\"  nd_options_section nd_options_box_sizing_border_box\">\n    \n    <div class=\"nd_options_float_left\">\n      <h1 style=\"color:#ffffff;\" class=\"nd_options_font_size_60 nd_options_font_weight_normal\">14<\/h1>\n    <\/div>\n\n    <div class=\"nd_options_float_left nd_options_margin_left_20\">\n      <div class=\"nd_options_section nd_options_height_5\"><\/div>\n      <div class=\"nd_options_section nd_options_height_2\"><\/div>\n      <div class=\"nd_options_section nd_options_height_2\"><\/div>\n      <p class=\"nd_options_letter_spacing_2 nd_options_line_height_14\" style=\"color:#ffffff;\">NEW CHEF<\/p>\n      <div class=\"nd_options_section nd_options_height_10\"><\/div>\n      <p class=\"nd_options_letter_spacing_2 nd_options_line_height_14\" style=\"color:#ffffff;\">IN KITCHEN<\/p>\n    <\/div> \n\n  <\/div>\n  <!--END FOCUS NUMBER-->\n\n   <div style=\"background-color:; height: 10px;\" class=\"nicdark_section  \"><\/div>[\/vc_column][\/vc_row][vc_row css=&#8221;.vc_custom_1547042844926{margin-top: 80px !important;}&#8221;][vc_column] <h2 style=\"color:#eeeeee; padding:px; text-align:center; font-size:70px; line-height:px; letter-spacing: 0px; font-weight:normal;\" class=\"   nd_options_third_font \">Best Menus<\/h2>  <h1 style=\"color:; padding:px; text-align:center; font-size:50px; line-height:px; letter-spacing: px; font-weight:lighter;\" class=\"  nd_options_font_size_40_important_all_iphone nd_options_first_font \">SPECIALITIES<\/h1> <div style=\"background-color:; height: 35px;\" class=\"nicdark_section  \"><\/div>[\/vc_column][\/vc_row][vc_row css=&#8221;.vc_custom_1548925911091{margin-top: 15px !important;margin-bottom: 50px !important;}&#8221;][vc_column width=&#8221;1\/2&#8243;]<div style=\"background-color:; height: 15px;\" class=\"nicdark_section  \"><\/div>\n    <div class=\"nd_options_section nd_options_position_relative nd_options_list_restaurant \">\n\n        <img decoding=\"async\" alt=\"\" class=\"nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9\" width=\"80\" src=\"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-content\/uploads\/sites\/2\/2019\/01\/img-03.jpg\">\n        \n        <div class=\"nd_options_section nd_options_height_15\"><\/div>\n        <div class=\"nd_options_section nd_options_position_relative\">\n            <div class=\"nd_options_position_absolute nd_options_height_3 nd_options_width_100_percentage nd_options_bottom_2 nd_options_border_bottom_2_dotted_grey\"><\/div>\n            <h4 class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_bg_white nd_options_float_left nd_options_position_relative nd_options_padding_right_10\"><strong>PASTA WITH FISH<\/strong><\/h4>\n            <h4 class=\"nd_options_bg_white nd_options_float_right nd_options_position_relative nd_options_padding_left_10\"><strong>$ 39<\/strong><\/h4>\n        <\/div>\n        <div class=\"nd_options_section nd_options_height_10\"><\/div>\n        <div class=\"nd_options_section\">\n            <p class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_font_weight_lighter nd_options_float_left\">Lorem ipsum dolor sit<\/p>\n            <p style=\"background-color:#c0a58b;\" class=\" nd_options_color_white nd_options_display_inline_block nd_options_first_font nd_options_padding_5_10 nd_options_border_radius_15 nd_options_float_right nd_options_font_size_13\">STARTER<\/p>\n        <\/div>\n    <\/div>\n  <div style=\"background-color:; height: 30px;\" class=\"nicdark_section  \"><\/div>\n    <div class=\"nd_options_section nd_options_position_relative nd_options_list_restaurant \">\n\n        <img decoding=\"async\" alt=\"\" class=\"nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9\" width=\"80\" src=\"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-content\/uploads\/sites\/2\/2019\/01\/img-04.jpg\">\n        \n        <div class=\"nd_options_section nd_options_height_15\"><\/div>\n        <div class=\"nd_options_section nd_options_position_relative\">\n            <div class=\"nd_options_position_absolute nd_options_height_3 nd_options_width_100_percentage nd_options_bottom_2 nd_options_border_bottom_2_dotted_grey\"><\/div>\n            <h4 class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_bg_white nd_options_float_left nd_options_position_relative nd_options_padding_right_10\"><strong>FRESH MEAT<\/strong><\/h4>\n            <h4 class=\"nd_options_bg_white nd_options_float_right nd_options_position_relative nd_options_padding_left_10\"><strong>$ 26<\/strong><\/h4>\n        <\/div>\n        <div class=\"nd_options_section nd_options_height_10\"><\/div>\n        <div class=\"nd_options_section\">\n            <p class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_font_weight_lighter nd_options_float_left\">Lorem ipsum dolor sit amt<\/p>\n            <p style=\"background-color:;\" class=\" nd_options_color_grey nd_options_border_1_solid_grey nd_options_display_inline_block nd_options_first_font nd_options_padding_5_10 nd_options_border_radius_15 nd_options_float_right nd_options_font_size_13\">NEW<\/p>\n        <\/div>\n    <\/div>\n  <div style=\"background-color:; height: 30px;\" class=\"nicdark_section  \"><\/div>\n    <div class=\"nd_options_section nd_options_position_relative nd_options_list_restaurant \">\n\n        <img decoding=\"async\" alt=\"\" class=\"nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9\" width=\"80\" src=\"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-content\/uploads\/sites\/2\/2019\/01\/img-05.jpg\">\n        \n        <div class=\"nd_options_section nd_options_height_15\"><\/div>\n        <div class=\"nd_options_section nd_options_position_relative\">\n            <div class=\"nd_options_position_absolute nd_options_height_3 nd_options_width_100_percentage nd_options_bottom_2 nd_options_border_bottom_2_dotted_grey\"><\/div>\n            <h4 class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_bg_white nd_options_float_left nd_options_position_relative nd_options_padding_right_10\"><strong>SPAGHETTI<\/strong><\/h4>\n            <h4 class=\"nd_options_bg_white nd_options_float_right nd_options_position_relative nd_options_padding_left_10\"><strong>$ 37<\/strong><\/h4>\n        <\/div>\n        <div class=\"nd_options_section nd_options_height_10\"><\/div>\n        <div class=\"nd_options_section\">\n            <p class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_font_weight_lighter nd_options_float_left\">Lorem ipsum dolor sit amt<\/p>\n            <p style=\"background-color:#c0a58b;\" class=\" nd_options_color_white nd_options_display_inline_block nd_options_first_font nd_options_padding_5_10 nd_options_border_radius_15 nd_options_float_right nd_options_font_size_13\">NEW<\/p>\n        <\/div>\n    <\/div>\n  <div style=\"background-color:; height: 30px;\" class=\"nicdark_section  \"><\/div>\n    <div class=\"nd_options_section nd_options_position_relative nd_options_list_restaurant \">\n\n        <img decoding=\"async\" alt=\"\" class=\"nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9\" width=\"80\" src=\"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-content\/uploads\/sites\/2\/2019\/01\/img-06.jpg\">\n        \n        <div class=\"nd_options_section nd_options_height_15\"><\/div>\n        <div class=\"nd_options_section nd_options_position_relative\">\n            <div class=\"nd_options_position_absolute nd_options_height_3 nd_options_width_100_percentage nd_options_bottom_2 nd_options_border_bottom_2_dotted_grey\"><\/div>\n            <h4 class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_bg_white nd_options_float_left nd_options_position_relative nd_options_padding_right_10\"><strong>VEGETARIAN SOUP<\/strong><\/h4>\n            <h4 class=\"nd_options_bg_white nd_options_float_right nd_options_position_relative nd_options_padding_left_10\"><strong>$ 42<\/strong><\/h4>\n        <\/div>\n        <div class=\"nd_options_section nd_options_height_10\"><\/div>\n        <div class=\"nd_options_section\">\n            <p class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_font_weight_lighter nd_options_float_left\">Lorem ipsum dolor sit<\/p>\n            <p style=\"background-color:#c0a58b;\" class=\" nd_options_color_white nd_options_display_inline_block nd_options_first_font nd_options_padding_5_10 nd_options_border_radius_15 nd_options_float_right nd_options_font_size_13\">VEGAN<\/p>\n        <\/div>\n    <\/div>\n  <div style=\"background-color:; height: 15px;\" class=\"nicdark_section  \"><\/div>[\/vc_column][vc_column width=&#8221;1\/2&#8243;]<div style=\"background-color:; height: 15px;\" class=\"nicdark_section  \"><\/div>\n    <div class=\"nd_options_section nd_options_position_relative nd_options_list_restaurant \">\n\n        <img decoding=\"async\" alt=\"\" class=\"nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9\" width=\"80\" src=\"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-content\/uploads\/sites\/2\/2019\/01\/img-07.jpg\">\n        \n        <div class=\"nd_options_section nd_options_height_15\"><\/div>\n        <div class=\"nd_options_section nd_options_position_relative\">\n            <div class=\"nd_options_position_absolute nd_options_height_3 nd_options_width_100_percentage nd_options_bottom_2 nd_options_border_bottom_2_dotted_grey\"><\/div>\n            <h4 class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_bg_white nd_options_float_left nd_options_position_relative nd_options_padding_right_10\"><strong>NOODLES<\/strong><\/h4>\n            <h4 class=\"nd_options_bg_white nd_options_float_right nd_options_position_relative nd_options_padding_left_10\"><strong>$ 16<\/strong><\/h4>\n        <\/div>\n        <div class=\"nd_options_section nd_options_height_10\"><\/div>\n        <div class=\"nd_options_section\">\n            <p class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_font_weight_lighter nd_options_float_left\">Lorem ipsum dolor sit amt<\/p>\n            <p style=\"background-color:#c0a58b;\" class=\" nd_options_color_white nd_options_display_inline_block nd_options_first_font nd_options_padding_5_10 nd_options_border_radius_15 nd_options_float_right nd_options_font_size_13\">NEW<\/p>\n        <\/div>\n    <\/div>\n  <div style=\"background-color:; height: 30px;\" class=\"nicdark_section  \"><\/div>\n    <div class=\"nd_options_section nd_options_position_relative nd_options_list_restaurant \">\n\n        <img decoding=\"async\" alt=\"\" class=\"nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9\" width=\"80\" src=\"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-content\/uploads\/sites\/2\/2019\/01\/img-08.jpg\">\n        \n        <div class=\"nd_options_section nd_options_height_15\"><\/div>\n        <div class=\"nd_options_section nd_options_position_relative\">\n            <div class=\"nd_options_position_absolute nd_options_height_3 nd_options_width_100_percentage nd_options_bottom_2 nd_options_border_bottom_2_dotted_grey\"><\/div>\n            <h4 class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_bg_white nd_options_float_left nd_options_position_relative nd_options_padding_right_10\"><strong>CHICKEN<\/strong><\/h4>\n            <h4 class=\"nd_options_bg_white nd_options_float_right nd_options_position_relative nd_options_padding_left_10\"><strong>$ 19<\/strong><\/h4>\n        <\/div>\n        <div class=\"nd_options_section nd_options_height_10\"><\/div>\n        <div class=\"nd_options_section\">\n            <p class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_font_weight_lighter nd_options_float_left\">Lorem ipsum dolor sit amt<\/p>\n            <p style=\"background-color:#c0a58b;\" class=\" nd_options_color_white nd_options_display_inline_block nd_options_first_font nd_options_padding_5_10 nd_options_border_radius_15 nd_options_float_right nd_options_font_size_13\">NEW<\/p>\n        <\/div>\n    <\/div>\n  <div style=\"background-color:; height: 30px;\" class=\"nicdark_section  \"><\/div>\n    <div class=\"nd_options_section nd_options_position_relative nd_options_list_restaurant \">\n\n        <img decoding=\"async\" alt=\"\" class=\"nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9\" width=\"80\" src=\"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-content\/uploads\/sites\/2\/2019\/01\/img-09.jpg\">\n        \n        <div class=\"nd_options_section nd_options_height_15\"><\/div>\n        <div class=\"nd_options_section nd_options_position_relative\">\n            <div class=\"nd_options_position_absolute nd_options_height_3 nd_options_width_100_percentage nd_options_bottom_2 nd_options_border_bottom_2_dotted_grey\"><\/div>\n            <h4 class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_bg_white nd_options_float_left nd_options_position_relative nd_options_padding_right_10\"><strong>VEGETARIAN FRIED<\/strong><\/h4>\n            <h4 class=\"nd_options_bg_white nd_options_float_right nd_options_position_relative nd_options_padding_left_10\"><strong>$ 34<\/strong><\/h4>\n        <\/div>\n        <div class=\"nd_options_section nd_options_height_10\"><\/div>\n        <div class=\"nd_options_section\">\n            <p class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_font_weight_lighter nd_options_float_left\">Lorem ipsum dolor<\/p>\n            <p style=\"background-color:#c0a58b;\" class=\" nd_options_color_white nd_options_display_inline_block nd_options_first_font nd_options_padding_5_10 nd_options_border_radius_15 nd_options_float_right nd_options_font_size_13\">GLUTAN FREE<\/p>\n        <\/div>\n    <\/div>\n  <div style=\"background-color:; height: 30px;\" class=\"nicdark_section  \"><\/div>\n    <div class=\"nd_options_section nd_options_position_relative nd_options_list_restaurant \">\n\n        <img decoding=\"async\" alt=\"\" class=\"nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9\" width=\"80\" src=\"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-content\/uploads\/sites\/2\/2019\/01\/img-10.jpg\">\n        \n        <div class=\"nd_options_section nd_options_height_15\"><\/div>\n        <div class=\"nd_options_section nd_options_position_relative\">\n            <div class=\"nd_options_position_absolute nd_options_height_3 nd_options_width_100_percentage nd_options_bottom_2 nd_options_border_bottom_2_dotted_grey\"><\/div>\n            <h4 class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_bg_white nd_options_float_left nd_options_position_relative nd_options_padding_right_10\"><strong>SALMON PASTA<\/strong><\/h4>\n            <h4 class=\"nd_options_bg_white nd_options_float_right nd_options_position_relative nd_options_padding_left_10\"><strong>$ 71<\/strong><\/h4>\n        <\/div>\n        <div class=\"nd_options_section nd_options_height_10\"><\/div>\n        <div class=\"nd_options_section\">\n            <p class=\" nd_options_padding_left_100 nd_options_padding_0_all_iphone nd_options_font_weight_lighter nd_options_float_left\">Lorem ipsum dolor sit amt<\/p>\n            <p style=\"background-color:;\" class=\" nd_options_color_grey nd_options_border_1_solid_grey nd_options_display_inline_block nd_options_first_font nd_options_padding_5_10 nd_options_border_radius_15 nd_options_float_right nd_options_font_size_13\">FISH<\/p>\n        <\/div>\n    <\/div>\n  <div style=\"background-color:; height: 15px;\" class=\"nicdark_section  \"><\/div>[\/vc_column][\/vc_row]<\/p>\n","protected":false},"excerpt":{"rendered":"<p>[vc_row css=&#8221;.vc_custom_1548416771682{margin-top: 60px !important;margin-bottom: 60px !important;}&#8221;][vc_column][vc_column_text][\/vc_column_text][\/vc_column][\/vc_row][vc_row full_width=&#8221;stretch_row&#8221; parallax=&#8221;content-moving&#8221; parallax_image=&#8221;547&#8243; css=&#8221;.vc_custom_1548245096415{margin-top: 70px !important;padding-top: 100px !important;padding-bottom: 100px !important;}&#8221; el_class=&#8221;nd_options_vc_parallax_filter_2_5&#8243;][vc_column width=&#8221;1\/4&#8243;][\/vc_column][vc_column width=&#8221;1\/4&#8243;][\/vc_column][vc_column width=&#8221;1\/4&#8243;][\/vc_column][vc_column width=&#8221;1\/4&#8243;][\/vc_column][\/vc_row][vc_row css=&#8221;.vc_custom_1547042844926{margin-top: 80px !important;}&#8221;][vc_column][\/vc_column][\/vc_row][vc_row css=&#8221;.vc_custom_1548925911091{margin-top: 15px !important;margin-bottom: 50px !important;}&#8221;][vc_column width=&#8221;1\/2&#8243;][\/vc_column][vc_column width=&#8221;1\/2&#8243;][\/vc_column][\/vc_row]<\/p>\n","protected":false},"author":1,"featured_media":0,"parent":0,"menu_order":0,"comment_status":"closed","ping_status":"closed","template":"","meta":{"footnotes":""},"class_list":["post-861","page","type-page","status-publish","hentry"],"_links":{"self":[{"href":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/wp\/v2\/pages\/861"}],"collection":[{"href":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/wp\/v2\/pages"}],"about":[{"href":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/wp\/v2\/types\/page"}],"author":[{"embeddable":true,"href":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/wp\/v2\/users\/1"}],"replies":[{"embeddable":true,"href":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/wp\/v2\/comments?post=861"}],"version-history":[{"count":4,"href":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/wp\/v2\/pages\/861\/revisions"}],"predecessor-version":[{"id":1310,"href":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/wp\/v2\/pages\/861\/revisions\/1310"}],"wp:attachment":[{"href":"https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/wp\/v2\/media?parent=861"}],"curies":[{"name":"wp","href":"https:\/\/api.w.org\/{rel}","templated":true}]}}
