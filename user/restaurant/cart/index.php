@@ -3731,7 +3731,7 @@ include('../../../config/dbcon.php');
                         </div>
                     </div>
                     <p class="return-to-shop">
-                        <a class="button wc-backward" href="../shop/index.html">
+                        <a class="button wc-backward" href="../shop/index.php">
                             Return to shop </a>
                     </p>
                 </div>

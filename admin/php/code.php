@@ -1,6 +1,6 @@
 <?php
 // session_start();
-include('../../authentication.php');
+include('../authentication.php');
 include('../../config/dbcon.php');
 
 
@@ -225,7 +225,7 @@ if (isset($_POST['add-to-cart'])) {
         // }
         $_SESSION['status'] = "Product added to the Cart. ";
 
-        
+
 
         // header('Location:product-edit.php?prod_id=' . $product_id);
         // header("Location:product-edit.php?prod_id=".$product_id);
@@ -261,7 +261,7 @@ if (isset($_POST['cart_item_id'])) {
 
 
 // 21. Delete cart item from session
-if(isset($_POST['delete_cart_item'])){
+if (isset($_POST['delete_cart_item'])) {
     $product_id = $_POST['delete_cart_item'];
     // for hard delete
     // $query = "DELETE FROM products WHERE id='$product_id'";
@@ -276,7 +276,7 @@ if(isset($_POST['delete_cart_item'])){
 
     header("Location:../dashboard/special-pages/cart.php");
     exit();
-}   
+}
 
 
 // Delete all cart items
@@ -304,7 +304,7 @@ if (isset($_POST['delete_all'])) {
 
 
 // Remove cart item from session
-if(isset($_POST['delete_all_cart_item'])){
+if (isset($_POST['delete_all_cart_item'])) {
     if (isset($_POST['delete_all_cart_item'])) {
         if (isset($_SESSION['cart'])) {
             unset($_SESSION['cart']);
@@ -504,5 +504,37 @@ if (isset($_POST['DeleteUserbtn'])) {
     }
 }
 
+
+
+// add restaurant video
+if (isset($_POST['set_video'])) {
+    $video_source = $_POST['video_source'];
+    // Validate the video source URL
+    $query = "SELECT * FROM customization WHERE show_video=1";
+    $query_run = mysqli_query($con, $query);
+    if ($query_run && mysqli_num_rows($query_run) > 0) {
+        $row = mysqli_fetch_assoc($query_run);
+        if ($row && $row['source'] == $video_source) {
+            $_SESSION['status'] = "video source already exists";
+            header("Location:../dashboard/customize/restaurant_video.php");
+            exit();
+        }
+        // update table
+        $query2 = "UPDATE customization SET show_video='0' WHERE show_video='1'";
+        $query2_run = mysqli_query($con, $query2);
+        if ($query2_run) {
+
+        } else {
+            $_SESSION['status'] = "Not updated.!";
+        }
+    } else {
+        $_SESSION['status'] = "No video exists.!";
+    }
+
+    $video_query = "INSERT INTO customization (source, show_video) VALUES ('$video_source', '1')";
+    $video_query_run = mysqli_query($con, $video_query);
+    $_SESSION['status'] = $video_query_run ? "Video Added" : "Something went wrong";
+    header("Location:../dashboard/customize/restaurant_video.php");
+}
 
 ?>

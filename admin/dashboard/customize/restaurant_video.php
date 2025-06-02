@@ -1,7 +1,7 @@
 <?php
-include("../authentication.php");
+include('../../authentication.php');
 
-include("../../config/dbcon.php");
+include('../../../config/dbcon.php');
 ?>
 <!doctype html>
 <html lang="en" dir="ltr">
@@ -16,14 +16,14 @@ include("../../config/dbcon.php");
         href="https://templates.iqonic.design/aprycot/html/dashboard/dist/assets/images/favicon.ico" />
 
     <!-- Library / Plugin Css Build -->
-    <link rel="stylesheet" href="../assets/css/core/libs.min.css">
+    <link rel="stylesheet" href="../../assets/css/core/libs.min.css">
 
     <!-- Custom Css -->
-    <link rel="stylesheet" href="../assets/css/aprycot.mine209.css?v=1.0.0">
+    <link rel="stylesheet" href="../../assets/css/aprycot.mine209.css?v=1.0.0">
 
 </head>
 
-<body class="  " style="background:url(../assets/images/dashboard.png);    background-attachment: fixed;
+<body class="  " style="background:url(../../../assets/images/dashboard.png);    background-attachment: fixed;
     background-size: cover;">
     <!-- loader Start -->
     <!-- <div id="loading">
@@ -2603,7 +2603,7 @@ include("../../config/dbcon.php");
                         </a>
                         <ul class="sub-nav collapse" id="home" data-bs-parent="#sidebar">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php">
+                                <a class="nav-link active" aria-current="page" href="../index.php">
                                     <i class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24"
                                             fill="currentColor">
@@ -2694,7 +2694,7 @@ include("../../config/dbcon.php");
                                 </a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="special-pages/items.php">
+                                <a class="nav-link" href="../special-pages/items.php">
                                     <i class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24"
                                             fill="currentColor">
@@ -2708,7 +2708,7 @@ include("../../config/dbcon.php");
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="special-pages/add-to-cart.php">
+                                <a class="nav-link " href="../special-pages/add-to-cart.php">
                                     <i class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24"
                                             fill="currentColor">
@@ -2722,7 +2722,7 @@ include("../../config/dbcon.php");
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="special-pages/cart.php">
+                                <a class="nav-link " href="../special-pages/cart.php">
                                     <i class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24"
                                             fill="currentColor">
@@ -2736,7 +2736,7 @@ include("../../config/dbcon.php");
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="special-pages/item-category.php">
+                                <a class="nav-link " href="../special-pages/item-category.php">
                                     <i class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24"
                                             fill="currentColor">
@@ -2941,7 +2941,7 @@ include("../../config/dbcon.php");
                         <ul class="sub-nav collapse" id="sidebar-user" data-bs-parent="#sidebar">
 
                             <li class="nav-item">
-                                <a class="nav-link " href="app/user-list.php">
+                                <a class="nav-link " href="../app/user-list.php">
                                     <i class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24"
                                             fill="currentColor">
@@ -2996,7 +2996,7 @@ include("../../config/dbcon.php");
                         <ul class="sub-nav collapse" id="sidebar-customize" data-bs-parent="#sidebar">
 
                             <li class="nav-item">
-                                <a class="nav-link " href="customize/restaurant_video.php">
+                                <a class="nav-link " href="restaurant_video.php">
                                     <i class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24"
                                             fill="currentColor">
@@ -4469,7 +4469,7 @@ include("../../config/dbcon.php");
                             <li class="nav-item dropdown">
                                 <a class="nav-link py-0 d-flex align-items-center" href="#" id="navbarDropdown"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="../assets/images/avatars/01.png" alt="User-Profile"
+                                    <img src="../../assets/images/avatars/01.png" alt="User-Profile"
                                         class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
                                         <?php
@@ -4517,12 +4517,12 @@ include("../../config/dbcon.php");
         </div>
         <div class="content-inner mt-5 py-0">
             <div class="row">
-                <?php include('../../message.php') ?>
+                <?php include('../../../message.php') ?>
                 <div class="col-md-12 col-lg-8">
                     <div class="card " data-iq-gsap="onStart" data-iq-opacity="0" data-iq-position-y="-40"
                         data-iq-duration=".6" data-iq-delay=".8" data-iq-trigger="scroll" data-iq-ease="none">
                         <div class="hero-image p-3"
-                            style="background: url('../assets/images/layouts/01.png') no-repeat center right;background-size: cover;background-position: center;">
+                            style="background: url('../../assets/images/layouts/01.png') no-repeat center right;background-size: cover;background-position: center;">
                             <div class="card-body p-5">
                                 <div class="row banner-container">
                                     <div class="col-lg-12 banner-item">
@@ -6461,6 +6461,58 @@ include("../../config/dbcon.php");
                     </div>
                 </div> -->
             </div>
+
+            <!-- video source -->
+            <div class="content-inner mt-5 py-0">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <?php include('../../../message.php') ?>
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <div class="header-title">
+                                        <h4 class="card-title">Add Video
+
+                                        </h4>
+                                    </div>
+                                    <a href="items.php" class="btn btn-danger float-right">Back</a>
+                                </div>
+                                <div class="card-body px-10">
+                                    <form action="../../php/code.php" method="POST" enctype="multipart/form-data">
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">Video Source</label>
+                                                    <textarea name="video_source" class="form-control" required rows="3"
+                                                        placeholder="Enter Video Source"></textarea>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <!-- <div class="col-md-8">
+                                                <div class="form-group">
+                                                    <label for="">Upload Image</label><br>
+                                                    <input type="file" name="image" class="form-control">
+                                                </div>
+                                            </div> -->
+                                            <br>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="">Click to Set</label><br>
+                                                    <button type="submit" name="set_video"
+                                                        class="btn btn-primary btn-block">Set</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         <!-- Footer Section Start -->
         <footer class="footer"
@@ -6479,7 +6531,7 @@ include("../../config/dbcon.php");
                                 d="M15.85 2.50065C16.481 2.50065 17.111 2.58965 17.71 2.79065C21.401 3.99065 22.731 8.04065 21.62 11.5806C20.99 13.3896 19.96 15.0406 18.611 16.3896C16.68 18.2596 14.561 19.9196 12.28 21.3496L12.03 21.5006L11.77 21.3396C9.48102 19.9196 7.35002 18.2596 5.40102 16.3796C4.06102 15.0306 3.03002 13.3896 2.39002 11.5806C1.26002 8.04065 2.59002 3.99065 6.32102 2.76965C6.61102 2.66965 6.91002 2.59965 7.21002 2.56065H7.33002C7.61102 2.51965 7.89002 2.50065 8.17002 2.50065H8.28002C8.91002 2.51965 9.52002 2.62965 10.111 2.83065H10.17C10.21 2.84965 10.24 2.87065 10.26 2.88965C10.481 2.96065 10.69 3.04065 10.89 3.15065L11.27 3.32065C11.3618 3.36962 11.4649 3.44445 11.554 3.50912C11.6104 3.55009 11.6612 3.58699 11.7 3.61065C11.7163 3.62028 11.7329 3.62996 11.7496 3.63972C11.8354 3.68977 11.9247 3.74191 12 3.79965C13.111 2.95065 14.46 2.49065 15.85 2.50065ZM18.51 9.70065C18.92 9.68965 19.27 9.36065 19.3 8.93965V8.82065C19.33 7.41965 18.481 6.15065 17.19 5.66065C16.78 5.51965 16.33 5.74065 16.18 6.16065C16.04 6.58065 16.26 7.04065 16.68 7.18965C17.321 7.42965 17.75 8.06065 17.75 8.75965V8.79065C17.731 9.01965 17.8 9.24065 17.94 9.41065C18.08 9.58065 18.29 9.67965 18.51 9.70065Z"
                                 fill="currentColor"></path>
                         </svg>
-                    </span> by <a href="../../../../../../iqonic.design/index.html">Akshay</a>.
+                    </span> by <a href="../../../../../../../iqonic.design/index.html">Akshay</a>.
                 </div>
             </div>
         </footer>
@@ -6489,40 +6541,40 @@ include("../../config/dbcon.php");
     <!-- offcanvas start -->
 
     <!-- Required Library Bundle Script -->
-    <script src="../assets/js/core/libs.min.js"></script>
+    <script src="../../assets/js/core/libs.min.js"></script>
 
     <!-- External Library Bundle Script -->
-    <script src="../assets/js/core/external.min.js"></script>
+    <script src="../../assets/js/core/external.min.js"></script>
 
     <!-- Widgetchart JavaScript -->
-    <script src="../assets/js/charts/widgetcharts.js"></script>
+    <script src="../../assets/js/charts/widgetcharts.js"></script>
 
     <!-- Mapchart JavaScript -->
-    <script src="../assets/js/charts/vectore-chart.js"></script>
-    <script src="../assets/js/charts/dashboard.js"></script>
+    <script src="../../assets/js/charts/vectore-chart.js"></script>
+    <script src="../../assets/js/charts/dashboard.js"></script>
 
     <!-- Admin Dashboard Chart -->
-    <script src="../assets/js/charts/admin.js"></script>
+    <script src="../../assets/js/charts/admin.js"></script>
 
     <!-- fslightbox JavaScript -->
-    <script src="../assets/js/fslightbox.js"></script>
+    <script src="../../assets/js/fslightbox.js"></script>
 
     <!-- GSAP Animation -->
-    <script src="../assets/vendor/gsap/gsap.min.js"></script>
-    <script src="../assets/vendor/gsap/ScrollTrigger.min.js"></script>
-    <script src="../assets/js/animation/gsap-init.js"></script>
+    <script src="../../assets/vendor/gsap/gsap.min.js"></script>
+    <script src="../../assets/vendor/gsap/ScrollTrigger.min.js"></script>
+    <script src="../../assets/js/animation/gsap-init.js"></script>
 
     <!-- Stepper Plugin -->
-    <script src="../assets/js/stepper.js"></script>
+    <script src="../../assets/js/stepper.js"></script>
 
     <!-- Form Wizard Script -->
-    <script src="../assets/js/form-wizard.js"></script>
+    <script src="../../assets/js/form-wizard.js"></script>
 
     <!-- app JavaScript -->
-    <script src="../assets/js/app.js"></script>
+    <script src="../../assets/js/app.js"></script>
 
     <!-- moment JavaScript -->
-    <script src="../assets/vendor/moment.min.js"></script>
+    <script src="../../assets/vendor/moment.min.js"></script>
 </body>
 
 <!-- Mirrored from templates.iqonic.design/aprycot/html/dashboard/dist/dashboard/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Feb 2025 06:49:27 GMT -->

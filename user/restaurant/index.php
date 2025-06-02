@@ -2825,7 +2825,7 @@ include('../../config/dbcon.php');
                                                     <a href="profile.php">Profile</a>
                                                     <a href="order-history.php">Order History</a>
                                                     <!-- <form action="../php/code.php"> -->
-                                                        <a href="../php/logout.php">Logout</a>
+                                                    <a href="../php/logout.php">Logout</a>
                                                     <!-- </form> -->
                                                 </div>
                                             </div>
@@ -3782,9 +3782,6 @@ include('../../config/dbcon.php');
 
 
 
-
-
-
         <!--page margin-->
         <!--start nd_options_container-->
         <div class="nd_options_container nd_options_padding_0_15 nd_options_box_sizing_border_box nd_options_clearfix">
@@ -3794,7 +3791,8 @@ include('../../config/dbcon.php');
             <div style="float:left; width:100%;" id="post-8" class="post-8 page type-page status-publish hentry">
 
                 <!--automatic title-->
-
+                <!-- include message.php for taosts -->
+                
                 <!--start content-->
                 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
                     class="vc_row wpb_row vc_row-fluid vc_row-no-padding">
@@ -4125,7 +4123,31 @@ include('../../config/dbcon.php');
                                             class="nd_options_transition_all_08_ease nd_options_opacity_05_hover"
                                             src="wp-content/uploads/sites/2/2019/01/ico-06.png">
                                     </a> -->
-                                    <video playsinline="" class="mui-bj3eb4-video" controls=""
+                                    <?php
+                                    $customization_query = "SELECT source FROM customization WHERE show_video=1 LIMIT 1";
+                                    $customization_result = mysqli_query($con, $customization_query);
+
+                                    $video_src = '';
+                                    if ($customization_result && mysqli_num_rows($customization_result) > 0) {
+                                        $row = mysqli_fetch_assoc($customization_result);
+                                        $video_src = htmlspecialchars($row['source']);
+                                    }
+                                    ?>
+
+                                    <!-- <php if ($video_src) { ?> -->
+                                    <video playsinline class="mui-bj3eb4-video" controls data-automation="VideoPlayer"
+                                        height="100%" loop width="100%"
+                                        poster="https://www.shutterstock.com/shutterstock/videos/3483392003/thumb/1.jpg?ip=x480"
+                                        preload="none" aria-label="video-player" controlslist="nodownload" autoplay
+                                        muted>
+                                        <source src="<?= $video_src ?>" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <!-- <php } ?> -->
+                                    <!-- <php else: ?>
+                                        <p style="color:#fff; text-align:center;">No video available.</p>
+                                    <php endif; ?> -->
+                                    <!-- <video playsinline="" class="mui-bj3eb4-video" controls=""
                                         data-automation="VideoPlayer" height="100%" loop="" width="100%"
                                         poster="https://www.shutterstock.com/shutterstock/videos/3483392003/thumb/1.jpg?ip=x480"
                                         preload="none" aria-label="video-player" controlslist="nodownload" autoplay
@@ -4136,7 +4158,7 @@ include('../../config/dbcon.php');
                                         <source
                                             src="https://www.shutterstock.com/shutterstock/videos/3483392003/preview/stock-footage-high-end-restaurant-that-appears-to-be-deserted.mp4"
                                             type="video/mp4">
-                                    </video>
+                                    </video> -->
 
                                 </div>
 

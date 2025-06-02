@@ -3643,8 +3643,8 @@ include('../../../config/dbcon.php');
                                             <!-- <input type="hidden" name="product_id" value="<?= $product['id'] ?>"> -->
                                             <span class="cart">
                                                 <div class="quantity ">
-                                                    <label class="screen-reader-text" for="quantity_67f92e724b3b8">Sweet Cheeses
-                                                        quantity</label>
+                                                    <label class="screen-reader-text"
+                                                        for="quantity_67f92e724b3b8"><?= $product['name'] . "Quantity" ?></label>
                                                     <input type="number" id="quantity_67f92e724b3b8" class="input-text qty text"
                                                         name="quantity" value="1" aria-label="Product quantity" size="4" min="1"
                                                         max="" step="1" placeholder="" inputmode="numeric" autocomplete="off" />
@@ -3758,6 +3758,7 @@ include('../../../config/dbcon.php');
                                                 <input type="hidden" name="price" value="<?= $product['price'] ?>">
                                                 <input type="hidden" name="discount_price"
                                                     value="<?= $product['discount_price'] ?>">
+                                                <input type="hidden" name="quantity" value="1">
                                                 <input type="hidden" name="tax" value="<?= $product['tax'] ?>">
                                                 <input type="hidden" name="old_image" value="<?= $product['image'] ?>">
                                                 <a href="../grilled-meat/index.html"
@@ -3977,25 +3978,30 @@ include('../../../config/dbcon.php');
                             <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
                             <div class="wpb_text_column wpb_content_element ">
                                 <div class="wpb_wrapper">
-                                        <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">HOME</a>
-                                        </p>
-                                        <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">ABOUT US</a>
-                                        </p>
-                                        <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../services/index.php" style="color: #ffffff; text-decoration: none;">SERVICES</a>
-                                        </p>
-                                        <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../book-a-table/index.php" style="color: #ffffff; text-decoration: none;">BOOKING</a>
-                                        </p>
-                                        <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../menu-1/index.php" style="color: #ffffff; text-decoration: none;">MENU</a>
-                                        </p>
-                                        <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../contact-1/index.php" style="color: #ffffff; text-decoration: none;">CONTACTS</a>
-                                        </p>
-                                    </div>
+                                    <p style="text-align: center;letter-spacing: 2px">
+                                        <a href="../index.php" style="color: #ffffff; text-decoration: none;">HOME</a>
+                                    </p>
+                                    <p style="text-align: center;letter-spacing: 2px">
+                                        <a href="../index.php" style="color: #ffffff; text-decoration: none;">ABOUT
+                                            US</a>
+                                    </p>
+                                    <p style="text-align: center;letter-spacing: 2px">
+                                        <a href="../services/index.php"
+                                            style="color: #ffffff; text-decoration: none;">SERVICES</a>
+                                    </p>
+                                    <p style="text-align: center;letter-spacing: 2px">
+                                        <a href="../book-a-table/index.php"
+                                            style="color: #ffffff; text-decoration: none;">BOOKING</a>
+                                    </p>
+                                    <p style="text-align: center;letter-spacing: 2px">
+                                        <a href="../menu-1/index.php"
+                                            style="color: #ffffff; text-decoration: none;">MENU</a>
+                                    </p>
+                                    <p style="text-align: center;letter-spacing: 2px">
+                                        <a href="../contact-1/index.php"
+                                            style="color: #ffffff; text-decoration: none;">CONTACTS</a>
+                                    </p>
+                                </div>
                             </div>
                             <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
                         </div>

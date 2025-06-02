@@ -3555,6 +3555,50 @@ include('../../authentication.php');
                                 </style>
                                 <?php include('../../../message.php') ?>
 
+                                <!-- ...existing code... -->
+                                <?php
+                                $show_toast = false;
+                                if (isset($_GET['success']) && $_GET['success'] == '1') {
+                                    $show_toast = true;
+                                }
+                                ?>
+                                <!-- Toast CSS -->
+                                <style>
+                                    .toast-message {
+                                        position: fixed;
+                                        top: 30px;
+                                        right: 30px;
+                                        background: #c0a58a;
+                                        color: #fff;
+                                        padding: 18px 32px;
+                                        border-radius: 6px;
+                                        font-size: 18px;
+                                        box-shadow: 0 2px 16px #0002;
+                                        z-index: 9999;
+                                        opacity: 0;
+                                        transition: opacity 0.5s;
+                                    }
+
+                                    .toast-message.show {
+                                        opacity: 1;
+                                    }
+                                </style>
+                                <!-- Toast HTML -->
+                                <div id="toast" class="toast-message">Please check your email for booking confirmation.
+                                </div>
+                                <!-- Toast JS -->
+                                <script>
+                                    <?php if ($show_toast): ?>
+                                        window.addEventListener('DOMContentLoaded', function () {
+                                            var toast = document.getElementById('toast');
+                                            toast.classList.add('show');
+                                            setTimeout(function () {
+                                                toast.classList.remove('show');
+                                            }, 4000); // Toast will disappear after 4 seconds
+                                        });
+                                    <?php endif; ?>
+                                </script>
+                                <!-- ...existing code... -->
 
                                 <div id="nd_rst_component_container"
                                     class="nd_rst_section nd_rst_padding_30 nd_rst_box_sizing_border_box nd_rst_border_1_solid_grey">
@@ -3664,7 +3708,7 @@ include('../../authentication.php');
 
 
                                                                     </div>
-                                                                    <div
+                                                                    <!-- <div
                                                                         class="nd_rst_rest_single nd_rst_display_none nd_rst_rest_single_1312 ">
 
 
@@ -3686,16 +3730,13 @@ include('../../authentication.php');
                                                                         </div>
 
 
-                                                                    </div>
-                                                                    <ul
+                                                                    </div> -->
+                                                                    <!-- <ul
                                                                         class="nd_rst_ul_restaurant nd_rst_display_none">
                                                                         <li data-restaurant="1311"
                                                                             class="nd_rst_ulli_restaurant  nd_rst_bg_color_blue  ">
                                                                             Hill Restaurant</li>
-                                                                        <li data-restaurant="1312"
-                                                                            class="nd_rst_ulli_restaurant  ">
-                                                                            Modern Restaurant</li>
-                                                                    </ul>
+                                                                    </ul> -->
                                                                 </div>
 
                                                                 <input readonly class="nd_rst_display_none_important"
@@ -4169,7 +4210,8 @@ include('../../authentication.php');
                                                     <input type="email" name="email" id="email" required>
                                                 </div>
                                                 <div class="details-form-group">
-                                                    <label for="phone">Phone Number<span style="color:red">*</span></label>
+                                                    <label for="phone">Phone Number<span
+                                                            style="color:red">*</span></label>
                                                     <input type="tel" name="phone" id="phone" required>
                                                 </div>
                                                 <div class="details-form-group">
@@ -4178,14 +4220,16 @@ include('../../authentication.php');
                                                 </div>
                                                 <div class="details-form-group">
                                                     <label for="special_request">Special Requests</label>
-                                                    <textarea name="special_request" id="special_request" rows="3"></textarea>
+                                                    <textarea name="special_request" id="special_request"
+                                                        rows="3"></textarea>
                                                 </div>
                                                 <!-- Step Navigation Buttons -->
                                                 <div class="details-nav-btns">
                                                     <button type="button" class="step-prev-btn details-btn">
                                                         Previous
                                                     </button>
-                                                    <button type="button" class="step-next-btn details-btn details-btn-next">
+                                                    <button type="button"
+                                                        class="step-next-btn details-btn details-btn-next">
                                                         Next
                                                     </button>
                                                 </div>
@@ -4199,6 +4243,7 @@ include('../../authentication.php');
                                                         max-width: 500px;
                                                         margin: 30px auto 0 auto;
                                                     }
+
                                                     .details-title {
                                                         color: #c0a58a;
                                                         font-size: 2em;
@@ -4207,9 +4252,11 @@ include('../../authentication.php');
                                                         font-family: 'Quicksand', sans-serif;
                                                         letter-spacing: 2px;
                                                     }
+
                                                     .details-form-group {
                                                         margin-bottom: 18px;
                                                     }
+
                                                     .details-form-group label {
                                                         display: block;
                                                         color: #2d2d2d;
@@ -4218,6 +4265,7 @@ include('../../authentication.php');
                                                         margin-bottom: 7px;
                                                         letter-spacing: 1px;
                                                     }
+
                                                     .details-form-group input,
                                                     .details-form-group textarea {
                                                         width: 100%;
@@ -4231,21 +4279,25 @@ include('../../authentication.php');
                                                         transition: border 0.2s;
                                                         box-sizing: border-box;
                                                     }
+
                                                     .details-form-group input:focus,
                                                     .details-form-group textarea:focus {
                                                         border-color: #c0a58a;
                                                         outline: none;
                                                         background: #fff;
                                                     }
+
                                                     .details-form-group textarea {
                                                         resize: vertical;
                                                         min-height: 60px;
                                                     }
+
                                                     .details-nav-btns {
                                                         display: flex;
                                                         justify-content: space-between;
                                                         margin-top: 30px;
                                                     }
+
                                                     .details-btn {
                                                         background: #b66565;
                                                         color: #fff;
@@ -4258,16 +4310,20 @@ include('../../authentication.php');
                                                         font-family: 'Quicksand', sans-serif;
                                                         transition: background 0.2s;
                                                     }
+
                                                     .details-btn.details-btn-next {
                                                         background: #c0a58a;
                                                     }
+
                                                     .details-btn:hover {
                                                         background: #2d2d2d;
                                                     }
+
                                                     @media (max-width: 600px) {
                                                         .step2 {
                                                             padding: 20px 10px;
                                                         }
+
                                                         .details-title {
                                                             font-size: 1.3em;
                                                         }
@@ -4926,7 +4982,7 @@ include('../../authentication.php');
                         </div>
                     </div>
                 </div>
-                
+
                 <!--end content-->
 
             </div>
@@ -5022,7 +5078,8 @@ include('../../authentication.php');
                                 </div>
                                 <div style="background-color:; height: 15px;" class="nicdark_section  "></div>
                                 <p style="color:#ffffff; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: 1px; font-weight:normal;"
-                                    class="   nd_options_second_font "><a href="mailto:info@restaurant.com" style="color: #fff;">info@restaurant.com</a></p>
+                                    class="   nd_options_second_font "><a href="mailto:info@restaurant.com"
+                                        style="color: #fff;">info@restaurant.com</a></p>
                                 <p style="color:#ffffff; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: 1px; font-weight:normal;"
                                     class="   nd_options_second_font ">+12 476 357 384</p>
                                 <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
@@ -5036,22 +5093,28 @@ include('../../authentication.php');
                                 <div class="wpb_text_column wpb_content_element ">
                                     <div class="wpb_wrapper">
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">HOME</a>
+                                            <a href="../index.php"
+                                                style="color: #ffffff; text-decoration: none;">HOME</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">ABOUT US</a>
+                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">ABOUT
+                                                US</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../services/index.php" style="color: #ffffff; text-decoration: none;">SERVICES</a>
+                                            <a href="../services/index.php"
+                                                style="color: #ffffff; text-decoration: none;">SERVICES</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../book-a-table/index.php" style="color: #ffffff; text-decoration: none;">BOOKING</a>
+                                            <a href="../book-a-table/index.php"
+                                                style="color: #ffffff; text-decoration: none;">BOOKING</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../menu-1/index.php" style="color: #ffffff; text-decoration: none;">MENU</a>
+                                            <a href="../menu-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">MENU</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../contact-1/index.php" style="color: #ffffff; text-decoration: none;">CONTACTS</a>
+                                            <a href="../contact-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">CONTACTS</a>
                                         </p>
                                     </div>
                                 </div>

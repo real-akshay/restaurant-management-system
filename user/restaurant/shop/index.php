@@ -1,5 +1,6 @@
 <?php
 include('../../authentication.php');
+include('../../../config/dbcon.php');
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -3551,6 +3552,37 @@ include('../../authentication.php');
 
                 <ul class="products columns-4">
 
+                    <!-- my items -->
+                    <!-- <php
+                    $query = "SELECT * FROM products";
+                    $query_run = mysqli_query($con, $query);
+                    if ($query_run && mysqli_num_rows($query_run) > 0) {
+                        $result = mysqli_fetch_assoc($query_run);
+                        foreach ($result as $item) { ?>
+                            <li
+                                class="product type-product post-883 status-publish first instock product_cat-food-delivery has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                <a href="../product/index.php"
+                                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img width="300"
+                                        height="300" src="../../admin/uploads/product/<?= $item['image'] ?>"
+                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+                                        decoding="async" fetchpriority="high"
+                                        srcset="https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/product-03-300x300.jpg 300w, https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/product-03-150x150.jpg 150w, https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/product-03-768x768.jpg 768w, https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/product-03-600x600.jpg 600w, https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/product-03-100x100.jpg 100w, https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/product-03.jpg 1000w"
+                                        sizes="(max-width: 300px) 100vw, 300px" />
+                                    <h2 class="woocommerce-loop-product__title"><?= $item['name'] ?></h2>
+                                    <span class="price"><span class="woocommerce-Price-amount amount"><bdi><span
+                                                    class="woocommerce-Price-currencySymbol">&#8377;</span><?= $item['price'] ?></bdi></span></span>
+                                </a><a href="index4cbc.html?add-to-cart=883"
+                                    aria-describedby="woocommerce_loop_add_to_cart_link_describedby_883" data-quantity="1"
+                                    class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="883"
+                                    data-product_sku="" aria-label="Add to cart: &ldquo;<?=$item['name']?>&rdquo;" rel="nofollow"
+                                    data-success_message="&ldquo;<?=$item['name']?>&rdquo; has been added to your cart">Add to cart</a>
+                                <span id="woocommerce_loop_add_to_cart_link_describedby_883" class="screen-reader-text">
+                                </span>
+                            </li>
+                        <php }
+                    }
+                    ?> -->
+
                     <li
                         class="product type-product post-883 status-publish first instock product_cat-food-delivery has-post-thumbnail shipping-taxable purchasable product-type-simple">
                         <a href="../product/bean-soup/index.html"
@@ -3832,22 +3864,28 @@ include('../../authentication.php');
                                 <div class="wpb_text_column wpb_content_element ">
                                     <div class="wpb_wrapper">
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">HOME</a>
+                                            <a href="../index.php"
+                                                style="color: #ffffff; text-decoration: none;">HOME</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">ABOUT US</a>
+                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">ABOUT
+                                                US</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../services/index.php" style="color: #ffffff; text-decoration: none;">SERVICES</a>
+                                            <a href="../services/index.php"
+                                                style="color: #ffffff; text-decoration: none;">SERVICES</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../book-a-table/index.php" style="color: #ffffff; text-decoration: none;">BOOKING</a>
+                                            <a href="../book-a-table/index.php"
+                                                style="color: #ffffff; text-decoration: none;">BOOKING</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../menu-1/index.php" style="color: #ffffff; text-decoration: none;">MENU</a>
+                                            <a href="../menu-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">MENU</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../contact-1/index.php" style="color: #ffffff; text-decoration: none;">CONTACTS</a>
+                                            <a href="../contact-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">CONTACTS</a>
                                         </p>
                                     </div>
                                 </div>
