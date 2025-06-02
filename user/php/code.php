@@ -12,6 +12,7 @@ if (!isset($_SESSION['auth_user']['user_id'])) {
 
 
 // Email setup
+require 'config.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -289,15 +290,15 @@ if (isset($_POST['confirm_btn'])) {
             try {
                 // Server settings
                 $mail->isSMTP();
-                $mail->Host = 'smtp.gmail.com';
+                $mail->Host = $smtp_host;
                 $mail->SMTPAuth = true;
-                $mail->Username = 'akshaysingrore675@gmail.com';         //  Your Gmail
-                $mail->Password = 'sdjb ueyr mwpw niri';            //  App password
+                $mail->Username = $smtp_user;
+                $mail->Password = $smtp_pass;
                 $mail->SMTPSecure = 'tls';
-                $mail->Port = 587;
+                $mail->Port = $smtp_port;
 
                 // Sender & Receiver
-                $mail->setFrom('akshaysingrore675@gmail.com', 'Akshay\'s Restaurant');
+                $mail->setFrom($smtp_user, 'Akshay\'s Restaurant');
                 $mail->addAddress($email, $name); // Client's email and name
 
                 // Content
