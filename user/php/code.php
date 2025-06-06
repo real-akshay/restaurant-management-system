@@ -1,5 +1,5 @@
 <?php
-include('../../authentication.php');
+include('../authentication.php');
 include('../../config/dbcon.php');
 
 if (session_status() === PHP_SESSION_NONE) {
@@ -12,7 +12,7 @@ if (!isset($_SESSION['auth_user']['user_id'])) {
 
 
 // Email setup
-require 'config.php';
+require '../../config.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
