@@ -462,13 +462,87 @@ if (isset($_POST['addUser'])) {
 // update user
 if (isset($_POST['UpdateUser'])) {
     $user_id = $_POST['user_id'];
+    $profile_pic = $_POST['profile_pic'];
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $role = $_POST['role'];
 
-    $query = "UPDATE users SET name='$name', phone='$phone', email='$email', password='$password', role='$role' WHERE id='$user_id'";
+    $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif');
+    $update_profile_pic = $profile_pic;
+
+    // Check if a new file is uploaded
+    if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['name'] != '') {
+        $image = $_FILES['profile_pic']['name'];
+        $file_extension = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+        $filename = time() . '_' . uniqid() . '.' . $file_extension;
+
+        // Validate extension
+        if (!in_array($file_extension, $allowed_extensions)) {
+            $_SESSION['status'] = "Only jpg, jpeg, png, gif images are allowed.";
+            header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
+            exit();
+        }
+
+        // Validate file size (max 2MB)
+        if ($_FILES['profile_pic']['size'] > 2 * 1024 * 1024) {
+            $_SESSION['status'] = "Image size should not exceed 2MB.";
+            header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
+            exit();
+        }
+
+        // Validate image type
+        $image_info = getimagesize($_FILES['profile_pic']['tmp_name']);
+        if ($image_info === false) {
+            $_SESSION['status'] = "Uploaded file is not a valid image.";
+            header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
+            exit();
+        }
+
+        // Move file to uploads directory
+        $upload_path = '../uploads/profile/';
+        if (!is_dir($upload_path)) {
+            mkdir($upload_path, 0755, true);
+        }
+        if (move_uploaded_file($_FILES['profile_pic']['tmp_name'], $upload_path . $filename)) {
+            $update_profile_pic = $filename;
+            // Optionally delete old image if exists and not default
+            if (!empty($profile_pic) && file_exists($upload_path . $profile_pic)) {
+                unlink($upload_path . $profile_pic);
+            }
+        } else {
+            $_SESSION['status'] = "Failed to upload image.";
+            header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
+            exit();
+        }
+    } else {
+        $update_profile_pic = $profile_pic;
+    }
+
+    // Sanitize other fields if needed
+    $name = mysqli_real_escape_string($con, $name);
+    $phone = mysqli_real_escape_string($con, $phone);
+    $email = mysqli_real_escape_string($con, $email);
+    $role = mysqli_real_escape_string($con, $role);
+
+    // If password is not empty, hash it
+    if (!empty($password)) {
+        if (strlen($password) < 8) {
+            $_SESSION['status'] = "Password must be at least 8 characters long.";
+            header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
+            exit();
+        }
+        $password = password_hash($password, PASSWORD_DEFAULT);
+    } else {
+        // Keep old password if not changed
+        $get_user = mysqli_query($con, "SELECT password FROM users WHERE id='$user_id' LIMIT 1");
+        $row = mysqli_fetch_assoc($get_user);
+        $password = $row['password'];
+    }
+
+    $profile_pic = $update_profile_pic;
+    $query = "UPDATE users SET profile_pic='$profile_pic', name='$name', phone='$phone', email='$email', password='$password', role='$role' WHERE id='$user_id'";
     $query_run = mysqli_query($con, $query);
 
     if ($query_run) {

@@ -1,3 +1,9 @@
+<?php
+// include('../authentication.php');
+
+include('../config/dbcon.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -428,17 +434,17 @@
     <link rel='stylesheet' id='js_composer_front-css'
         href='restaurant/wp-content/uploads/sites/2/js_composer/js_composer_front_custom40df.css?ver=5.6' type='text/css'
         media='all' />
-    <script type="text/javascript" src="wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
-    <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1"
+    <script type="text/javascript" src="restaurant/wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script type="text/javascript" src="restaurant/wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1"
         id="jquery-migrate-js"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min84f5.js?ver=5.4.8.1"
+        src="restaurant/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min84f5.js?ver=5.4.8.1"
         id="tp-tools-js"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min84f5.js?ver=5.4.8.1"
+        src="restaurant/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min84f5.js?ver=5.4.8.1"
         id="revmin-js"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.mina7df.js?ver=2.7.0-wc.9.3.3"
+        src="restaurant/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.mina7df.js?ver=2.7.0-wc.9.3.3"
         id="jquery-blockui-js" data-wp-strategy="defer"></script>
     <script type="text/javascript" id="wc-add-to-cart-js-extra">
         /* <![CDATA[ */
@@ -446,10 +452,10 @@
         /* ]]> */
     </script>
     <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.minc60b.js?ver=9.3.3" id="wc-add-to-cart-js"
+        src="restaurant/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.minc60b.js?ver=9.3.3" id="wc-add-to-cart-js"
         data-wp-strategy="defer"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.mine91a.js?ver=2.1.4-wc.9.3.3"
+        src="restaurant/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.mine91a.js?ver=2.1.4-wc.9.3.3"
         id="js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript" id="woocommerce-js-extra">
         /* <![CDATA[ */
@@ -457,23 +463,27 @@
         /* ]]> */
     </script>
     <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.minc60b.js?ver=9.3.3" id="woocommerce-js"
+        src="restaurant/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.minc60b.js?ver=9.3.3" id="woocommerce-js"
         defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart40df.js?ver=5.6"
+        src="restaurant/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart40df.js?ver=5.6"
         id="vc_woocommerce-add-to-cart-js-js"></script>
-    <link rel="https://api.w.org/" href="wp-json/index.html" />
-    <link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/8.json" />
+    <link rel="https://api.w.org/" href="restaurant/wp-json/index.html" />
+    <link rel="alternate" title="JSON" type="application/json" href="restaurant/wp-json/wp/v2/pages/8.json" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
     <meta name="generator" content="WordPress 6.6.2" />
     <meta name="generator" content="WooCommerce 9.3.3" />
     <link rel="canonical" href="index.html" />
     <link rel='shortlink' href='index.html' />
     <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-        href="wp-json/oembed/1.0/embed9813.json?url=https%3A%2F%2Fwww.nicdark-themes.com%2Fthemes%2Frestaurant%2Fwp%2Fdemo%2Frestaurant%2F" />
+        href="restaurant/wp-json/oembed/1.0/embed9813.json?url=https%3A%2F%2Fwww.nicdark-themes.com%2Fthemes%2Frestaurant%2Fwp%2Fdemo%2Frestaurant%2F" />
     <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-        href="wp-json/oembed/1.0/embed0f70?url=https%3A%2F%2Fwww.nicdark-themes.com%2Fthemes%2Frestaurant%2Fwp%2Fdemo%2Frestaurant%2F&amp;format=xml" />
-
+        href="restaurant/wp-json/oembed/1.0/embed0f70?url=https%3A%2F%2Fwww.nicdark-themes.com%2Fthemes%2Frestaurant%2Fwp%2Fdemo%2Frestaurant%2F&amp;format=xml" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Kristi:400|Montserrat:600,700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS (add this line) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style type="text/css">
         .nd_tds_background_color_1 {
@@ -2227,7 +2237,7 @@
             font-style: normal;
             font-weight: 300 900;
             font-display: fallback;
-            src: url('wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt%2cwght.woff2') format('woff2');
+            src: url('restaurant/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt%2cwght.woff2') format('woff2');
             font-stretch: normal;
         }
 
@@ -2236,12 +2246,12 @@
             font-style: normal;
             font-weight: 400;
             font-display: fallback;
-            src: url('wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
+            src: url('restaurant/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
         }
     </style>
-    <link rel="icon" href="wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" sizes="32x32" />
-    <link rel="icon" href="wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" sizes="192x192" />
-    <link rel="apple-touch-icon" href="wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" />
+    <link rel="icon" href="restaurant/wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" sizes="32x32" />
+    <link rel="icon" href="restaurant/wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="restaurant/wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" />
     <meta name="msapplication-TileImage"
         content="https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" />
     <script type="text/javascript">function setREVStartSize(e) {
@@ -2587,13 +2597,14 @@
 
 <body id="start_nicdark_framework"
     class="home page-template-default page page-id-8 theme-ristorante nd_options_customizer_fonts nd_options_customizer_forms woocommerce-no-js wpb-js-composer js-comp-ver-5.6 vc_responsive">
-
+    <!-- <php include('../../message.php') ?> -->
+    
     <!--START theme-->
     <div class="nicdark_site nicdark_bg_white nicdark_front_page ">
 
 
 
-        <div
+        <!-- <div
             class="nd_tds_display_none_responsive nd_tds_right_30 nd_tds_bottom_30 nd_tds_position_fixed nd_tds_z_index_99">
 
             <span style="top:1px; left:16px; font-size:8px; line-height:10px; border-radius:0px; padding:3px 5px;"
@@ -2606,9 +2617,9 @@
                 <span style="padding-top:7px;"
                     class="nd_tds_display_table_cell nd_tds_vertical_align_middle nd_tds_padding_left_5">54</span>
             </a>
-        </div>
+        </div> -->
 
-        <div style="right:80px;"
+        <!-- <div style="right:80px;"
             class="nd_tds_display_none_responsive nd_tds_bottom_30 nd_tds_position_fixed nd_tds_z_index_99">
             <a target="_blank"
                 class="nd_tds_border_radius_100_percentage nd_tds_width_35 nd_tds_height_35 nd_tds_float_left nd_tds_background_color_2 nd_tds_box_shadow_0_0_20_000_015"
@@ -2616,7 +2627,7 @@
                 <img class="nd_tds_position_absolute nd_tds_left_10 nd_tds_top_10" width="15px"
                     src="wp-content/plugins/nd-theme-demos-switcher/addons/fixed-img/img/envato.png">
             </a>
-        </div>
+        </div> -->
 
 
 
@@ -2641,7 +2652,7 @@
                                                 class="nd_options_display_table_cell nd_options_vertical_align_middle    ">
                                                 <a href="#"><img decoding="async" alt="" width="17px"
                                                         class="nd_options_margin_right_10 nd_options_float_left"
-                                                        src="wp-content/uploads/sites/2/2019/01/languages.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/languages.png"></a>
                                             </div>
 
 
@@ -2711,7 +2722,7 @@
                                                 class="nd_options_display_table_cell nd_options_vertical_align_middle    ">
                                                 <a href="#"><img decoding="async" alt="" width="17px"
                                                         class="nd_options_margin_right_10 nd_options_float_left"
-                                                        src="wp-content/uploads/sites/2/2019/01/instagram.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/instagram.png"></a>
                                             </div>
 
 
@@ -2736,6 +2747,113 @@
                             <div class="wpb_wrapper">
                                 <div class="wpb_text_column wpb_content_element ">
                                     <div class="wpb_wrapper">
+                                        <!-- User Profile Dropdown -->
+                                        <style>
+                                            .user-dropdown {
+                                                position: relative;
+                                                display: inline-block;
+                                            }
+
+                                            .user-dropdown-toggle {
+                                                cursor: pointer;
+                                                display: flex;
+                                                align-items: center;
+                                                border: none;
+                                                background: none;
+                                                padding: 0;
+                                            }
+
+                                            .user-dropdown-menu {
+                                                display: none;
+                                                position: absolute;
+                                                right: 0;
+                                                top: 120%;
+                                                min-width: 180px;
+                                                background: #fff;
+                                                border-radius: 8px;
+                                                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+                                                z-index: 1000;
+                                                opacity: 0;
+                                                transform: translateY(-10px) scale(0.98);
+                                                transition: opacity 0.25s cubic-bezier(.4, 0, .2, 1), transform 0.25s cubic-bezier(.4, 0, .2, 1);
+                                            }
+
+                                            .user-dropdown.open .user-dropdown-menu {
+                                                display: block;
+                                                opacity: 1;
+                                                transform: translateY(0) scale(1);
+                                            }
+
+                                            .user-dropdown-menu a {
+                                                display: block;
+                                                padding: 12px 20px;
+                                                color: #2d2d2d;
+                                                text-decoration: none;
+                                                font-family: 'Quicksand', sans-serif;
+                                                font-size: 15px;
+                                                transition: background 0.2s;
+                                            }
+
+                                            .user-dropdown-menu a:hover {
+                                                background: #f5f5f5;
+                                            }
+                                        </style>
+                                        <div style="margin:;"
+                                            class="top_header_text nd_options_display_table nd_options_float_right">
+                                            <div class="user-dropdown" id="userDropdown">
+                                                <button class="user-dropdown-toggle" id="userDropdownBtn" type="button">
+                                                    <img decoding="async" alt="" width="20px"
+                                                        class="nd_options_margin_left_20 nd_options_float_left"
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/05/01.png">
+                                                    <span
+                                                        style="margin-left:10px; font-family: 'Quicksand', sans-serif; color:#000;">
+                                                        <!-- <php
+                                                        $user_id = $_SESSION['auth_user']['user_id'];
+                                                        $query = "SELECT name FROM users WHERE role='user' AND id='$user_id'";
+                                                        $query_run = mysqli_query($con, $query);
+                                                        if ($query_run && mysqli_num_rows($query_run) > 0) {
+                                                            $user = mysqli_fetch_assoc($query_run);
+                                                            echo htmlspecialchars($user['name']);
+                                                        } else {
+                                                            echo "No User";
+                                                        }
+                                                        ?> -->
+                                                    </span>
+                                                    <svg style="margin-left:8px;" width="16" height="16" fill="#fff"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M4.646 6.646a.5.5 0 0 1 .708 0L8 9.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </button>
+                                                <div class="user-dropdown-menu" id="userDropdownMenu">
+                                                    <a href="profile.php">Profile</a>
+                                                    <a href="order-history.php">Order History</a>
+                                                    <!-- <form action="../php/code.php"> -->
+                                                    <a href="../php/logout.php">Logout</a>
+                                                    <!-- </form> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            // Dropdown open/close with animation
+                                            document.addEventListener('DOMContentLoaded', function () {
+                                                var dropdown = document.getElementById('userDropdown');
+                                                var btn = document.getElementById('userDropdownBtn');
+                                                var menu = document.getElementById('userDropdownMenu');
+
+                                                btn.addEventListener('click', function (e) {
+                                                    e.stopPropagation();
+                                                    dropdown.classList.toggle('open');
+                                                });
+
+                                                // Close dropdown when clicking outside
+                                                document.addEventListener('click', function (e) {
+                                                    if (!dropdown.contains(e.target)) {
+                                                        dropdown.classList.remove('open');
+                                                    }
+                                                });
+                                            });
+                                        </script>
                                         <div style="margin:;"
                                             class=" top_header_text nd_options_display_table nd_options_float_right">
 
@@ -2744,7 +2862,7 @@
                                                 class="nd_options_display_table_cell nd_options_vertical_align_middle    ">
                                                 <a href="#"><img decoding="async" alt="" width="20px"
                                                         class="nd_options_margin_left_20 nd_options_float_left"
-                                                        src="wp-content/uploads/sites/2/2019/01/food-delivery.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/food-delivery.png"></a>
                                             </div>
 
 
@@ -2753,7 +2871,7 @@
                                             <div
                                                 class="nd_options_display_table_cell nd_options_vertical_align_middle    ">
                                                 <a style="color:;" class="nd_options_margin_left_10 nd_options__font "
-                                                    href="#">FOOD DELIVERY</a>
+                                                    href="./delivery/index.php">FOOD DELIVERY</a>
                                             </div>
 
 
@@ -2769,7 +2887,7 @@
                                                 class="nd_options_display_table_cell nd_options_vertical_align_middle    ">
                                                 <a href="#"><img decoding="async" alt="" width="20px"
                                                         class="nd_options_margin_left_20 nd_options_float_left"
-                                                        src="wp-content/uploads/sites/2/2019/01/happy-hour.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/happy-hour.png"></a>
                                             </div>
 
 
@@ -2784,12 +2902,14 @@
 
                                         </div>
 
+
+
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 <div class="vc_row-full-width vc_clearfix"></div>
                 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
@@ -2800,7 +2920,7 @@
                                 <div style="text-align:left;" class="nd_options_section">
                                     <img decoding="async" alt="" style="width:120px;"
                                         class=" nd_options_margin_0 nd_options_padding_0 "
-                                        src="wp-content/uploads/sites/2/2019/01/logo.png">
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/logo.png">
                                 </div>
                             </div>
                         </div>
@@ -2838,7 +2958,7 @@
                                             </li>
                                             <li id="menu-item-719"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-719">
-                                                <a href="about-us-1/index.html">ABOUT US</a>
+                                                <a href="about-us-1/index.php">ABOUT US</a>
                                                 <!-- <ul class="sub-menu">
                                                     <li id="menu-item-1083"
                                                         class="nd_options_best_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1083">
@@ -2857,15 +2977,15 @@
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-1313"
                                                         class="nd_options_hot_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1313">
-                                                        <a href="book-a-table/index.html">Book a Table</a>
+                                                        <a href="restaurant/login.php">Book a Table</a>
                                                     </li>
                                                     <li id="menu-item-1187"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1187">
-                                                        <a href="delivery/index.html">Delivery</a>
+                                                        <a href="delivery/index.php">Delivery</a>
                                                     </li>
                                                     <li id="menu-item-1024"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1024">
-                                                        <a href="services/index.html">Services</a>
+                                                        <a href="services/index.php">Services</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1240"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1240">
@@ -2875,13 +2995,13 @@
                                                                 <a href="services-2/index.html">Services 2</a></li>
                                                         </ul> -->
                                                     </li>
-                                                    <li id="menu-item-1035"
+                                                    <!-- <li id="menu-item-1035"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1035">
                                                         <a href="testimonials/index.html">Testimonials</a>
-                                                    </li>
+                                                    </li> -->
                                                     <li id="menu-item-1480"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1480">
-                                                        <a href="menu-1/index.html">Menu</a>
+                                                        <a href="menu-1/index.php">Menu</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1481"
                                                                 class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1481">
@@ -2900,17 +3020,17 @@
                                                                 <a href="menu/index.html">Menu 5</a></li>
                                                         </ul> -->
                                                     </li>
-                                                    <li id="menu-item-1049"
+                                                    <!-- <li id="menu-item-1049"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1049">
-                                                        <a href="promotion/index.html">Promotion</a>
-                                                    </li>
-                                                    <li id="menu-item-1059"
+                                                        <a href="promotion/index.php">Promotion</a>
+                                                    </li> -->
+                                                    <!-- <li id="menu-item-1059"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1059">
                                                         <a href="faq/index.html">Faq</a>
-                                                    </li>
+                                                    </li> -->
                                                     <li id="menu-item-1068"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1068">
-                                                        <a href="contact-1/index.html">Contact</a>
+                                                        <a href="contact-1/index.php">Contact</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1067"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1067">
@@ -2922,7 +3042,7 @@
                                                     </li>
                                                     <li id="menu-item-1082"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1082">
-                                                        <a href="about-us-1/index.html">About Us</a>
+                                                        <a href="about-us-1/index.php">About Us</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1084"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1084">
@@ -2937,23 +3057,23 @@
                                                     </li>
                                                     <li id="menu-item-1296"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1296">
-                                                        <a href="gallery/index.html">Gallery</a>
+                                                        <a href="gallery/index.php">Gallery</a>
                                                     </li>
                                                     <li id="menu-item-1111"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1111">
                                                         <a target="_blank" rel="noopener"
-                                                            href="coming-soon/index.html">Coming Soon</a>
+                                                            href="coming-soon/index.php">Coming Soon</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li id="menu-item-1474"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1474">
-                                                <a href="menu-1/index.html">MENU</a>
+                                                <a href="menu-1/index.php">MENU</a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-1472"
+                                                    <!-- <li id="menu-item-1472"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1472">
                                                         <a href="menu-1/index.html">Menu 1</a>
-                                                    </li>
+                                                    </li> -->
 
                                                     <!-- <li id="menu-item-1501"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1501">
@@ -2971,11 +3091,11 @@
                                             </li>
                                             <li id="menu-item-1225"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1225">
-                                                <a href="delivery/index.html">SHOP</a>
+                                                <a href="delivery/index.php">SHOP</a>
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-1188"
                                                         class="nd_options_hot_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1188">
-                                                        <a href="delivery/index.html">Archive</a>
+                                                        <a href="delivery/index.php">Archive</a>
                                                     </li>
                                                     <li id="menu-item-1115"
                                                         class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1115">
@@ -2983,15 +3103,15 @@
                                                     </li>
                                                     <li id="menu-item-1116"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116">
-                                                        <a href="cart/index.html">Cart</a>
+                                                        <a href="cart/index.php">Cart</a>
                                                     </li>
                                                     <li id="menu-item-1117"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1117">
-                                                        <a href="checkout/index.html">Checkout</a>
+                                                        <a href="checkout/index.php">Checkout</a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li id="menu-item-801"
+                                            <!-- <li id="menu-item-801"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-801">
                                                 <a href="news/index.html">NEWS</a>
                                                 <ul class="sub-menu">
@@ -3018,31 +3138,31 @@
                                                         </ul>
                                                     </li>
                                                 </ul>
-                                            </li>
+                                            </li> -->
                                             <li id="menu-item-802"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-802">
-                                                <a href="contact-1/index.html">CONTACT</a>
-                                                <ul class="sub-menu">
+                                                <a href="contact-1/index.php">CONTACT</a>
+                                                <!-- <ul class="sub-menu">
                                                     <li id="menu-item-1070"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1070">
                                                         <a href="contact-1/index.html">Contact 1</a>
                                                     </li>
-                                                    <!-- <li id="menu-item-1069"
+                                                    <li id="menu-item-1069"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1069">
-                                                        <a href="contact-2/index.html">Contact 2</a></li> -->
-                                                </ul>
+                                                        <a href="contact-2/index.html">Contact 2</a></li>
+                                                </ul> -->
                                             </li>
                                             <li id="menu-item-1174"
                                                 class="book_a_table_btn menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1174">
-                                                <a href="book-a-table/index.html">BOOK A TABLE</a>
+                                                <a href="restaurant/login.php">BOOK A TABLE</a>
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-1430"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1430">
-                                                        <a href="book-a-table/index.html">Custom Plugin</a>
+                                                        <a href="restaurant/login.php">Custom Plugin</a>
                                                     </li>
                                                     <li id="menu-item-1429"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1429">
-                                                        <a href="open-table/index.html">Open Table</a>
+                                                        <a href="open-table/index.php">Open Table</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -3161,10 +3281,10 @@
                             <div class="wpb_wrapper">
 
                                 <a style="margin:; border: px solid ; border-radius:px; background-color:; padding:; "
-                                    rel="" href="contact-1/index.html"
+                                    rel="" href="contact-1/index.php"
                                     class="nicdark_display_inline_block nd_options_float_right  "><img decoding="async"
                                         class="nd_options_float_left" alt="" width="25"
-                                        src="wp-content/uploads/sites/2/2019/01/ico-07.png"></a>
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/ico-07.png"></a>
 
                             </div>
                         </div>
@@ -3187,9 +3307,10 @@
                         padding-left: 40px !important;
                     }
 
-                    " el_class=" menu_site"][vc_column width=" 1/4"][nd_options_image nd_options_align=" left" nd_options_image=" 535" nd_options_width=" 120px"][/vc_column][vc_column width=" 1/2"][nd_options_menu nd_options_menu_weight=" normal" nd_options_menu_family=" nd_options_first_font" nd_options_menu_align=" center" nd_options_menu_color=" #ffffff" nd_options_menu_font_size=" 14" nd_options_menu_letter_spacing=" 2" nd_options_menu_padding=" 15"][/vc_column][vc_column width=" 1/4"][nd_options_button nd_options_layout=" layout-2" nd_options_align=" right" nd_options_image=" 612" nd_options_image_width=" 25" nd_options_link=" url:http%3A%2F%2Fwww.nicdark-themes.com%2Fthemes%2Frestaurant%2Fwp%2Fdemo%2Frestaurant%2Fcontact-1%2F|||"][/vc_column][/vc_row]</p>
-;
-                    }
+                    /*removed unwanted code */
+                    /* " el_class=" menu_site"][vc_column width=" 1/4"][nd_options_image nd_options_align=" left" nd_options_image=" 535" nd_options_width=" 120px"][/vc_column][vc_column width=" 1/2"][nd_options_menu nd_options_menu_weight=" normal" nd_options_menu_family=" nd_options_first_font" nd_options_menu_align=" center" nd_options_menu_color=" #ffffff" nd_options_menu_font_size=" 14" nd_options_menu_letter_spacing=" 2" nd_options_menu_padding=" 15"][/vc_column][vc_column width=" 1/4"][nd_options_button nd_options_layout=" layout-2" nd_options_align=" right" nd_options_image=" 612" nd_options_image_width=" 25" nd_options_link=" url:http%3A%2F%2Fwww.nicdark-themes.com%2Fthemes%2Frestaurant%2Fwp%2Fdemo%2Frestaurant%2Fcontact-1%2F|||"][/vc_column][/vc_row]</p> 
+                    ;*/
+                    /* } */
                 </style>
             </div>
             <!--end container-->
@@ -3215,7 +3336,7 @@
                                 <div style="text-align:left;" class="nd_options_section">
                                     <img decoding="async" alt="" style="width:120px;"
                                         class=" nd_options_margin_0 nd_options_padding_0 "
-                                        src="wp-content/uploads/sites/2/2019/01/logo-dark.png">
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/logo-dark.png">
                                 </div>
                             </div>
                         </div>
@@ -3280,7 +3401,7 @@
                                 <div style="text-align:right;" class="nd_options_section">
                                     <img decoding="async" alt="" style="width:25px;"
                                         class=" nd_options_cursor_pointer nd_options_open_sidebar_514 nd_options_margin_0 nd_options_padding_0 "
-                                        src="wp-content/uploads/sites/2/2019/01/menu-grey.png">
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/menu-grey.png">
                                 </div>
 
 
@@ -3290,7 +3411,7 @@
 
                                     <img decoding="async" style="right:20px; top:20px;" alt="" width="20"
                                         class="nd_options_close_sidebar_514 nd_options_cursor_pointer nd_options_z_index_9 nd_options_position_absolute"
-                                        src="wp-content/plugins/nd-shortcodes/addons/customizer/header/header-2/img/icon-close-white.svg">
+                                        src="restaurant/wp-content/plugins/nd-shortcodes/addons/customizer/header/header-2/img/icon-close-white.svg">
 
                                     <div class="nd_options_section">
                                         <div class="vc_row wpb_row vc_row-fluid vc_custom_1542895585002">
@@ -3303,9 +3424,9 @@
                                                                     <ul id="menu-menu-2" class="menu">
                                                                         <li
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-837">
-                                                                            <a href="index.html"
+                                                                            <a href="index.php"
                                                                                 aria-current="page">HOME</a>
-                                                                            <ul class="sub-menu">
+                                                                            <!-- <ul class="sub-menu">
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-838">
                                                                                     <a href="index.html"
@@ -3336,12 +3457,12 @@
                                                                                     <a href="home-6/index.html">Home
                                                                                         6</a>
                                                                                 </li>
-                                                                            </ul>
+                                                                            </ul> -->
                                                                         </li>
                                                                         <li
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-719">
-                                                                            <a href="about-us-1/index.html">ABOUT US</a>
-                                                                            <ul class="sub-menu">
+                                                                            <a href="about-us-1/index.php">ABOUT US</a>
+                                                                            <!-- <ul class="sub-menu">
                                                                                 <li
                                                                                     class="nd_options_best_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1083">
                                                                                     <a href="about-us-1/index.html">About
@@ -3357,7 +3478,7 @@
                                                                                     <a href="about-us-3/index.html">About
                                                                                         Us 3</a>
                                                                                 </li>
-                                                                            </ul>
+                                                                            </ul> -->
                                                                         </li>
                                                                         <li
                                                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1022">
@@ -3365,19 +3486,19 @@
                                                                             <ul class="sub-menu">
                                                                                 <li
                                                                                     class="nd_options_hot_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1313">
-                                                                                    <a href="book-a-table/index.html">Book
+                                                                                    <a href="restaurant/login.php">Book
                                                                                         a Table</a>
                                                                                 </li>
                                                                                 <li
                                                                                     class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1187">
                                                                                     <a
-                                                                                        href="delivery/index.html">Delivery</a>
+                                                                                        href="delivery/index.php">Delivery</a>
                                                                                 </li>
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1024">
                                                                                     <a
-                                                                                        href="services/index.html">Services</a>
-                                                                                    <ul class="sub-menu">
+                                                                                        href="services/index.php">Services</a>
+                                                                                    <!-- <ul class="sub-menu">
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1240">
                                                                                             <a
@@ -3390,17 +3511,17 @@
                                                                                                 href="services-2/index.html">Services
                                                                                                 2</a>
                                                                                         </li>
-                                                                                    </ul>
+                                                                                    </ul> -->
                                                                                 </li>
-                                                                                <li
+                                                                                <!-- <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1035">
                                                                                     <a
                                                                                         href="testimonials/index.html">Testimonials</a>
-                                                                                </li>
+                                                                                </li> -->
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1480">
-                                                                                    <a href="menu-1/index.html">Menu</a>
-                                                                                    <ul class="sub-menu">
+                                                                                    <a href="menu-1/index.php">Menu</a>
+                                                                                    <!-- <ul class="sub-menu">
                                                                                         <li
                                                                                             class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1481">
                                                                                             <a href="menu-1/index.html">Menu
@@ -3426,22 +3547,22 @@
                                                                                             <a href="menu/index.html">Menu
                                                                                                 5</a>
                                                                                         </li>
-                                                                                    </ul>
+                                                                                    </ul> -->
                                                                                 </li>
-                                                                                <li
+                                                                                <!-- <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1049">
                                                                                     <a
                                                                                         href="promotion/index.html">Promotion</a>
-                                                                                </li>
-                                                                                <li
+                                                                                </li> -->
+                                                                                <!-- <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1059">
                                                                                     <a href="faq/index.html">Faq</a>
-                                                                                </li>
+                                                                                </li> -->
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1068">
                                                                                     <a
-                                                                                        href="contact-1/index.html">Contact</a>
-                                                                                    <ul class="sub-menu">
+                                                                                        href="contact-1/index.php">Contact</a>
+                                                                                    <!-- <ul class="sub-menu">
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1067">
                                                                                             <a
@@ -3454,13 +3575,13 @@
                                                                                                 href="contact-2/index.html">Contact
                                                                                                 2</a>
                                                                                         </li>
-                                                                                    </ul>
+                                                                                    </ul> -->
                                                                                 </li>
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1082">
-                                                                                    <a href="about-us-1/index.html">About
+                                                                                    <a href="about-us-1/index.php">About
                                                                                         Us</a>
-                                                                                    <ul class="sub-menu">
+                                                                                    <!-- <ul class="sub-menu">
                                                                                         <li
                                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1084">
                                                                                             <a
@@ -3479,25 +3600,25 @@
                                                                                                 href="about-us-3/index.html">About
                                                                                                 Us 3</a>
                                                                                         </li>
-                                                                                    </ul>
+                                                                                    </ul> -->
                                                                                 </li>
                                                                                 <li
                                                                                     class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1296">
                                                                                     <a
-                                                                                        href="gallery/index.html">Gallery</a>
+                                                                                        href="gallery/index.php">Gallery</a>
                                                                                 </li>
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1111">
                                                                                     <a target="_blank" rel="noopener"
-                                                                                        href="coming-soon/index.html">Coming
+                                                                                        href="coming-soon/index.php">Coming
                                                                                         Soon</a>
                                                                                 </li>
                                                                             </ul>
                                                                         </li>
                                                                         <li
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1474">
-                                                                            <a href="menu-1/index.html">MENU</a>
-                                                                            <ul class="sub-menu">
+                                                                            <a href="menu-1/index.php">MENU</a>
+                                                                            <!-- <ul class="sub-menu">
                                                                                 <li
                                                                                     class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1472">
                                                                                     <a href="menu-1/index.html">Menu
@@ -3522,35 +3643,35 @@
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1473">
                                                                                     <a href="menu/index.html">Menu 5</a>
                                                                                 </li>
-                                                                            </ul>
+                                                                            </ul> -->
                                                                         </li>
                                                                         <li
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1225">
-                                                                            <a href="delivery/index.html">SHOP</a>
+                                                                            <a href="delivery/index.php">SHOP</a>
                                                                             <ul class="sub-menu">
                                                                                 <li
                                                                                     class="nd_options_hot_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1188">
                                                                                     <a
-                                                                                        href="delivery/index.html">Archive</a>
+                                                                                        href="delivery/index.php">Archive</a>
                                                                                 </li>
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1115">
                                                                                     <a
-                                                                                        href="product/mixed-salad/index.html">Single
+                                                                                        href="product/mixed-salad/index.php">Single
                                                                                         Product</a>
                                                                                 </li>
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116">
-                                                                                    <a href="cart/index.html">Cart</a>
+                                                                                    <a href="cart/index.php">Cart</a>
                                                                                 </li>
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1117">
                                                                                     <a
-                                                                                        href="checkout/index.html">Checkout</a>
+                                                                                        href="checkout/index.php">Checkout</a>
                                                                                 </li>
                                                                             </ul>
                                                                         </li>
-                                                                        <li
+                                                                        <!-- <li
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-801">
                                                                             <a href="news/index.html">NEWS</a>
                                                                             <ul class="sub-menu">
@@ -3585,11 +3706,11 @@
                                                                                     </ul>
                                                                                 </li>
                                                                             </ul>
-                                                                        </li>
+                                                                        </li> -->
                                                                         <li
                                                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-802">
-                                                                            <a href="contact-1/index.html">CONTACT</a>
-                                                                            <ul class="sub-menu">
+                                                                            <a href="contact-1/index.php">CONTACT</a>
+                                                                            <!-- <ul class="sub-menu">
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1070">
                                                                                     <a href="contact-1/index.html">Contact
@@ -3600,21 +3721,21 @@
                                                                                     <a href="contact-2/index.html">Contact
                                                                                         2</a>
                                                                                 </li>
-                                                                            </ul>
+                                                                            </ul> -->
                                                                         </li>
                                                                         <li
                                                                             class="book_a_table_btn menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1174">
-                                                                            <a href="book-a-table/index.html">BOOK A
+                                                                            <a href="restaurant/login.php">BOOK A
                                                                                 TABLE</a>
                                                                             <ul class="sub-menu">
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1430">
-                                                                                    <a href="book-a-table/index.html">Custom
+                                                                                    <a href="restaurant/login.php">Custom
                                                                                         Plugin</a>
                                                                                 </li>
                                                                                 <li
                                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1429">
-                                                                                    <a href="open-table/index.html">Open
+                                                                                    <a href="open-table/index.php">Open
                                                                                         Table</a>
                                                                                 </li>
                                                                             </ul>
@@ -3652,9 +3773,10 @@
                         padding-left: 60px !important;
                     }
 
+                    /* 
                     " el_class=" menu_responsive"][vc_column width=" 1/2"][nd_options_image nd_options_align=" left" nd_options_image=" 799" nd_options_width=" 120px"][/vc_column][vc_column width=" 1/2"][nd_options_open_sidebar nd_options_align=" right" nd_options_pages=" 784" nd_options_image=" 798" nd_options_width=" 25px" nd_options_sidebar=" nd_options_header_5_sidebar_1" nd_options_image_close=" 773" nd_options_image_close_width=" 20" nd_options_bg_color=" #2d2d2d" nd_options_image_close_position=" 20 20"][/vc_column][/vc_row]</p>
 ;
-                    }
+                    } */
                 </style>
             </div>
             <!--end container-->
@@ -3664,11 +3786,7 @@
 
 
 
-
-
-
         <!--page margin-->
-
         <!--start nd_options_container-->
         <div class="nd_options_container nd_options_padding_0_15 nd_options_box_sizing_border_box nd_options_clearfix">
 
@@ -3677,6 +3795,7 @@
             <div style="float:left; width:100%;" id="post-8" class="post-8 page type-page status-publish hentry">
 
                 <!--automatic title-->
+                <!-- include message.php for taosts -->
 
                 <!--start content-->
                 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
@@ -3704,7 +3823,7 @@
                                                 data-param9="" data-param10="" data-description="">
                                                 <!-- MAIN IMAGE -->
                                                 <img decoding="async"
-                                                    src="wp-content/uploads/sites/2/revslider/home-1/para-10.jpg" alt=""
+                                                    src="restaurant/wp-content/uploads/sites/2/revslider/home-1/para-10.jpg" alt=""
                                                     title="Home" data-bgposition="center center" data-bgfit="cover"
                                                     data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg"
                                                     data-no-retina>
@@ -3743,6 +3862,7 @@
                                                     data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                                                     style="z-index: 6; white-space: nowrap; font-size: 35px; line-height: 35px; font-weight: 300; color: #ffffff; letter-spacing: 5px;font-family:Quicksand;letter-spacing:2px;">
                                                     THE UNIQUE </p>
+                                                <!-- <php include('../../message.php') ?> -->
 
                                                 <!-- LAYER NR. 3 -->
                                                 <h1 class="tp-caption   tp-resizeme rs-parallaxlevel-1"
@@ -3774,7 +3894,7 @@
                                                     data-fontweight="['700','500','500','500']"
                                                     data-letterspacing="['2','','','']" data-width="none"
                                                     data-height="none" data-whitespace="nowrap" data-type="button"
-                                                    data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"http:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/book-a-table\/","delay":""}]'
+                                                    data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"restaurant/login.php","delay":""}]'
                                                     data-responsive_offset="on" data-responsive="off"
                                                     data-frames='[{"delay":3850,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power2.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","ease":"Power1.easeIn"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bg:rgb(45,45,45);"}]'
                                                     data-textAlign="['left','left','left','left']"
@@ -3822,7 +3942,7 @@
                                                 data-captionhidden="on"
                                                 style="z-index: 10;background-color:rgb(192,165,138);"><img
                                                     decoding="async"
-                                                    src="wp-content/uploads/sites/2/2019/01/ico.down_.png" alt=""
+                                                    src="restaurant/wp-content/uploads/sites/2/2019/01/ico.down_.png" alt=""
                                                     data-ww="['30px','30px','30px','30px']"
                                                     data-hh="['30px','30px','30px','30px']" width="60" height="60"
                                                     data-no-retina> </div>
@@ -3915,8 +4035,8 @@
                                                 <div style="background-color:; height: 10px;" class="nicdark_section  ">
                                                 </div>
                                                 <p style="color:; padding:px; text-align:; font-size:14px; line-height:14px; letter-spacing: 1px; font-weight:;"
-                                                    class="  nd_options_home_1_under_slide_1  "><b>ADDRESS :</b> 143
-                                                    Avenue, Miami ( Florida )</p>
+                                                    class="  nd_options_home_1_under_slide_1  "><b>ADDRESS :</b> 4th
+                                                    bridge road Gorakhpur (Jabalpur )</p>
                                                 <div style="background-color:; height: 10px;" class="nicdark_section  ">
                                                 </div>
                                             </div>
@@ -3985,7 +4105,7 @@
                                 <div style="background-color:; height: 35px;" class="nicdark_section  "></div>
 
                                 <a style="border: px solid ; border-radius:3px; letter-spacing:2px; line-height:16px; font-size:16px; background-color:#c0a58a; padding:15px 35px; margin:; color:#ffffff;"
-                                    rel="" href="book-a-table/index.html"
+                                    rel="" href="restaurant/login.php"
                                     class="nicdark_display_inline_block nd_options_float_left nd_options_font_weight_normal nd_options_first_font  ">BOOK
                                     A TABLE</a>
 
@@ -3996,22 +4116,41 @@
                     <div class="wpb_column vc_column_container vc_col-sm-4 vc_col-has-fill">
                         <div class="vc_column-inner vc_custom_1548243176309">
                             <div class="wpb_wrapper">
-                                <div style="background-color:; height: 250px;" class="nicdark_section  "></div>
+                                <!-- <div style="background-color:; height: 250px;" class="nicdark_section  "></div> -->
 
                                 <div class=" nd_options_text_align_center nd_options_section">
 
 
-                                    <a class=" nd_options_outline_0 nd_options_mpopup_iframe"
+                                    <!-- <a class=" nd_options_outline_0 nd_options_mpopup_iframe"
                                         href="https://www.youtube.com/watch?v=v5bClGpH0iI">
                                         <img decoding="async" width="80px" alt=""
                                             class="nd_options_transition_all_08_ease nd_options_opacity_05_hover"
                                             src="wp-content/uploads/sites/2/2019/01/ico-06.png">
-                                    </a>
+                                    </a> -->
+                                    <?php
+                                    $customization_query = "SELECT source FROM customization WHERE show_video=1 LIMIT 1";
+                                    $customization_result = mysqli_query($con, $customization_query);
 
+                                    $video_src = '';
+                                    if ($customization_result && mysqli_num_rows($customization_result) > 0) {
+                                        $row = mysqli_fetch_assoc($customization_result);
+                                        $video_src = htmlspecialchars($row['source']);
+                                    }
+                                    ?>
+
+                                    <!-- <php if ($video_src) { ?> -->
+                                    <video playsinline class="mui-bj3eb4-video" controls data-automation="VideoPlayer"
+                                        height="100%" loop width="100%"
+                                        poster="https://www.shutterstock.com/shutterstock/videos/3483392003/thumb/1.jpg?ip=x480"
+                                        preload="none" aria-label="video-player" controlslist="nodownload" autoplay
+                                        muted>
+                                        <source src="<?= $video_src ?>" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
 
                                 </div>
 
-                                <div style="background-color:; height: 250px;" class="nicdark_section  "></div>
+                                <!-- <div style="background-color:; height: 250px;" class="nicdark_section  "></div> -->
                             </div>
                         </div>
                     </div>
@@ -4048,48 +4187,67 @@
                                     //]]&gt;
                                 </script>
 
-
                                 <div class="nd_options_section nd_options_masonry_content  ">
 
-                                    <div
-                                        class="nd_options_width_25_percentage nd_options_float_left nd_options_postgrid_woo_layout_3_885 nd_options_padding_15 nd_options_text_align_center nd_options_box_sizing_border_box nd_options_masonry_item nd_options_width_100_percentage_responsive nd_options_position_relative">
+                                    <?php
 
-                                        <div class="nd_options_section nd_options_position_relative">
+                                    $show_product_query = "SELECT * FROM products LIMIT 4";
+                                    $show_product_query_run = mysqli_query($con, $show_product_query);
+                                    if (mysqli_num_rows($show_product_query_run) > 0) {
+                                        foreach ($show_product_query_run as $product) { ?>
 
-                                            <img decoding="async" class="nd_options_section" alt=""
-                                                src="wp-content/uploads/sites/2/2019/01/product-01.jpg">
+                                            <form action="restaurant/login.php" method="GET">
 
-                                            <!--start filter-->
-                                            <div
-                                                class="nd_options_bg_greydark_alpha_gradient_6 nd_options_position_absolute nd_options_left_0 nd_options_height_100_percentage nd_options_width_100_percentage nd_options_padding_30 nd_options_box_sizing_border_box">
+                                                <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+
+                                                <div
+                                                    class="nd_options_width_25_percentage nd_options_float_left nd_options_postgrid_woo_layout_3_885 nd_options_padding_15 nd_options_text_align_center nd_options_box_sizing_border_box nd_options_masonry_item nd_options_width_100_percentage_responsive nd_options_position_relative">
+
+                                                    <div class="nd_options_section nd_options_position_relative">
+
+                                                        <!-- Current image tag -->
+                                                        <img decoding="async" class="nd_options_section" alt=""
+                                                            src="../admin/uploads/product/<?= $product['image'] ?>">
+
+                                                        <!--start filter-->
+                                                        <div
+                                                            class="nd_options_bg_greydark_alpha_gradient_6 nd_options_position_absolute nd_options_left_0 nd_options_height_100_percentage nd_options_width_100_percentage nd_options_padding_30 nd_options_box_sizing_border_box">
+
+                                                            <a href="product/sweet-cheeses/index.html"
+                                                                style="background-color:#c0a58a;"
+                                                                class=" nd_options_position_absolute nd_options_top_30 nd_options_right_30 nd_options_padding_5_10 nd_options_border_radius_3 nd_options_line_height_14 nd_options_text_transform_uppercase nd_options_color_white nd_options_second_font">&#8377;
+                                                                <?= $product['price'] ?></a>
+
+                                                            <button type="submit" value="<?= $product['id'] ?>" name="id" style="background: none;
+                                                                        color: inherit;
+                                                                        border: none;
+                                                                        padding: 0;
+                                                                        font: inherit;
+                                                                        cursor: pointer;
+                                                                        outline: inherit;"
+                                                                class="nd_options_color_white nd_options_position_absolute nd_options_left_0 nd_options_bottom_30 nd_options_section nd_options_text_align_center">
+                                                                <h3
+                                                                    class="nd_options_margin_0_important nd_options_color_white nd_options_second_font">
+                                                                    <?= $product['name'] ?>
+                                                                </h3>
+                                                            </button>
+
+                                                        </div>
+                                                    </div>
+                                                    <!--END filter-->
 
 
-                                                <a href="product/sweet-cheeses/index.html"
-                                                    style="background-color:#c0a58a;"
-                                                    class=" nd_options_position_absolute nd_options_top_30 nd_options_right_30 nd_options_padding_5_10 nd_options_border_radius_3 nd_options_line_height_14 nd_options_text_transform_uppercase nd_options_color_white nd_options_second_font">&#36;
-                                                    38</a>
-
-                                                <a class="nd_options_color_white nd_options_position_absolute nd_options_left_0 nd_options_bottom_30 nd_options_section nd_options_text_align_center"
-                                                    href="product/sweet-cheeses/index.html">
-                                                    <h3
-                                                        class="nd_options_margin_0_important nd_options_color_white nd_options_second_font">
-                                                        Sweet Cheeses
-                                                    </h3>
-                                                </a>
-
-                                            </div>
-                                            <!--END filter-->
 
 
-                                        </div>
+                                                </div>
+                                            </form>
 
-                                    </div>
+                                        <?php }
+
+                                    } ?>
 
 
-
-
-
-                                    <div
+                                    <!-- <div
                                         class="nd_options_width_25_percentage nd_options_float_left nd_options_postgrid_woo_layout_3_884 nd_options_padding_15 nd_options_text_align_center nd_options_box_sizing_border_box nd_options_masonry_item nd_options_width_100_percentage_responsive nd_options_position_relative">
 
                                         <div class="nd_options_section nd_options_position_relative">
@@ -4097,7 +4255,7 @@
                                             <img decoding="async" class="nd_options_section" alt=""
                                                 src="wp-content/uploads/sites/2/2019/01/product-02.jpg">
 
-                                            <!--start filter-->
+                                            !--start filter--
                                             <div
                                                 class="nd_options_bg_greydark_alpha_gradient_6 nd_options_position_absolute nd_options_left_0 nd_options_height_100_percentage nd_options_width_100_percentage nd_options_padding_30 nd_options_box_sizing_border_box">
 
@@ -4116,18 +4274,15 @@
                                                 </a>
 
                                             </div>
-                                            <!--END filter-->
+                                            !--END filter--
 
 
                                         </div>
 
-                                    </div>
+                                    </div> -->
 
 
-
-
-
-                                    <div
+                                    <!-- <div
                                         class="nd_options_width_25_percentage nd_options_float_left nd_options_postgrid_woo_layout_3_883 nd_options_padding_15 nd_options_text_align_center nd_options_box_sizing_border_box nd_options_masonry_item nd_options_width_100_percentage_responsive nd_options_position_relative">
 
                                         <div class="nd_options_section nd_options_position_relative">
@@ -4135,7 +4290,7 @@
                                             <img decoding="async" class="nd_options_section" alt=""
                                                 src="wp-content/uploads/sites/2/2019/01/product-03.jpg">
 
-                                            <!--start filter-->
+                                            !--start filter--
                                             <div
                                                 class="nd_options_bg_greydark_alpha_gradient_6 nd_options_position_absolute nd_options_left_0 nd_options_height_100_percentage nd_options_width_100_percentage nd_options_padding_30 nd_options_box_sizing_border_box">
 
@@ -4153,18 +4308,18 @@
                                                 </a>
 
                                             </div>
-                                            <!--END filter-->
+                                            !--END filter--
 
 
                                         </div>
 
-                                    </div>
+                                    </div> -->
 
 
 
 
 
-                                    <div
+                                    <!-- <div
                                         class="nd_options_width_25_percentage nd_options_float_left nd_options_postgrid_woo_layout_3_882 nd_options_padding_15 nd_options_text_align_center nd_options_box_sizing_border_box nd_options_masonry_item nd_options_width_100_percentage_responsive nd_options_position_relative">
 
                                         <div class="nd_options_section nd_options_position_relative">
@@ -4172,7 +4327,7 @@
                                             <img decoding="async" class="nd_options_section" alt=""
                                                 src="wp-content/uploads/sites/2/2019/01/product-04.jpg">
 
-                                            <!--start filter-->
+                                            !--start filter--
                                             <div
                                                 class="nd_options_bg_greydark_alpha_gradient_6 nd_options_position_absolute nd_options_left_0 nd_options_height_100_percentage nd_options_width_100_percentage nd_options_padding_30 nd_options_box_sizing_border_box">
 
@@ -4191,14 +4346,12 @@
                                                 </a>
 
                                             </div>
-                                            <!--END filter-->
+                                            !--END filter--
 
 
                                         </div>
 
-                                    </div>
-
-
+                                    </div> -->
 
                                 </div>
                             </div>
@@ -4243,9 +4396,7 @@
                                 <div class="nd_rst_section nd_rst_component_search_l1  ">
 
                                     <!--START FORM-->
-                                    <form
-                                        action="http://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/book-a-table/"
-                                        method="get">
+                                    <form action="restaurant/login.php" method="get">
 
 
                                         <div
@@ -4280,7 +4431,7 @@
                                                                     Apr</h6>
                                                                 <div class="nd_rst_section nd_rst_height_5"></div>
                                                                 <img decoding="async" alt="" width="12"
-                                                                    src="wp-content/uploads/sites/2/2019/02/arrow-down.png">
+                                                                    src="restaurant/wp-content/uploads/sites/2/2019/02/arrow-down.png">
                                                             </div>
 
                                                         </div>
@@ -4371,14 +4522,14 @@
                                                                         class="nd_rst_float_right nd_rst_guests_increase nd_rst_cursor_pointer"
                                                                         style="transform: rotate(180deg);" alt=""
                                                                         width="12"
-                                                                        src="wp-content/uploads/sites/2/2019/02/arrow-down.png">
+                                                                        src="restaurant/wp-content/uploads/sites/2/2019/02/arrow-down.png">
                                                                 </div>
                                                                 <div class="nd_rst_section nd_rst_height_10"></div>
                                                                 <div class="nd_rst_section">
                                                                     <img decoding="async"
                                                                         class="nd_rst_float_right nd_rst_guests_decrease nd_rst_cursor_pointer"
                                                                         alt="" width="12"
-                                                                        src="wp-content/uploads/sites/2/2019/02/arrow-down.png">
+                                                                        src="restaurant/wp-content/uploads/sites/2/2019/02/arrow-down.png">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -4485,7 +4636,7 @@
                                 <div style="text-align:center;" class="nd_options_section">
                                     <img decoding="async" alt="" style="width:50px;"
                                         class=" nd_options_margin_0 nd_options_padding_0 "
-                                        src="wp-content/uploads/sites/2/2019/01/ico-01.png">
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/ico-01.png">
                                 </div>
                                 <div style="background-color:; height: 15px;" class="nicdark_section  "></div>
                                 <p style="color:; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: px; font-weight:;"
@@ -4502,7 +4653,7 @@
                                 <div style="text-align:center;" class="nd_options_section">
                                     <img decoding="async" alt="" style="width:50px;"
                                         class=" nd_options_margin_0 nd_options_padding_0 "
-                                        src="wp-content/uploads/sites/2/2019/01/ico-02.png">
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/ico-02.png">
                                 </div>
                                 <div style="background-color:; height: 15px;" class="nicdark_section  "></div>
                                 <p style="color:; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: px; font-weight:;"
@@ -4519,7 +4670,7 @@
                                 <div style="text-align:center;" class="nd_options_section">
                                     <img decoding="async" alt="" style="width:50px;"
                                         class=" nd_options_margin_0 nd_options_padding_0 "
-                                        src="wp-content/uploads/sites/2/2019/01/ico-03.png">
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/ico-03.png">
                                 </div>
                                 <div style="background-color:; height: 15px;" class="nicdark_section  "></div>
                                 <p style="color:; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: px; font-weight:;"
@@ -4536,7 +4687,7 @@
                                 <div style="text-align:center;" class="nd_options_section">
                                     <img decoding="async" alt="" style="width:50px;"
                                         class=" nd_options_margin_0 nd_options_padding_0 "
-                                        src="wp-content/uploads/sites/2/2019/01/ico-04.png">
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/ico-04.png">
                                 </div>
                                 <div style="background-color:; height: 15px;" class="nicdark_section  "></div>
                                 <p style="color:; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: px; font-weight:;"
@@ -4558,7 +4709,8 @@
                                         <div class="vc_column-inner vc_custom_1548236172125">
                                             <div class="wpb_wrapper">
                                                 <div style="background-color:; height: 100px;"
-                                                    class="nicdark_section  "></div>
+                                                    class="nicdark_section  ">
+                                                </div>
                                                 <h3 style="color:#ffffff; padding:px; text-align:center; font-size:20px; line-height:20px; letter-spacing: 2px; font-weight:bold;"
                                                     class="   nd_options_first_font ">FIND US HERE</h3>
                                                 <div style="background-color:; height: 25px;" class="nicdark_section  ">
@@ -4568,9 +4720,12 @@
                                                 <p style="color:#ffffff; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: px; font-weight:normal;"
                                                     class="   nd_options_first_font ">+1 374 474 637</p>
                                                 <p style="color:#ffffff; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: px; font-weight:normal;"
-                                                    class="   nd_options_first_font ">info@restaurant.com</p>
+                                                    class="   nd_options_first_font "><a
+                                                        href="mailto:info@restaurant.com"
+                                                        style="color: #fff;">info@restaurant.com</a></p>
                                                 <div style="background-color:; height: 100px;"
-                                                    class="nicdark_section  "></div>
+                                                    class="nicdark_section  ">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -4882,7 +5037,7 @@
 
                                     <img decoding="async" alt=""
                                         class="nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9"
-                                        width="80" src="wp-content/uploads/sites/2/2019/01/img-03.jpg">
+                                        width="80" src="restaurant/wp-content/uploads/sites/2/2019/01/img-03.jpg">
 
                                     <div class="nd_options_section nd_options_height_15"></div>
                                     <div class="nd_options_section nd_options_position_relative">
@@ -4914,7 +5069,7 @@
 
                                     <img decoding="async" alt=""
                                         class="nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9"
-                                        width="80" src="wp-content/uploads/sites/2/2019/01/img-04.jpg">
+                                        width="80" src="restaurant/wp-content/uploads/sites/2/2019/01/img-04.jpg">
 
                                     <div class="nd_options_section nd_options_height_15"></div>
                                     <div class="nd_options_section nd_options_position_relative">
@@ -4946,7 +5101,7 @@
 
                                     <img decoding="async" alt=""
                                         class="nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9"
-                                        width="80" src="wp-content/uploads/sites/2/2019/01/img-05.jpg">
+                                        width="80" src="restaurant/wp-content/uploads/sites/2/2019/01/img-05.jpg">
 
                                     <div class="nd_options_section nd_options_height_15"></div>
                                     <div class="nd_options_section nd_options_position_relative">
@@ -4978,7 +5133,7 @@
 
                                     <img decoding="async" alt=""
                                         class="nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9"
-                                        width="80" src="wp-content/uploads/sites/2/2019/01/img-06.jpg">
+                                        width="80" src="restaurant/wp-content/uploads/sites/2/2019/01/img-06.jpg">
 
                                     <div class="nd_options_section nd_options_height_15"></div>
                                     <div class="nd_options_section nd_options_position_relative">
@@ -5017,7 +5172,7 @@
 
                                     <img decoding="async" alt=""
                                         class="nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9"
-                                        width="80" src="wp-content/uploads/sites/2/2019/01/img-07.jpg">
+                                        width="80" src="restaurant/wp-content/uploads/sites/2/2019/01/img-07.jpg">
 
                                     <div class="nd_options_section nd_options_height_15"></div>
                                     <div class="nd_options_section nd_options_position_relative">
@@ -5049,7 +5204,7 @@
 
                                     <img decoding="async" alt=""
                                         class="nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9"
-                                        width="80" src="wp-content/uploads/sites/2/2019/01/img-08.jpg">
+                                        width="80" src="restaurant/wp-content/uploads/sites/2/2019/01/img-08.jpg">
 
                                     <div class="nd_options_section nd_options_height_15"></div>
                                     <div class="nd_options_section nd_options_position_relative">
@@ -5081,7 +5236,7 @@
 
                                     <img decoding="async" alt=""
                                         class="nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9"
-                                        width="80" src="wp-content/uploads/sites/2/2019/01/img-09.jpg">
+                                        width="80" src="restaurant/wp-content/uploads/sites/2/2019/01/img-09.jpg">
 
                                     <div class="nd_options_section nd_options_height_15"></div>
                                     <div class="nd_options_section nd_options_position_relative">
@@ -5113,7 +5268,7 @@
 
                                     <img decoding="async" alt=""
                                         class="nd_options_position_absolute nd_options_left_0 nd_options_position_initial_all_iphone nd_options_width_100_percentage_all_iphone nd_options_z_index_9"
-                                        width="80" src="wp-content/uploads/sites/2/2019/01/img-10.jpg">
+                                        width="80" src="restaurant/wp-content/uploads/sites/2/2019/01/img-10.jpg">
 
                                     <div class="nd_options_section nd_options_height_15"></div>
                                     <div class="nd_options_section nd_options_position_relative">
@@ -5159,7 +5314,7 @@
 
                                                     <img decoding="async" style="top:5px;" alt=""
                                                         class="nd_options_position_absolute nd_options_left_0"
-                                                        width="50" src="wp-content/uploads/sites/2/2019/01/ico-05.png">
+                                                        width="50" src="restaurant/wp-content/uploads/sites/2/2019/01/ico-05.png">
 
                                                     <div style="padding-left:70px;"
                                                         class="nd_options_section nd_options_box_sizing_border_box">
@@ -5186,7 +5341,7 @@
                                                 </div>
 
                                                 <a style="border: px solid ; border-radius:3px; letter-spacing:px; line-height:16px; font-size:16px; background-color:#c0a58a; padding:15px 35px; margin:; color:#ffffff;"
-                                                    rel="" href="book-a-table/index.html"
+                                                    rel="" href="restaurant/login.php"
                                                     class="nicdark_display_inline_block nd_options_float_right nd_options_font_weight_normal nd_options_first_font home_calltoaction_service_button ">BOOK
                                                     A TABLE</a>
 
@@ -5233,7 +5388,7 @@
                                                     rel="" href="#"
                                                     class="nicdark_display_inline_block nd_options_float_left  "><img
                                                         decoding="async" class="nd_options_float_left" alt="" width="20"
-                                                        src="wp-content/uploads/sites/2/2019/01/social-1.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/social-1.png"></a>
 
 
 
@@ -5241,7 +5396,7 @@
                                                     rel="" href="#"
                                                     class="nicdark_display_inline_block nd_options_float_left  "><img
                                                         decoding="async" class="nd_options_float_left" alt="" width="20"
-                                                        src="wp-content/uploads/sites/2/2019/01/social-3.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/social-3.png"></a>
 
 
 
@@ -5249,7 +5404,7 @@
                                                     rel="" href="#"
                                                     class="nicdark_display_inline_block nd_options_float_left  "><img
                                                         decoding="async" class="nd_options_float_left" alt="" width="20"
-                                                        src="wp-content/uploads/sites/2/2019/01/social-2.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/social-2.png"></a>
 
 
 
@@ -5257,7 +5412,7 @@
                                                     rel="" href="#"
                                                     class="nicdark_display_inline_block nd_options_float_left  "><img
                                                         decoding="async" class="nd_options_float_left" alt="" width="20"
-                                                        src="wp-content/uploads/sites/2/2019/01/social-4.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/social-4.png"></a>
 
 
 
@@ -5265,7 +5420,7 @@
                                                     rel="" href="#"
                                                     class="nicdark_display_inline_block nd_options_float_left  "><img
                                                         decoding="async" class="nd_options_float_left" alt="" width="20"
-                                                        src="wp-content/uploads/sites/2/2019/01/social-5.png"></a>
+                                                        src="restaurant/wp-content/uploads/sites/2/2019/01/social-5.png"></a>
 
                                             </div>
                                         </div>
@@ -5273,10 +5428,10 @@
                                 </div>
                                 <div style="background-color:; height: 5px;" class="nicdark_section  "></div>
                                 <p style="color:#ffffff; padding:px; text-align:center; font-size:12px; line-height:px; letter-spacing: 2px; font-weight:normal;"
-                                    class="   nd_options_second_font ">STAY TUNED</p>
+                                    class="nd_options_second_font">STAY TUNED</p>
                                 <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
                                 <p style="color:#ffffff; padding:px; text-align:center; font-size:14px; line-height:px; letter-spacing: 1px; font-weight:normal;"
-                                    class="   nd_options_second_font ">Lorem ipsum dolor sit amet, consectetur
+                                    class="nd_options_second_font">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. Praesent eu libero elit.</p>
                                 <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
                             </div>
@@ -5289,11 +5444,12 @@
                                 <div style="text-align:center;" class="nd_options_section">
                                     <img decoding="async" alt="" style="width:120px;"
                                         class=" nd_options_margin_0 nd_options_padding_0 "
-                                        src="wp-content/uploads/sites/2/2019/01/logo.png">
+                                        src="restaurant/wp-content/uploads/sites/2/2019/01/logo.png">
                                 </div>
                                 <div style="background-color:; height: 15px;" class="nicdark_section  "></div>
                                 <p style="color:#ffffff; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: 1px; font-weight:normal;"
-                                    class="   nd_options_second_font ">info@restaurant.com</p>
+                                    class="nd_options_second_font"><a href="mailto:info@restaurant.com"
+                                        style="color:#fff">info@restaurant.com</a></p>
                                 <p style="color:#ffffff; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: 1px; font-weight:normal;"
                                     class="   nd_options_second_font ">+12 476 357 384</p>
                                 <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
@@ -5306,19 +5462,29 @@
                                 <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
                                 <div class="wpb_text_column wpb_content_element ">
                                     <div class="wpb_wrapper">
-                                        <p style="text-align: center;letter-spacing: 2px"><span
-                                                style="color: #ffffff">HOME</span></p>
-                                        <p style="text-align: center;letter-spacing: 2px"><span
-                                                style="color: #ffffff">ABOUT US</span></p>
-                                        <p style="text-align: center;letter-spacing: 2px"><span
-                                                style="color: #ffffff">SERVICES</span></p>
-                                        <p style="text-align: center;letter-spacing: 2px"><span
-                                                style="color: #ffffff">BOOKING</span></p>
-                                        <p style="text-align: center;letter-spacing: 2px"><span
-                                                style="color: #ffffff">MENU</span></p>
-                                        <p style="text-align: center;letter-spacing: 2px"><span
-                                                style="color: #ffffff">CONTACTS</span></p>
-
+                                        <p style="text-align: center;letter-spacing: 2px">
+                                            <a href="index.php" style="color: #ffffff; text-decoration: none;">HOME</a>
+                                        </p>
+                                        <p style="text-align: center;letter-spacing: 2px">
+                                            <a href="about-us-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">ABOUT US</a>
+                                        </p>
+                                        <p style="text-align: center;letter-spacing: 2px">
+                                            <a href="services/index.php"
+                                                style="color: #ffffff; text-decoration: none;">SERVICES</a>
+                                        </p>
+                                        <p style="text-align: center;letter-spacing: 2px">
+                                            <a href="book-a-table/index.php"
+                                                style="color: #ffffff; text-decoration: none;">BOOKING</a>
+                                        </p>
+                                        <p style="text-align: center;letter-spacing: 2px">
+                                            <a href="menu-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">MENU</a>
+                                        </p>
+                                        <p style="text-align: center;letter-spacing: 2px">
+                                            <a href="contact-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">CONTACTS</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
@@ -5333,7 +5499,7 @@
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <p style="color:; padding:px; text-align:center; font-size:px; line-height:px; letter-spacing: 2px; font-weight:normal;"
-                                    class="   nd_options_second_font ">Copyright 2019 Nicdark Themes</p>
+                                    class="nd_options_second_font">Copyright 2019</p>
                             </div>
                         </div>
                     </div>
@@ -5343,7 +5509,7 @@
                     .vc_custom_1548407428133 {
                         padding-top: 50px !important;
                         padding-bottom: 50px !important;
-                        background-image: url(wp-content/uploads/sites/2/2019/01/para-053788.jpg?id=591) !important;
+                        background-image: url(restaurant/wp-content/uploads/sites/2/2019/01/para-053788.jpg?id=591) !important;
                         background-position: center !important;
                         background-repeat: no-repeat !important;
                         background-size: cover !important;
@@ -5411,38 +5577,38 @@
         }
     </script>
     <link rel='stylesheet' id='wc-blocks-style-css'
-        href='wp-content/plugins/woocommerce/assets/client/blocks/wc-blockse2cc.css?ver=wc-9.3.3' type='text/css'
+        href='restaurant/wp-content/plugins/woocommerce/assets/client/blocks/wc-blockse2cc.css?ver=wc-9.3.3' type='text/css'
         media='all' />
     <link rel='stylesheet' id='nd_options_magnific_popup_style-css'
-        href='wp-content/plugins/nd-shortcodes/shortcodes/custom/magic-popup/css/magnific-popup109c.css?ver=6.6.2'
+        href='restaurant/wp-content/plugins/nd-shortcodes/shortcodes/custom/magic-popup/css/magnific-popup109c.css?ver=6.6.2'
         type='text/css' media='all' />
     <link rel='stylesheet' id='jquery-ui-datepicker-layout-1-css-css'
-        href='wp-content/plugins/nd-restaurant-reservations/addons/visual/search/css/datepicker-layout-1109c.css?ver=6.6.2'
+        href='restaurant/wp-content/plugins/nd-restaurant-reservations/addons/visual/search/css/datepicker-layout-1109c.css?ver=6.6.2'
         type='text/css' media='all' />
-    <script type="text/javascript" src="wp-includes/js/dist/hooks.min2757.js?ver=2810c76e705dd1a53b18"
+    <script type="text/javascript" src="restaurant/wp-includes/js/dist/hooks.min2757.js?ver=2810c76e705dd1a53b18"
         id="wp-hooks-js"></script>
-    <script type="text/javascript" src="wp-includes/js/dist/i18n.minc33c.js?ver=5e580eb46a90c2b997e6"
+    <script type="text/javascript" src="restaurant/wp-includes/js/dist/i18n.minc33c.js?ver=5e580eb46a90c2b997e6"
         id="wp-i18n-js"></script>
     <script type="text/javascript" id="wp-i18n-js-after">
         /* <![CDATA[ */
         wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
         /* ]]> */
     </script>
-    <script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/swv/js/indexe2db.js?ver=5.9.8"
+    <script type="text/javascript" src="restaurant/wp-content/plugins/contact-form-7/includes/swv/js/indexe2db.js?ver=5.9.8"
         id="swv-js"></script>
     <script type="text/javascript" id="contact-form-7-js-extra">
         /* <![CDATA[ */
         var wpcf7 = { "api": { "root": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/", "namespace": "contact-form-7\/v1" } };
         /* ]]> */
     </script>
-    <script type="text/javascript" src="wp-content/plugins/contact-form-7/includes/js/indexe2db.js?ver=5.9.8"
+    <script type="text/javascript" src="restaurant/wp-content/plugins/contact-form-7/includes/js/indexe2db.js?ver=5.9.8"
         id="contact-form-7-js"></script>
-    <script type="text/javascript" src="wp-includes/js/comment-reply.min109c.js?ver=6.6.2" id="comment-reply-js"
+    <script type="text/javascript" src="restaurant/wp-includes/js/comment-reply.min109c.js?ver=6.6.2" id="comment-reply-js"
         async="async" data-wp-strategy="async"></script>
-    <script type="text/javascript" src="wp-content/themes/ristorante/js/nicdark_navigation109c.js?ver=6.6.2"
+    <script type="text/javascript" src="restaurant/wp-content/themes/ristorante/js/nicdark_navigation109c.js?ver=6.6.2"
         id="nicdark_navigation-js"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.minc60b.js?ver=9.3.3"
+        src="restaurant/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.minc60b.js?ver=9.3.3"
         id="sourcebuster-js-js"></script>
     <script type="text/javascript" id="wc-order-attribution-js-extra">
         /* <![CDATA[ */
@@ -5450,22 +5616,22 @@
         /* ]]> */
     </script>
     <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.minc60b.js?ver=9.3.3"
+        src="restaurant/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.minc60b.js?ver=9.3.3"
         id="wc-order-attribution-js"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min40df.js?ver=5.6"
+        src="restaurant/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min40df.js?ver=5.6"
         id="wpb_composer_front_js-js"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/nd-shortcodes/shortcodes/custom/magic-popup/js/jquery.magnific-popup.min109c.js?ver=6.6.2"
+        src="restaurant/wp-content/plugins/nd-shortcodes/shortcodes/custom/magic-popup/js/jquery.magnific-popup.min109c.js?ver=6.6.2"
         id="nd_options_magnific_popup_plugin-js"></script>
-    <script type="text/javascript" src="wp-includes/js/imagesloaded.minbb93.js?ver=5.0.0" id="imagesloaded-js"></script>
-    <script type="text/javascript" src="wp-includes/js/masonry.min3a05.js?ver=4.2.2" id="masonry-js"></script>
+    <script type="text/javascript" src="restaurant/wp-includes/js/imagesloaded.minbb93.js?ver=5.0.0" id="imagesloaded-js"></script>
+    <script type="text/javascript" src="restaurant/wp-includes/js/masonry.min3a05.js?ver=4.2.2" id="masonry-js"></script>
     <script type="text/javascript"
-        src="wp-content/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min40df.js?ver=5.6"
+        src="restaurant/wp-content/plugins/js_composer/assets/lib/bower/skrollr/dist/skrollr.min40df.js?ver=5.6"
         id="vc_jquery_skrollr_js-js"></script>
-    <script type="text/javascript" src="wp-includes/js/jquery/ui/core.minb37e.js?ver=1.13.3"
+    <script type="text/javascript" src="restaurant/wp-includes/js/jquery/ui/core.minb37e.js?ver=1.13.3"
         id="jquery-ui-core-js"></script>
-    <script type="text/javascript" src="wp-includes/js/jquery/ui/datepicker.minb37e.js?ver=1.13.3"
+    <script type="text/javascript" src="restaurant/wp-includes/js/jquery/ui/datepicker.minb37e.js?ver=1.13.3"
         id="jquery-ui-datepicker-js"></script>
 
 

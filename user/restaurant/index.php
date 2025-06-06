@@ -480,7 +480,11 @@ include('../../config/dbcon.php');
         href="wp-json/oembed/1.0/embed9813.json?url=https%3A%2F%2Fwww.nicdark-themes.com%2Fthemes%2Frestaurant%2Fwp%2Fdemo%2Frestaurant%2F" />
     <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
         href="wp-json/oembed/1.0/embed0f70?url=https%3A%2F%2Fwww.nicdark-themes.com%2Fthemes%2Frestaurant%2Fwp%2Fdemo%2Frestaurant%2F&amp;format=xml" />
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Kristi:400|Montserrat:600,700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS (add this line) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style type="text/css">
         .nd_tds_background_color_1 {
@@ -2594,7 +2598,8 @@ include('../../config/dbcon.php');
 
 <body id="start_nicdark_framework"
     class="home page-template-default page page-id-8 theme-ristorante nd_options_customizer_fonts nd_options_customizer_forms woocommerce-no-js wpb-js-composer js-comp-ver-5.6 vc_responsive">
-
+    <?php include('../../message.php') ?>
+    
     <!--START theme-->
     <div class="nicdark_site nicdark_bg_white nicdark_front_page ">
 
@@ -2822,7 +2827,7 @@ include('../../config/dbcon.php');
                                                     </svg>
                                                 </button>
                                                 <div class="user-dropdown-menu" id="userDropdownMenu">
-                                                    <a href="profile.php">Profile</a>
+                                                    <a href="profile/profile.php">Profile</a>
                                                     <a href="order-history.php">Order History</a>
                                                     <!-- <form action="../php/code.php"> -->
                                                     <a href="../php/logout.php">Logout</a>
@@ -3792,7 +3797,7 @@ include('../../config/dbcon.php');
 
                 <!--automatic title-->
                 <!-- include message.php for taosts -->
-                
+
                 <!--start content-->
                 <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true"
                     class="vc_row wpb_row vc_row-fluid vc_row-no-padding">
@@ -3819,7 +3824,7 @@ include('../../config/dbcon.php');
                                                 data-param9="" data-param10="" data-description="">
                                                 <!-- MAIN IMAGE -->
                                                 <img decoding="async"
-                                                    src="wp-content/uploads/sites/2/revslider/home-1/para-10.jpg" alt=""
+                                                    src="wp-content/uploads/sites/2/revslider/home-1/para-10.webp" alt=""
                                                     title="Home" data-bgposition="center center" data-bgfit="cover"
                                                     data-bgrepeat="no-repeat" data-bgparallax="3" class="rev-slidebg"
                                                     data-no-retina>
@@ -3858,7 +3863,7 @@ include('../../config/dbcon.php');
                                                     data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
                                                     style="z-index: 6; white-space: nowrap; font-size: 35px; line-height: 35px; font-weight: 300; color: #ffffff; letter-spacing: 5px;font-family:Quicksand;letter-spacing:2px;">
                                                     THE UNIQUE </p>
-                                                <?php include('../../message.php') ?>
+                                                <!-- <php include('../../message.php') ?> -->
 
                                                 <!-- LAYER NR. 3 -->
                                                 <h1 class="tp-caption   tp-resizeme rs-parallaxlevel-1"

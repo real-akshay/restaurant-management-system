@@ -34,23 +34,41 @@ if (isset($_POST['login_btn'])) {
                 'user_phone' => $row['phone']
             ];
 
-            $_SESSION['status'] = "Logged In Successfully";
+            $_SESSION['status'] = [
+                'type' => 'success', // ya 'error', 'info', 'warning'
+                'message' => 'Logged In Successfully'
+            ];
+            // $_SESSION['status'] = "Logged In Successfully";
             header("Location: index.php"); // user dashboard
             exit();
         } else {
-            $_SESSION['status'] = "Invalid Email or Password or Unauthorized Access!";
+            $_SESSION['status'] = [
+                'type' => 'error', // ya 'error', 'info', 'warning'
+                'message' => 'Invalid Email or Password or Unauthorized Access!'
+            ];
+            // $_SESSION['status'] = "Invalid Email or Password or Unauthorized Access!";
             header("Location: login.php"); // back to admin login
             exit();
         }
 
     } else {
-        $_SESSION['status'] = "Invalid Email or Password or Unauthorized Access!";
+        $_SESSION['status'] = [
+            'type' => 'warning', // ya 'error', 'info', 'warning'
+            'message' => 'User not found.! Please sign-in first.'
+            // Invalid Email or Password or Unauthorized Access!
+        ];
+
+        // $_SESSION['status'] = "Invalid Email or Password or Unauthorized Access!";
         header("Location: login.php"); // back to user login page
         exit();
     }
 
 } else {
-    $_SESSION['status'] = "Access Denied!";
+    $_SESSION['status'] = [
+        'type' => 'error', // ya 'error', 'info', 'warning'
+        'message' => 'Access Denied.!'
+    ];
+    // $_SESSION['status'] = "Access Denied!";
     header("Location: login.php");
     exit();
 }
