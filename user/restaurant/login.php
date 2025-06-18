@@ -2,10 +2,10 @@
 session_start();
 
 // Already user logged in ho to index par redirect
-if (isset($_SESSION['auth']) && $_SESSION['auth'] == 'user') {
-    header("Location: ../index.php");
-    exit();
-}
+// if (isset($_SESSION['auth_session']) && $_SESSION['auth_user'] == 'user') {
+//     header("Location: ../index.php");
+//     exit();
+// }
 
 // Agar admin logged in hai to bhi user login form show mat karo (ya warning do)
 // if (isset($_SESSION['auth']) && $_SESSION['auth'] == 'admin') {
@@ -259,7 +259,7 @@ if (isset($_SESSION['auth']) && $_SESSION['auth'] == 'user') {
             <button type="submit" name="login_btn">LOGIN</button>
         </form>
         <div class="mt-3">
-            <a href="forgot-password.php" class="btn btn-link px-0" style="color:#b66565;font-weight:600;">Forgot
+            <a href="../php/forgot-password.php" class="btn btn-link px-0" style="color:#b66565;font-weight:600;">Forgot
                 Password?</a>
         </div>
         <div class="mt-2">

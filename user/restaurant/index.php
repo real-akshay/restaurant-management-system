@@ -1,5 +1,4 @@
 <?php
-// include('../../authentication.php');
 include('../authentication.php');
 
 include('../../config/dbcon.php');
@@ -2809,12 +2808,12 @@ include('../../config/dbcon.php');
                                                     <span
                                                         style="margin-left:10px; font-family: 'Quicksand', sans-serif; color:#000;">
                                                         <?php
-                                                        $user_id = $_SESSION['auth_user']['user_id'];
-                                                        $query = "SELECT name FROM users WHERE role='user' AND id='$user_id'";
+                                                        $user_id = $_SESSION['user_session']['user_id'];
+                                                        $query = "SELECT first_name FROM users WHERE role='user' AND id='$user_id' LIMIT 1";
                                                         $query_run = mysqli_query($con, $query);
                                                         if ($query_run && mysqli_num_rows($query_run) > 0) {
                                                             $user = mysqli_fetch_assoc($query_run);
-                                                            echo htmlspecialchars($user['name']);
+                                                            echo htmlspecialchars($user['first_name']);
                                                         } else {
                                                             echo "No User";
                                                         }
@@ -2828,7 +2827,7 @@ include('../../config/dbcon.php');
                                                 </button>
                                                 <div class="user-dropdown-menu" id="userDropdownMenu">
                                                     <a href="profile/profile.php">Profile</a>
-                                                    <a href="order-history.php">Order History</a>
+                                                    <a href="order-history\order-history.php">Order History</a>
                                                     <!-- <form action="../php/code.php"> -->
                                                     <a href="../php/logout.php">Logout</a>
                                                     <!-- </form> -->
@@ -3200,6 +3199,7 @@ include('../../config/dbcon.php');
                                         padding: 15px;
                                         display: inline-block;
                                         font-family: Quicksand;
+                                        text-decoration: none;
                                     }
 
                                     #nd_options_header_5 .vc_row[data-vc-full-width] {

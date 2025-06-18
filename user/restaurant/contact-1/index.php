@@ -387,6 +387,8 @@ include('../../authentication.php');
             line-height: 1.6;
         }
     </style>
+    <!-- Bootstrap 5 CSS (add this line) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' id='nd_tds_style-css'
         href='../wp-content/plugins/nd-theme-demos-switcher/css/style109c.css?ver=6.6.2' type='text/css' media='all' />
     <link rel='stylesheet' id='contact-form-7-css'
@@ -2384,7 +2386,9 @@ include('../../authentication.php');
 
 <body id="start_nicdark_framework"
     class="page-template-default page page-id-38 theme-ristorante nd_options_customizer_fonts nd_options_customizer_forms woocommerce-no-js wpb-js-composer js-comp-ver-5.6 vc_responsive">
-
+    <?php
+    include('../../../message.php');
+    ?>
     <!--START theme-->
     <div class="nicdark_site nicdark_bg_white  ">
 
@@ -3653,14 +3657,14 @@ include('../../authentication.php');
                                             <div id="custom_contact_form"
                                                 class="nd_options_section nd_options_customizer_forms"
                                                 style="max-width:500px;margin:auto;">
-                                                <?php if ($success): ?>
+                                                <!-- <php if ($success): ?>
                                                     <div class="wpcf7-response-output wpcf7-mail-sent-ok"
-                                                        style="margin-bottom:10px;"><?php echo $success; ?></div>
-                                                    <?php unset($_SESSION['status']); // Success message session unset after display ?>
-                                                <?php elseif ($error): ?>
+                                                        style="margin-bottom:10px;"><php echo $success; ?></div>
+                                                    <php unset($_SESSION['status']);  Success message session unset after display ?>
+                                                <php elseif ($error): ?> 
                                                     <div class="wpcf7-response-output wpcf7-validation-errors"
-                                                        style="margin-bottom:10px;"><?php echo $error; ?></div>
-                                                <?php endif; ?>
+                                                        style="margin-bottom:10px;"><php echo $error; ?></div>
+                                                <php endif; ?>-->
                                                 <form action="../../php/code.php" method="post"
                                                     style="background:#fff;padding:30px;border-radius:8px;">
                                                     <div style="padding: 0px 10px 15px 0px; width:100%;">
@@ -4104,6 +4108,8 @@ include('../../authentication.php');
     <script defer type="text/javascript" src="../wp-content/plugins/akismet/_inc/akismet-frontend0f96.js?ver=1728428812"
         id="akismet-frontend-js"></script>
 
+    <!-- Bootstrap 5 Toast JS (if not already included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

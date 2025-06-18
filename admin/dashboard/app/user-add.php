@@ -1,5 +1,5 @@
 <?php
-include("../../authentication.php");     
+include("../../authentication.php");
 include("../../../config/dbcon.php");
 ?>
 <!doctype html>
@@ -1959,13 +1959,15 @@ include("../../../config/dbcon.php");
                                     <img src="../../assets/images/avatars/01.png" alt="User-Profile"
                                         class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
-                                    <?php
-                                        $query = "SELECT name FROM users WHERE role='admin'";
+                                        <?php
+                                        $admin_id = $_SESSION['admin_session']['admin_id'];
+                                        $admin_email = $_SESSION['admin_session']['admin_email'];
+                                        $query = "SELECT first_name FROM users WHERE email='$admin_email' AND role='admin' AND id='$admin_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
                                         if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                            foreach ($query_run as $user) {
+                                            foreach ($query_run as $admin) {
                                                 ?>
-                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($user['name']) ?></h6>
+                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($admin['first_name']) ?></h6>
                                                 <p class="mb-0 caption-sub-title">Administrator</p>
                                                 <?php
                                             }
@@ -2241,25 +2243,25 @@ include("../../../config/dbcon.php");
 
     <!-- script for live checking of email existance -->
     <script>
-    $(document).ready(function () {
-        $('.email_id').keyup(function (e) {
-            var email = $('.email_id').val();
-            // console.log(email);
-            $.ajax({
-                type: "POST",
-                url: "../../php/code.php",
-                data: {
-                    'check_Emailbtn': 1,
-                    'email': email,
-                },
-                success: function (response) {
-                    // console.log(response);
-                    $('.email_error').text(response);
-                }
+        $(document).ready(function () {
+            $('.email_id').keyup(function (e) {
+                var email = $('.email_id').val();
+                // console.log(email);
+                $.ajax({
+                    type: "POST",
+                    url: "../../php/code.php",
+                    data: {
+                        'check_Emailbtn': 1,
+                        'email': email,
+                    },
+                    success: function (response) {
+                        // console.log(response);
+                        $('.email_error').text(response);
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
 
 

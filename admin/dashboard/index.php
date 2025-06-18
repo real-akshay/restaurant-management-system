@@ -21,6 +21,7 @@ include("../../config/dbcon.php");
     <!-- Custom Css -->
     <link rel="stylesheet" href="../assets/css/aprycot.mine209.css?v=1.0.0">
 
+
 </head>
 
 <body class="  " style="background:url(../assets/images/dashboard.png);    background-attachment: fixed;
@@ -4473,13 +4474,15 @@ include("../../config/dbcon.php");
                                         class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
                                         <?php
-                                        $admin_id = $_SESSION['auth_user']['user_id'];
-                                        $query = "SELECT name FROM users WHERE role='admin' AND id=' $admin_id' LIMIT 1";
+                                        $admin_id = $_SESSION['admin_session']['admin_id'];
+                                        $admin_email = $_SESSION['admin_session']['admin_email'];
+                                        $query = "SELECT first_name FROM users WHERE email='$admin_email' AND role='admin' AND id='$admin_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
                                         if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                            foreach ($query_run as $user) {
+                                            foreach ($query_run as $admin) {
                                                 ?>
-                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($user['name']) ?></h6>
+                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($admin['first_name']) ?>
+                                                </h6>
                                                 <p class="mb-0 caption-sub-title">Administrator</p>
                                                 <?php
                                             }
@@ -4616,15 +4619,15 @@ include("../../config/dbcon.php");
                                         </span>
                                         <div class="banner-text pt-3">
                                             <?php
-                                            $admin_id = $_SESSION['auth_user']['user_id'];
-                                            $admin_email = $_SESSION['auth_user']['user_email'];
-                                            $query = "SELECT name FROM users WHERE email='$admin_email' AND role='admin' AND id='$admin_id' LIMIT 1";
+                                            $admin_id = $_SESSION['admin_session']['admin_id'];
+                                            $admin_email = $_SESSION['admin_session']['admin_email'];
+                                            $query = "SELECT first_name FROM users WHERE email='$admin_email' AND role='admin' AND id='$admin_id' LIMIT 1";
                                             $query_run = mysqli_query($con, $query);
                                             if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                                foreach ($query_run as $user) {
+                                                foreach ($query_run as $admin) {
                                                     ?>
                                                     <h1 class="fw-bold mb-4">
-                                                        Hello, <?= htmlspecialchars($user['name']) ?>
+                                                        Hello, <?= htmlspecialchars($admin['first_name']) ?>
                                                     </h1>
                                                     <?php
                                                 }

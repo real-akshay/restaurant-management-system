@@ -3682,7 +3682,7 @@ include('../../../config/dbcon.php');
                                                             'subtotal' => intval($product['price']) * $product['quantity']
                                                         ]; ?>
 
-                                                        <?php
+                                                    </form>    <?php
                                                 }
 
 

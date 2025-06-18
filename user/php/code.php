@@ -5,10 +5,6 @@ include('../../config/dbcon.php');
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-if (!isset($_SESSION['auth_user']['user_id'])) {
-    header("Location: ../../login.php");
-    exit();
-}
 
 
 // Email setup
@@ -44,7 +40,10 @@ if (isset($_POST['add-to-cart'])) {
         $filename = time() . '.' . $file_extension;
 
         if (!in_array($file_extension, $allowed_extensions)) {
-            $_SESSION['status'] = "You are allowed with only jpg, png, jpeg Images";
+            $_SESSION['status'] = [
+                'type' => 'warning',
+                'message' => 'You are allowed with only jpg, png, jpeg Images'
+            ];
             header("Location:product-edit.php?prod_id=" . $product_id);
             exit(0);
         }
@@ -66,9 +65,15 @@ if (isset($_POST['add-to-cart'])) {
         $query_run = mysqli_query($con, $query);
 
         if ($query_run) {
-            $_SESSION['status'] = "Quantity updated";
+            $_SESSION['status'] = [
+                'type' => 'warning',
+                'message' => 'Quantity updated.'
+            ];
         } else {
-            $_SESSION['status'] = "Quantity Not Updated!";
+            $_SESSION['status'] = [
+                'type' => 'error',
+                'message' => "Quantity Not Updated!"
+            ];
         }
     } else {
         // Product not in cart, insert new
@@ -76,9 +81,15 @@ if (isset($_POST['add-to-cart'])) {
         $query_run = mysqli_query($con, $query);
 
         if ($query_run) {
-            $_SESSION['status'] = "Product added to the Cart.";
+            $_SESSION['status'] = [
+                'type' => 'success',
+                'message' => "Product added to the Cart."
+            ];
         } else {
-            $_SESSION['status'] = "Product not Added to the Cart";
+            $_SESSION['status'] = [
+                'type' => 'error',
+                'message' => "Product not Added to the Cart"
+            ];
         }
     }
     header("Location:../restaurant/product/index.php?id=$product_id");
@@ -92,26 +103,23 @@ if (isset($_POST['add-to-cart'])) {
 if (isset($_POST['delete_cart_item'])) {
     $product_id = $_POST['delete_cart_item'];
 
-    // for hard delete
-    // $query = "DELETE FROM products WHERE id='$product_id'";
-    // for soft delete
-    // item also removed from cart
-
     $query = "UPDATE cart_products SET is_deleted='1' WHERE product_id='$product_id'";
     $query_run = mysqli_query($con, $query);
 
     if (isset($_SESSION['cart'][$product_id])) {
         unset($_SESSION['cart'][$product_id]);
-        // $_SESSION['status'] = "Item removed from cart successfully.";
     }
-    //  else {
-    //     $_SESSION['status'] = "No items found in cart.";
-    // }
 
     if ($query_run) {
-        $_SESSION['status'] = "Item removed from cart successfully.";
+        $_SESSION['status'] = [
+            'type' => 'success',
+            'message' => 'Item removed from cart successfully.'
+        ];
     } else {
-        $_SESSION['status'] = "Something went wrong.!";
+        $_SESSION['status'] = [
+            'type' => 'warning',
+            'message' => 'something went wrong.'
+        ];
 
     }
     header("Location:../restaurant/cart/index.php");
@@ -145,9 +153,15 @@ if (isset($_POST['update_cart'])) {
 
     }
     if ($query_run) {
-        $_SESSION['status'] = "Quantity updated";
+        $_SESSION['status'] = [
+            'type' => 'warning',
+            'message' => 'Quantity updated.'
+        ];
     } else {
-        $_SESSION['status'] = "Something went wrong.!";
+        $_SESSION['status'] = [
+            'type' => 'error',
+            'message' => "Something went wrong.!"
+        ];
     }
     header("Location:../restaurant/cart/index.php");
 }
@@ -204,7 +218,10 @@ if (isset($_POST['confirm_btn'])) {
         $query_run = mysqli_query($con, $query);
 
         if ($query_run) {
-            $_SESSION['status'] = "Booking confirmed successfully.";
+            $_SESSION['status'] = [
+                'type' => 'success',
+                'message' => 'Booking confirmed successfully.'
+            ];
 
             // Now send confirmation email
             $mail = new PHPMailer(true);
@@ -313,7 +330,10 @@ if (isset($_POST['confirm_btn'])) {
                 // optional: $_SESSION['email_status'] = "Email failed: {$mail->ErrorInfo}";
             }
         } else {
-            $_SESSION['status'] = "No table available for selected time.";
+            $_SESSION['status'] = [
+                'type' => 'warning',
+                'message' => 'No table availble for selected time.'
+            ];
         }
     }
     header("Location:../restaurant/book-a-table/index.php?success=1");
@@ -331,9 +351,15 @@ if (isset($_POST['send_btn'])) {
     $query = "INSERT INTO contact_us (name, email, message) Values('$name','$email', '$message')";
     $query_run = mysqli_query($con, $query);
     if ($query_run) {
-        $_SESSION['status'] = "Thank you for contacting us. We will get back to you soon.";
+        $_SESSION['status'] = [
+            'type' => 'warning',
+            'message' => 'Thank you for contacting us. We will get back to you soon.'
+        ];
     } else {
-        $_SESSION['status'] = "Info not sent!";
+        $_SESSION['status'] = [
+            'type' => 'warning',
+            'message' => 'Item no found.!'
+        ];
     }
     header('Location: ../restaurant/contact-1/index.php');
 

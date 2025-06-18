@@ -16,7 +16,7 @@ if (isset($_POST['checkout_place_order'])) {
     // $billing_email = $_POST['billing_email'];
 
     $orderData = [
-        'user_id' => $_SESSION['auth_user']['user_id'] ?? null,
+        'user_id' => $_SESSION['user_session']['user_id'] ?? null,
         'billing_first_name' => $_POST['billing_first_name'] ?? '',
         'billing_last_name' => $_POST['billing_last_name'] ?? '',
         'billing_company' => $_POST['billing_company'] ?? '',
@@ -129,10 +129,18 @@ if (isset($_POST['checkout_place_order'])) {
             echo "Cart is empty.";
         }
 
+        $_SESSION['status'] = [
+            'type' => 'success', // ya 'error', 'info', 'warning'
+            'message' => 'Order placed successfully. Your order ID is ' . $order_id
+        ];
         // Redirect to the order confirmation page
         header("Location:success.php?order_id=$order_id");
         exit();
     } else {
+        $_SESSION['status'] = [
+            'type' => 'error', // ya 'error', 'info', 'warning'
+            'message' => 'Error inserting order'
+        ];
         echo "Error inserting order: " . $stmt->error;
     }
 

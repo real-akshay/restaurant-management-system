@@ -2638,8 +2638,7 @@ include('../../../config/dbcon.php');
                                         <ul id="menu-menu-1" class="menu">
                                             <li id="menu-item-837"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-837">
-                                                <a
-                                                    href="../index.php">HOME</a>
+                                                <a href="../index.php">HOME</a>
                                                 <!-- <ul class="sub-menu">
                                                     <li id="menu-item-838"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-838">
@@ -2681,8 +2680,7 @@ include('../../../config/dbcon.php');
                                             </li>
                                             <li id="menu-item-719"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-719">
-                                                <a
-                                                    href="../about-us-1/index.php">ABOUT
+                                                <a href="../about-us-1/index.php">ABOUT
                                                     US</a>
                                                 <!-- <ul class="sub-menu">
                                                     <li id="menu-item-1083"
@@ -2711,19 +2709,16 @@ include('../../../config/dbcon.php');
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-1313"
                                                         class="nd_options_hot_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1313">
-                                                        <a
-                                                            href="../book-a-table/index.php">Book
+                                                        <a href="../book-a-table/index.php">Book
                                                             a Table</a>
                                                     </li>
                                                     <li id="menu-item-1187"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1187">
-                                                        <a
-                                                            href="../delivery/index.php">Delivery</a>
+                                                        <a href="../delivery/index.php">Delivery</a>
                                                     </li>
                                                     <li id="menu-item-1024"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1024">
-                                                        <a
-                                                            href="../services/index.php">Services</a>
+                                                        <a href="../services/index.php">Services</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1240"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1240">
@@ -2746,8 +2741,7 @@ include('../../../config/dbcon.php');
                                                     </li> -->
                                                     <li id="menu-item-1480"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1480">
-                                                        <a
-                                                            href="../menu-1/index.php">Menu</a>
+                                                        <a href="../menu-1/index.php">Menu</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1481"
                                                                 class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1481">
@@ -2793,8 +2787,7 @@ include('../../../config/dbcon.php');
                                                     </li> -->
                                                     <li id="menu-item-1068"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1068">
-                                                        <a
-                                                            href="../contact-1/index.php">Contact</a>
+                                                        <a href="../contact-1/index.php">Contact</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1067"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1067">
@@ -2812,8 +2805,7 @@ include('../../../config/dbcon.php');
                                                     </li>
                                                     <li id="menu-item-1082"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1082">
-                                                        <a
-                                                            href="../about-us-1/index.php">About
+                                                        <a href="../about-us-1/index.php">About
                                                             Us</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1084"
@@ -2838,8 +2830,7 @@ include('../../../config/dbcon.php');
                                                     </li>
                                                     <li id="menu-item-1296"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1296">
-                                                        <a
-                                                            href="../gallery/index.php">Gallery</a>
+                                                        <a href="../gallery/index.php">Gallery</a>
                                                     </li>
                                                     <li id="menu-item-1111"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1111">
@@ -2851,8 +2842,7 @@ include('../../../config/dbcon.php');
                                             </li>
                                             <li id="menu-item-1474"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1474">
-                                                <a
-                                                    href="../menu-1/">MENU</a>
+                                                <a href="../menu-1/">MENU</a>
                                                 <!-- <ul class="sub-menu">
                                                     <li id="menu-item-1472"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1472">
@@ -2888,29 +2878,24 @@ include('../../../config/dbcon.php');
                                             </li>
                                             <li id="menu-item-1225"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1225">
-                                                <a
-                                                    href="../delivery/">SHOP</a>
+                                                <a href="../delivery/">SHOP</a>
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-1188"
                                                         class="nd_options_hot_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1188">
-                                                        <a
-                                                            href="../delivery/">Archive</a>
+                                                        <a href="../delivery/">Archive</a>
                                                     </li>
                                                     <li id="menu-item-1115"
                                                         class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1115">
-                                                        <a
-                                                            href="../product/mixed-salad/">Single
+                                                        <a href="../product/mixed-salad/">Single
                                                             Product</a>
                                                     </li>
                                                     <li id="menu-item-1116"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1116">
-                                                        <a
-                                                            href="../cart/">Cart</a>
+                                                        <a href="../cart/">Cart</a>
                                                     </li>
                                                     <li id="menu-item-1117"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-873 current_page_item menu-item-1117">
-                                                        <a href="../checkout/"
-                                                            aria-current="page">Checkout</a>
+                                                        <a href="../checkout/" aria-current="page">Checkout</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -2954,8 +2939,7 @@ include('../../../config/dbcon.php');
                                             </li> -->
                                             <li id="menu-item-802"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-802">
-                                                <a
-                                                    href="../contact-1/">CONTACT</a>
+                                                <a href="../contact-1/">CONTACT</a>
                                                 <!-- <ul class="sub-menu">
                                                     <li id="menu-item-1070"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1070">
@@ -2973,20 +2957,17 @@ include('../../../config/dbcon.php');
                                             </li>
                                             <li id="menu-item-1174"
                                                 class="book_a_table_btn menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1174">
-                                                <a
-                                                    href="../book-a-table/">BOOK
+                                                <a href="../book-a-table/">BOOK
                                                     A TABLE</a>
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-1430"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1430">
-                                                        <a
-                                                            href="../book-a-table/">Custom
+                                                        <a href="../book-a-table/">Custom
                                                             Plugin</a>
                                                     </li>
                                                     <li id="menu-item-1429"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1429">
-                                                        <a
-                                                            href="../open-table/">Open
+                                                        <a href="../open-table/">Open
                                                             Table</a>
                                                     </li>
                                                 </ul>
@@ -3735,9 +3716,224 @@ include('../../../config/dbcon.php');
                     <div class="woocommerce-notices-wrapper"></div>
                     <form name="checkout" method="post" class="checkout woocommerce-checkout"
                         action="order-recieved/order_process.php" enctype="multipart/form-data">
+                        <?php $country_map = [
+                            "Afghanistan" => "AF",
+                            "Albania" => "AL",
+                            "Algeria" => "DZ",
+                            "Andorra" => "AD",
+                            "Angola" => "AO",
+                            "Argentina" => "AR",
+                            "Armenia" => "AM",
+                            "Australia" => "AU",
+                            "Austria" => "AT",
+                            "Azerbaijan" => "AZ",
+                            "Bahamas" => "BS",
+                            "Bahrain" => "BH",
+                            "Bangladesh" => "BD",
+                            "Barbados" => "BB",
+                            "Belarus" => "BY",
+                            "Belgium" => "BE",
+                            "Belize" => "BZ",
+                            "Benin" => "BJ",
+                            "Bhutan" => "BT",
+                            "Bolivia" => "BO",
+                            "Bosnia and Herzegovina" => "BA",
+                            "Botswana" => "BW",
+                            "Brazil" => "BR",
+                            "Brunei" => "BN",
+                            "Bulgaria" => "BG",
+                            "Burkina Faso" => "BF",
+                            "Burundi" => "BI",
+                            "Cambodia" => "KH",
+                            "Cameroon" => "CM",
+                            "Canada" => "CA",
+                            "Cape Verde" => "CV",
+                            "Central African Republic" => "CF",
+                            "Chad" => "TD",
+                            "Chile" => "CL",
+                            "China" => "CN",
+                            "Colombia" => "CO",
+                            "Comoros" => "KM",
+                            "Congo (Brazzaville)" => "CG",
+                            "Congo (Kinshasa)" => "CD",
+                            "Costa Rica" => "CR",
+                            "Croatia" => "HR",
+                            "Cuba" => "CU",
+                            "Cyprus" => "CY",
+                            "Czech Republic" => "CZ",
+                            "Denmark" => "DK",
+                            "Djibouti" => "DJ",
+                            "Dominica" => "DM",
+                            "Dominican Republic" => "DO",
+                            "Ecuador" => "EC",
+                            "Egypt" => "EG",
+                            "El Salvador" => "SV",
+                            "Equatorial Guinea" => "GQ",
+                            "Eritrea" => "ER",
+                            "Estonia" => "EE",
+                            "Eswatini" => "SZ",
+                            "Ethiopia" => "ET",
+                            "Fiji" => "FJ",
+                            "Finland" => "FI",
+                            "France" => "FR",
+                            "Gabon" => "GA",
+                            "Gambia" => "GM",
+                            "Georgia" => "GE",
+                            "Germany" => "DE",
+                            "Ghana" => "GH",
+                            "Greece" => "GR",
+                            "Grenada" => "GD",
+                            "Guatemala" => "GT",
+                            "Guinea" => "GN",
+                            "Guinea-Bissau" => "GW",
+                            "Guyana" => "GY",
+                            "Haiti" => "HT",
+                            "Honduras" => "HN",
+                            "Hungary" => "HU",
+                            "Iceland" => "IS",
+                            "India" => "IN",
+                            "Indonesia" => "ID",
+                            "Iran" => "IR",
+                            "Iraq" => "IQ",
+                            "Ireland" => "IE",
+                            "Israel" => "IL",
+                            "Italy" => "IT",
+                            "Jamaica" => "JM",
+                            "Japan" => "JP",
+                            "Jordan" => "JO",
+                            "Kazakhstan" => "KZ",
+                            "Kenya" => "KE",
+                            "Kiribati" => "KI",
+                            "Korea, North" => "KP",
+                            "Korea, South" => "KR",
+                            "Kuwait" => "KW",
+                            "Kyrgyzstan" => "KG",
+                            "Laos" => "LA",
+                            "Latvia" => "LV",
+                            "Lebanon" => "LB",
+                            "Lesotho" => "LS",
+                            "Liberia" => "LR",
+                            "Libya" => "LY",
+                            "Liechtenstein" => "LI",
+                            "Lithuania" => "LT",
+                            "Luxembourg" => "LU",
+                            "Madagascar" => "MG",
+                            "Malawi" => "MW",
+                            "Malaysia" => "MY",
+                            "Maldives" => "MV",
+                            "Mali" => "ML",
+                            "Malta" => "MT",
+                            "Marshall Islands" => "MH",
+                            "Mauritania" => "MR",
+                            "Mauritius" => "MU",
+                            "Mexico" => "MX",
+                            "Micronesia" => "FM",
+                            "Moldova" => "MD",
+                            "Monaco" => "MC",
+                            "Mongolia" => "MN",
+                            "Montenegro" => "ME",
+                            "Morocco" => "MA",
+                            "Mozambique" => "MZ",
+                            "Myanmar" => "MM",
+                            "Namibia" => "NA",
+                            "Nauru" => "NR",
+                            "Nepal" => "NP",
+                            "Netherlands" => "NL",
+                            "New Zealand" => "NZ",
+                            "Nicaragua" => "NI",
+                            "Niger" => "NE",
+                            "Nigeria" => "NG",
+                            "North Macedonia" => "MK",
+                            "Norway" => "NO",
+                            "Oman" => "OM",
+                            "Pakistan" => "PK",
+                            "Palau" => "PW",
+                            "Panama" => "PA",
+                            "Papua New Guinea" => "PG",
+                            "Paraguay" => "PY",
+                            "Peru" => "PE",
+                            "Philippines" => "PH",
+                            "Poland" => "PL",
+                            "Portugal" => "PT",
+                            "Qatar" => "QA",
+                            "Romania" => "RO",
+                            "Russia" => "RU",
+                            "Rwanda" => "RW",
+                            "Saint Kitts and Nevis" => "KN",
+                            "Saint Lucia" => "LC",
+                            "Saint Vincent and the Grenadines" => "VC",
+                            "Samoa" => "WS",
+                            "San Marino" => "SM",
+                            "Sao Tome and Principe" => "ST",
+                            "Saudi Arabia" => "SA",
+                            "Senegal" => "SN",
+                            "Serbia" => "RS",
+                            "Seychelles" => "SC",
+                            "Sierra Leone" => "SL",
+                            "Singapore" => "SG",
+                            "Slovakia" => "SK",
+                            "Slovenia" => "SI",
+                            "Solomon Islands" => "SB",
+                            "Somalia" => "SO",
+                            "South Africa" => "ZA",
+                            "South Sudan" => "SS",
+                            "Spain" => "ES",
+                            "Sri Lanka" => "LK",
+                            "Sudan" => "SD",
+                            "Suriname" => "SR",
+                            "Sweden" => "SE",
+                            "Switzerland" => "CH",
+                            "Syria" => "SY",
+                            "Taiwan" => "TW",
+                            "Tajikistan" => "TJ",
+                            "Tanzania" => "TZ",
+                            "Thailand" => "TH",
+                            "Togo" => "TG",
+                            "Tonga" => "TO",
+                            "Trinidad and Tobago" => "TT",
+                            "Tunisia" => "TN",
+                            "Turkey" => "TR",
+                            "Turkmenistan" => "TM",
+                            "Tuvalu" => "TV",
+                            "Uganda" => "UG",
+                            "Ukraine" => "UA",
+                            "United Arab Emirates" => "AE",
+                            "United Kingdom" => "GB",
+                            "United States" => "US",
+                            "Uruguay" => "UY",
+                            "Uzbekistan" => "UZ",
+                            "Vanuatu" => "VU",
+                            "Vatican City" => "VA",
+                            "Venezuela" => "VE",
+                            "Vietnam" => "VN",
+                            "Yemen" => "YE",
+                            "Zambia" => "ZM",
+                            "Zimbabwe" => "ZW"
+                        ];
 
 
 
+                        // Fetch logged-in user info
+                        $user_id = $_SESSION['user_session']['user_id'] ?? null;
+                        $user = [];
+                        if ($user_id) {
+                            $user_query = "SELECT * FROM users WHERE id='$user_id' LIMIT 1";
+                            $user_result = mysqli_query($con, $user_query);
+                            if ($user_result && mysqli_num_rows($user_result) > 0) {
+                                $user = mysqli_fetch_assoc($user_result);
+                            }
+                        }
+
+                        $user_country = $user['country'] ?? '';
+                        $country_code = isset($country_map[$user_country]) ? $country_map[$user_country] : '';
+                        $selected_state = $user['state'] ?? '';
+                        ?>
+
+
+                        <script>
+                            // Optionally, you can use JS to fill selects if needed
+                        </script>
+                        <!-- Now, in the billing details inputs, set value attributes using $user -->
                         <div class="col2-set" id="customer_details">
                             <div class="col-1">
                                 <wc-order-attribution-inputs></wc-order-attribution-inputs>
@@ -3754,294 +3950,554 @@ include('../../../config/dbcon.php');
                                                     title="required">*</abbr></label><span
                                                 class="woocommerce-input-wrapper"><input type="text" class="input-text "
                                                     name="billing_first_name" id="billing_first_name" placeholder=""
-                                                    value="" aria-required="true" autocomplete="given-name" /></span>
+                                                    value="<?php echo htmlspecialchars($user['first_name'] ?? '', ENT_QUOTES); ?>"
+                                                    aria-required="true" autocomplete="given-name" /></span>
                                         </p>
                                         <p class="form-row form-row-last validate-required" id="billing_last_name_field"
                                             data-priority="20"><label for="billing_last_name" class="">Last
                                                 name&nbsp;<abbr class="required" title="required">*</abbr></label><span
                                                 class="woocommerce-input-wrapper"><input type="text" class="input-text "
                                                     name="billing_last_name" id="billing_last_name" placeholder=""
-                                                    value="" aria-required="true" autocomplete="family-name" /></span>
+                                                    value="<?php echo htmlspecialchars($user['last_name'] ?? '', ENT_QUOTES); ?>"
+                                                    aria-required="true" autocomplete="family-name" /></span>
                                         </p>
                                         <p class="form-row form-row-wide" id="billing_company_field" data-priority="30">
                                             <label for="billing_company" class="">Company name&nbsp;<span
                                                     class="optional">(optional)</span></label><span
                                                 class="woocommerce-input-wrapper"><input type="text" class="input-text "
-                                                    name="billing_company" id="billing_company" placeholder="" value=""
+                                                    name="billing_company" id="billing_company" placeholder=""
+                                                    value="<?php echo htmlspecialchars($user['company'] ?? '', ENT_QUOTES); ?>"
                                                     autocomplete="organization" /></span>
                                         </p>
+                                        <?php
+                                        $selected_country = htmlspecialchars($user['country'] ?? '', ENT_QUOTES);
+                                        ?>
                                         <p class="form-row form-row-wide address-field update_totals_on_change validate-required"
-                                            id="billing_country_field" data-priority="40"><label for="billing_country"
-                                                class="">Country / Region&nbsp;<abbr class="required"
-                                                    title="required">*</abbr></label><span
-                                                class="woocommerce-input-wrapper"><select name="billing_country"
-                                                    id="billing_country" class="country_to_state country_select "
-                                                    aria-required="true" autocomplete="country"
+                                            id="billing_country_field" data-priority="40">
+                                            <label for="billing_country" class="">Country / Region&nbsp;<abbr
+                                                    class="required" title="required">*</abbr></label>
+                                            <span class="woocommerce-input-wrapper">
+                                                <select name="billing_country" id="billing_country"
+                                                    class="country_to_state country_select " aria-required="true"
+                                                    autocomplete="country"
                                                     data-placeholder="Select a country / region&hellip;"
                                                     data-label="Country / Region">
                                                     <option value="">Select a country / region&hellip;</option>
-                                                    <option value="AF">Afghanistan</option>
-                                                    <option value="AX">Åland Islands</option>
-                                                    <option value="AL">Albania</option>
-                                                    <option value="DZ">Algeria</option>
-                                                    <option value="AS">American Samoa</option>
-                                                    <option value="AD">Andorra</option>
-                                                    <option value="AO">Angola</option>
-                                                    <option value="AI">Anguilla</option>
-                                                    <option value="AQ">Antarctica</option>
-                                                    <option value="AG">Antigua and Barbuda</option>
-                                                    <option value="AR">Argentina</option>
-                                                    <option value="AM">Armenia</option>
-                                                    <option value="AW">Aruba</option>
-                                                    <option value="AU">Australia</option>
-                                                    <option value="AT">Austria</option>
-                                                    <option value="AZ">Azerbaijan</option>
-                                                    <option value="BS">Bahamas</option>
-                                                    <option value="BH">Bahrain</option>
-                                                    <option value="BD">Bangladesh</option>
-                                                    <option value="BB">Barbados</option>
-                                                    <option value="BY">Belarus</option>
-                                                    <option value="PW">Belau</option>
-                                                    <option value="BE">Belgium</option>
-                                                    <option value="BZ">Belize</option>
-                                                    <option value="BJ">Benin</option>
-                                                    <option value="BM">Bermuda</option>
-                                                    <option value="BT">Bhutan</option>
-                                                    <option value="BO">Bolivia</option>
-                                                    <option value="BQ">Bonaire, Saint Eustatius and Saba</option>
-                                                    <option value="BA">Bosnia and Herzegovina</option>
-                                                    <option value="BW">Botswana</option>
-                                                    <option value="BV">Bouvet Island</option>
-                                                    <option value="BR">Brazil</option>
-                                                    <option value="IO">British Indian Ocean Territory</option>
-                                                    <option value="BN">Brunei</option>
-                                                    <option value="BG">Bulgaria</option>
-                                                    <option value="BF">Burkina Faso</option>
-                                                    <option value="BI">Burundi</option>
-                                                    <option value="KH">Cambodia</option>
-                                                    <option value="CM">Cameroon</option>
-                                                    <option value="CA">Canada</option>
-                                                    <option value="CV">Cape Verde</option>
-                                                    <option value="KY">Cayman Islands</option>
-                                                    <option value="CF">Central African Republic</option>
-                                                    <option value="TD">Chad</option>
-                                                    <option value="CL">Chile</option>
-                                                    <option value="CN">China</option>
-                                                    <option value="CX">Christmas Island</option>
-                                                    <option value="CC">Cocos (Keeling) Islands</option>
-                                                    <option value="CO">Colombia</option>
-                                                    <option value="KM">Comoros</option>
-                                                    <option value="CG">Congo (Brazzaville)</option>
-                                                    <option value="CD">Congo (Kinshasa)</option>
-                                                    <option value="CK">Cook Islands</option>
-                                                    <option value="CR">Costa Rica</option>
-                                                    <option value="HR">Croatia</option>
-                                                    <option value="CU">Cuba</option>
-                                                    <option value="CW">Cura&ccedil;ao</option>
-                                                    <option value="CY">Cyprus</option>
-                                                    <option value="CZ">Czech Republic</option>
-                                                    <option value="DK">Denmark</option>
-                                                    <option value="DJ">Djibouti</option>
-                                                    <option value="DM">Dominica</option>
-                                                    <option value="DO">Dominican Republic</option>
-                                                    <option value="EC">Ecuador</option>
-                                                    <option value="EG">Egypt</option>
-                                                    <option value="SV">El Salvador</option>
-                                                    <option value="GQ">Equatorial Guinea</option>
-                                                    <option value="ER">Eritrea</option>
-                                                    <option value="EE">Estonia</option>
-                                                    <option value="SZ">Eswatini</option>
-                                                    <option value="ET">Ethiopia</option>
-                                                    <option value="FK">Falkland Islands</option>
-                                                    <option value="FO">Faroe Islands</option>
-                                                    <option value="FJ">Fiji</option>
-                                                    <option value="FI">Finland</option>
-                                                    <option value="FR">France</option>
-                                                    <option value="GF">French Guiana</option>
-                                                    <option value="PF">French Polynesia</option>
-                                                    <option value="TF">French Southern Territories</option>
-                                                    <option value="GA">Gabon</option>
-                                                    <option value="GM">Gambia</option>
-                                                    <option value="GE">Georgia</option>
-                                                    <option value="DE">Germany</option>
-                                                    <option value="GH">Ghana</option>
-                                                    <option value="GI">Gibraltar</option>
-                                                    <option value="GR">Greece</option>
-                                                    <option value="GL">Greenland</option>
-                                                    <option value="GD">Grenada</option>
-                                                    <option value="GP">Guadeloupe</option>
-                                                    <option value="GU">Guam</option>
-                                                    <option value="GT">Guatemala</option>
-                                                    <option value="GG">Guernsey</option>
-                                                    <option value="GN">Guinea</option>
-                                                    <option value="GW">Guinea-Bissau</option>
-                                                    <option value="GY">Guyana</option>
-                                                    <option value="HT">Haiti</option>
-                                                    <option value="HM">Heard Island and McDonald Islands</option>
-                                                    <option value="HN">Honduras</option>
-                                                    <option value="HK">Hong Kong</option>
-                                                    <option value="HU">Hungary</option>
-                                                    <option value="IS">Iceland</option>
-                                                    <option value="IN">India</option>
-                                                    <option value="ID">Indonesia</option>
-                                                    <option value="IR">Iran</option>
-                                                    <option value="IQ">Iraq</option>
-                                                    <option value="IE">Ireland</option>
-                                                    <option value="IM">Isle of Man</option>
-                                                    <option value="IL">Israel</option>
-                                                    <option value="IT">Italy</option>
-                                                    <option value="CI">Ivory Coast</option>
-                                                    <option value="JM">Jamaica</option>
-                                                    <option value="JP">Japan</option>
-                                                    <option value="JE">Jersey</option>
-                                                    <option value="JO">Jordan</option>
-                                                    <option value="KZ">Kazakhstan</option>
-                                                    <option value="KE">Kenya</option>
-                                                    <option value="KI">Kiribati</option>
-                                                    <option value="KW">Kuwait</option>
-                                                    <option value="KG">Kyrgyzstan</option>
-                                                    <option value="LA">Laos</option>
-                                                    <option value="LV">Latvia</option>
-                                                    <option value="LB">Lebanon</option>
-                                                    <option value="LS">Lesotho</option>
-                                                    <option value="LR">Liberia</option>
-                                                    <option value="LY">Libya</option>
-                                                    <option value="LI">Liechtenstein</option>
-                                                    <option value="LT">Lithuania</option>
-                                                    <option value="LU">Luxembourg</option>
-                                                    <option value="MO">Macao</option>
-                                                    <option value="MG">Madagascar</option>
-                                                    <option value="MW">Malawi</option>
-                                                    <option value="MY">Malaysia</option>
-                                                    <option value="MV">Maldives</option>
-                                                    <option value="ML">Mali</option>
-                                                    <option value="MT">Malta</option>
-                                                    <option value="MH">Marshall Islands</option>
-                                                    <option value="MQ">Martinique</option>
-                                                    <option value="MR">Mauritania</option>
-                                                    <option value="MU">Mauritius</option>
-                                                    <option value="YT">Mayotte</option>
-                                                    <option value="MX">Mexico</option>
-                                                    <option value="FM">Micronesia</option>
-                                                    <option value="MD">Moldova</option>
-                                                    <option value="MC">Monaco</option>
-                                                    <option value="MN">Mongolia</option>
-                                                    <option value="ME">Montenegro</option>
-                                                    <option value="MS">Montserrat</option>
-                                                    <option value="MA">Morocco</option>
-                                                    <option value="MZ">Mozambique</option>
-                                                    <option value="MM">Myanmar</option>
-                                                    <option value="NA">Namibia</option>
-                                                    <option value="NR">Nauru</option>
-                                                    <option value="NP">Nepal</option>
-                                                    <option value="NL">Netherlands</option>
-                                                    <option value="NC">New Caledonia</option>
-                                                    <option value="NZ">New Zealand</option>
-                                                    <option value="NI">Nicaragua</option>
-                                                    <option value="NE">Niger</option>
-                                                    <option value="NG">Nigeria</option>
-                                                    <option value="NU">Niue</option>
-                                                    <option value="NF">Norfolk Island</option>
-                                                    <option value="KP">North Korea</option>
-                                                    <option value="MK">North Macedonia</option>
-                                                    <option value="MP">Northern Mariana Islands</option>
-                                                    <option value="NO">Norway</option>
-                                                    <option value="OM">Oman</option>
-                                                    <option value="PK">Pakistan</option>
-                                                    <option value="PS">Palestinian Territory</option>
-                                                    <option value="PA">Panama</option>
-                                                    <option value="PG">Papua New Guinea</option>
-                                                    <option value="PY">Paraguay</option>
-                                                    <option value="PE">Peru</option>
-                                                    <option value="PH">Philippines</option>
-                                                    <option value="PN">Pitcairn</option>
-                                                    <option value="PL">Poland</option>
-                                                    <option value="PT">Portugal</option>
-                                                    <option value="PR">Puerto Rico</option>
-                                                    <option value="QA">Qatar</option>
-                                                    <option value="RE">Reunion</option>
-                                                    <option value="RO">Romania</option>
-                                                    <option value="RU">Russia</option>
-                                                    <option value="RW">Rwanda</option>
-                                                    <option value="ST">S&atilde;o Tom&eacute; and Pr&iacute;ncipe
+                                                    <option value="AF" <?php if ($country_code == 'AF')
+                                                        echo 'selected'; ?>>Afghanistan</option>
+                                                    <option value="AX" <?php if ($country_code == 'AX')
+                                                        echo 'selected'; ?>>Åland Islands</option>
+                                                    <option value="AL" <?php if ($country_code == 'AL')
+                                                        echo 'selected'; ?>>Albania</option>
+                                                    <option value="DZ" <?php if ($country_code == 'DZ')
+                                                        echo 'selected'; ?>>Algeria</option>
+                                                    <option value="AS" <?php if ($country_code == 'AS')
+                                                        echo 'selected'; ?>>American Samoa</option>
+                                                    <option value="AD" <?php if ($country_code == 'AD')
+                                                        echo 'selected'; ?>>Andorra</option>
+                                                    <option value="AO" <?php if ($country_code == 'AO')
+                                                        echo 'selected'; ?>>Angola</option>
+                                                    <option value="AI" <?php if ($country_code == 'AI')
+                                                        echo 'selected'; ?>>Anguilla</option>
+                                                    <option value="AQ" <?php if ($country_code == 'AQ')
+                                                        echo 'selected'; ?>>Antarctica</option>
+                                                    <option value="AG" <?php if ($country_code == 'AG')
+                                                        echo 'selected'; ?>>Antigua and Barbuda</option>
+                                                    <option value="AR" <?php if ($country_code == 'AR')
+                                                        echo 'selected'; ?>>Argentina</option>
+                                                    <option value="AM" <?php if ($country_code == 'AM')
+                                                        echo 'selected'; ?>>Armenia</option>
+                                                    <option value="AW" <?php if ($country_code == 'AW')
+                                                        echo 'selected'; ?>>Aruba</option>
+                                                    <option value="AU" <?php if ($country_code == 'AU')
+                                                        echo 'selected'; ?>>Australia</option>
+                                                    <option value="AT" <?php if ($country_code == 'AT')
+                                                        echo 'selected'; ?>>Austria</option>
+                                                    <option value="AZ" <?php if ($country_code == 'AZ')
+                                                        echo 'selected'; ?>>Azerbaijan</option>
+                                                    <option value="BS" <?php if ($country_code == 'BS')
+                                                        echo 'selected'; ?>>Bahamas</option>
+                                                    <option value="BH" <?php if ($country_code == 'BH')
+                                                        echo 'selected'; ?>>Bahrain</option>
+                                                    <option value="BD" <?php if ($country_code == 'BD')
+                                                        echo 'selected'; ?>>Bangladesh</option>
+                                                    <option value="BB" <?php if ($country_code == 'BB')
+                                                        echo 'selected'; ?>>Barbados</option>
+                                                    <option value="BY" <?php if ($country_code == 'BY')
+                                                        echo 'selected'; ?>>Belarus</option>
+                                                    <option value="PW" <?php if ($country_code == 'PW')
+                                                        echo 'selected'; ?>>Belau</option>
+                                                    <option value="BE" <?php if ($country_code == 'BE')
+                                                        echo 'selected'; ?>>Belgium</option>
+                                                    <option value="BZ" <?php if ($country_code == 'BZ')
+                                                        echo 'selected'; ?>>Belize</option>
+                                                    <option value="BJ" <?php if ($country_code == 'BJ')
+                                                        echo 'selected'; ?>>Benin</option>
+                                                    <option value="BM" <?php if ($country_code == 'BM')
+                                                        echo 'selected'; ?>>Bermuda</option>
+                                                    <option value="BT" <?php if ($country_code == 'BT')
+                                                        echo 'selected'; ?>>Bhutan</option>
+                                                    <option value="BO" <?php if ($country_code == 'BO')
+                                                        echo 'selected'; ?>>Bolivia</option>
+                                                    <option value="BQ" <?php if ($country_code == 'BQ')
+                                                        echo 'selected'; ?>>Bonaire, Saint Eustatius and Saba</option>
+                                                    <option value="BA" <?php if ($country_code == 'BA')
+                                                        echo 'selected'; ?>>Bosnia and Herzegovina</option>
+                                                    <option value="BW" <?php if ($country_code == 'BW')
+                                                        echo 'selected'; ?>>Botswana</option>
+                                                    <option value="BV" <?php if ($country_code == 'BV')
+                                                        echo 'selected'; ?>>Bouvet Island</option>
+                                                    <option value="BR" <?php if ($country_code == 'BR')
+                                                        echo 'selected'; ?>>Brazil</option>
+                                                    <option value="IO" <?php if ($country_code == 'IO')
+                                                        echo 'selected'; ?>>British Indian Ocean Territory</option>
+                                                    <option value="BN" <?php if ($country_code == 'BN')
+                                                        echo 'selected'; ?>>Brunei</option>
+                                                    <option value="BG" <?php if ($country_code == 'BG')
+                                                        echo 'selected'; ?>>Bulgaria</option>
+                                                    <option value="BF" <?php if ($country_code == 'BF')
+                                                        echo 'selected'; ?>>Burkina Faso</option>
+                                                    <option value="BI" <?php if ($country_code == 'BI')
+                                                        echo 'selected'; ?>>Burundi</option>
+                                                    <option value="KH" <?php if ($country_code == 'KH')
+                                                        echo 'selected'; ?>>Cambodia</option>
+                                                    <option value="CM" <?php if ($country_code == 'CM')
+                                                        echo 'selected'; ?>>Cameroon</option>
+                                                    <option value="CA" <?php if ($country_code == 'CA')
+                                                        echo 'selected'; ?>>Canada</option>
+                                                    <option value="CV" <?php if ($country_code == 'CV')
+                                                        echo 'selected'; ?>>Cape Verde</option>
+                                                    <option value="KY" <?php if ($country_code == 'KY')
+                                                        echo 'selected'; ?>>Cayman Islands</option>
+                                                    <option value="CF" <?php if ($country_code == 'CF')
+                                                        echo 'selected'; ?>>Central African Republic</option>
+                                                    <option value="TD" <?php if ($country_code == 'TD')
+                                                        echo 'selected'; ?>>Chad</option>
+                                                    <option value="CL" <?php if ($country_code == 'CL')
+                                                        echo 'selected'; ?>>Chile</option>
+                                                    <option value="CN" <?php if ($country_code == 'CN')
+                                                        echo 'selected'; ?>>China</option>
+                                                    <option value="CX" <?php if ($country_code == 'CX')
+                                                        echo 'selected'; ?>>Christmas Island</option>
+                                                    <option value="CC" <?php if ($country_code == 'CC')
+                                                        echo 'selected'; ?>>Cocos (Keeling) Islands</option>
+                                                    <option value="CO" <?php if ($country_code == 'CO')
+                                                        echo 'selected'; ?>>Colombia</option>
+                                                    <option value="KM" <?php if ($country_code == 'KM')
+                                                        echo 'selected'; ?>>Comoros</option>
+                                                    <option value="CG" <?php if ($country_code == 'CG')
+                                                        echo 'selected'; ?>>Congo (Brazzaville)</option>
+                                                    <option value="CD" <?php if ($country_code == 'CD')
+                                                        echo 'selected'; ?>>Congo (Kinshasa)</option>
+                                                    <option value="CK" <?php if ($country_code == 'CK')
+                                                        echo 'selected'; ?>>Cook Islands</option>
+                                                    <option value="CR" <?php if ($country_code == 'CR')
+                                                        echo 'selected'; ?>>Costa Rica</option>
+                                                    <option value="HR" <?php if ($country_code == 'HR')
+                                                        echo 'selected'; ?>>Croatia</option>
+                                                    <option value="CU" <?php if ($country_code == 'CU')
+                                                        echo 'selected'; ?>>Cuba</option>
+                                                    <option value="CW" <?php if ($country_code == 'CW')
+                                                        echo 'selected'; ?>>Cura&ccedil;ao</option>
+                                                    <option value="CY" <?php if ($country_code == 'CY')
+                                                        echo 'selected'; ?>>Cyprus</option>
+                                                    <option value="CZ" <?php if ($country_code == 'CZ')
+                                                        echo 'selected'; ?>>Czech Republic</option>
+                                                    <option value="DK" <?php if ($country_code == 'DK')
+                                                        echo 'selected'; ?>>Denmark</option>
+                                                    <option value="DJ" <?php if ($country_code == 'DJ')
+                                                        echo 'selected'; ?>>Djibouti</option>
+                                                    <option value="DM" <?php if ($country_code == 'DM')
+                                                        echo 'selected'; ?>>Dominica</option>
+                                                    <option value="DO" <?php if ($country_code == 'DO')
+                                                        echo 'selected'; ?>>Dominican Republic</option>
+                                                    <option value="EC" <?php if ($country_code == 'EC')
+                                                        echo 'selected'; ?>>Ecuador</option>
+                                                    <option value="EG" <?php if ($country_code == 'EG')
+                                                        echo 'selected'; ?>>Egypt</option>
+                                                    <option value="SV" <?php if ($country_code == 'SV')
+                                                        echo 'selected'; ?>>El Salvador</option>
+                                                    <option value="GQ" <?php if ($country_code == 'GQ')
+                                                        echo 'selected'; ?>>Equatorial Guinea</option>
+                                                    <option value="ER" <?php if ($country_code == 'ER')
+                                                        echo 'selected'; ?>>Eritrea</option>
+                                                    <option value="EE" <?php if ($country_code == 'EE')
+                                                        echo 'selected'; ?>>Estonia</option>
+                                                    <option value="SZ" <?php if ($country_code == 'SZ')
+                                                        echo 'selected'; ?>>Eswatini</option>
+                                                    <option value="ET" <?php if ($country_code == 'ET')
+                                                        echo 'selected'; ?>>Ethiopia</option>
+                                                    <option value="FK" <?php if ($country_code == 'FK')
+                                                        echo 'selected'; ?>>Falkland Islands</option>
+                                                    <option value="FO" <?php if ($country_code == 'FO')
+                                                        echo 'selected'; ?>>Faroe Islands</option>
+                                                    <option value="FJ" <?php if ($country_code == 'FJ')
+                                                        echo 'selected'; ?>>Fiji</option>
+                                                    <option value="FI" <?php if ($country_code == 'FI')
+                                                        echo 'selected'; ?>>Finland</option>
+                                                    <option value="FR" <?php if ($country_code == 'FR')
+                                                        echo 'selected'; ?>>France</option>
+                                                    <option value="GF" <?php if ($country_code == 'GF')
+                                                        echo 'selected'; ?>>French Guiana</option>
+                                                    <option value="PF" <?php if ($country_code == 'PF')
+                                                        echo 'selected'; ?>>French Polynesia</option>
+                                                    <option value="TF" <?php if ($country_code == 'TF')
+                                                        echo 'selected'; ?>>French Southern Territories</option>
+                                                    <option value="GA" <?php if ($country_code == 'GA')
+                                                        echo 'selected'; ?>>Gabon</option>
+                                                    <option value="GM" <?php if ($country_code == 'GM')
+                                                        echo 'selected'; ?>>Gambia</option>
+                                                    <option value="GE" <?php if ($country_code == 'GE')
+                                                        echo 'selected'; ?>>Georgia</option>
+                                                    <option value="DE" <?php if ($country_code == 'DE')
+                                                        echo 'selected'; ?>>Germany</option>
+                                                    <option value="GH" <?php if ($country_code == 'GH')
+                                                        echo 'selected'; ?>>Ghana</option>
+                                                    <option value="GI" <?php if ($country_code == 'GI')
+                                                        echo 'selected'; ?>>Gibraltar</option>
+                                                    <option value="GR" <?php if ($country_code == 'GR')
+                                                        echo 'selected'; ?>>Greece</option>
+                                                    <option value="GL" <?php if ($country_code == 'GL')
+                                                        echo 'selected'; ?>>Greenland</option>
+                                                    <option value="GD" <?php if ($country_code == 'GD')
+                                                        echo 'selected'; ?>>Grenada</option>
+                                                    <option value="GP" <?php if ($country_code == 'GP')
+                                                        echo 'selected'; ?>>Guadeloupe</option>
+                                                    <option value="GU" <?php if ($country_code == 'GU')
+                                                        echo 'selected'; ?>>Guam</option>
+                                                    <option value="GT" <?php if ($country_code == 'GT')
+                                                        echo 'selected'; ?>>Guatemala</option>
+                                                    <option value="GG" <?php if ($country_code == 'GG')
+                                                        echo 'selected'; ?>>Guernsey</option>
+                                                    <option value="GN" <?php if ($country_code == 'GN')
+                                                        echo 'selected'; ?>>Guinea</option>
+                                                    <option value="GW" <?php if ($country_code == 'GW')
+                                                        echo 'selected'; ?>>Guinea-Bissau</option>
+                                                    <option value="GY" <?php if ($country_code == 'GY')
+                                                        echo 'selected'; ?>>Guyana</option>
+                                                    <option value="HT" <?php if ($country_code == 'HT')
+                                                        echo 'selected'; ?>>Haiti</option>
+                                                    <option value="HM" <?php if ($country_code == 'HM')
+                                                        echo 'selected'; ?>>Heard Island and McDonald Islands</option>
+                                                    <option value="HN" <?php if ($country_code == 'HN')
+                                                        echo 'selected'; ?>>Honduras</option>
+                                                    <option value="HK" <?php if ($country_code == 'HK')
+                                                        echo 'selected'; ?>>Hong Kong</option>
+                                                    <option value="HU" <?php if ($country_code == 'HU')
+                                                        echo 'selected'; ?>>Hungary</option>
+                                                    <option value="IS" <?php if ($country_code == 'IS')
+                                                        echo 'selected'; ?>>Iceland</option>
+                                                    <option value="IN" <?php if ($country_code == 'IN')
+                                                        echo 'selected'; ?>>India</option>
+                                                    <option value="ID" <?php if ($country_code == 'ID')
+                                                        echo 'selected'; ?>>Indonesia</option>
+                                                    <option value="IR" <?php if ($country_code == 'IR')
+                                                        echo 'selected'; ?>>Iran</option>
+                                                    <option value="IQ" <?php if ($country_code == 'IQ')
+                                                        echo 'selected'; ?>>Iraq</option>
+                                                    <option value="IE" <?php if ($country_code == 'IE')
+                                                        echo 'selected'; ?>>Ireland</option>
+                                                    <option value="IM" <?php if ($country_code == 'IM')
+                                                        echo 'selected'; ?>>Isle of Man</option>
+                                                    <option value="IL" <?php if ($country_code == 'IL')
+                                                        echo 'selected'; ?>>Israel</option>
+                                                    <option value="IT" <?php if ($country_code == 'IT')
+                                                        echo 'selected'; ?>>Italy</option>
+                                                    <option value="CI" <?php if ($country_code == 'CI')
+                                                        echo 'selected'; ?>>Ivory Coast</option>
+                                                    <option value="JM" <?php if ($country_code == 'JM')
+                                                        echo 'selected'; ?>>Jamaica</option>
+                                                    <option value="JP" <?php if ($country_code == 'JP')
+                                                        echo 'selected'; ?>>Japan</option>
+                                                    <option value="JE" <?php if ($country_code == 'JE')
+                                                        echo 'selected'; ?>>Jersey</option>
+                                                    <option value="JO" <?php if ($country_code == 'JO')
+                                                        echo 'selected'; ?>>Jordan</option>
+                                                    <option value="KZ" <?php if ($country_code == 'KZ')
+                                                        echo 'selected'; ?>>Kazakhstan</option>
+                                                    <option value="KE" <?php if ($country_code == 'KE')
+                                                        echo 'selected'; ?>>Kenya</option>
+                                                    <option value="KI" <?php if ($country_code == 'KI')
+                                                        echo 'selected'; ?>>Kiribati</option>
+                                                    <option value="KW" <?php if ($country_code == 'KW')
+                                                        echo 'selected'; ?>>Kuwait</option>
+                                                    <option value="KG" <?php if ($country_code == 'KG')
+                                                        echo 'selected'; ?>>Kyrgyzstan</option>
+                                                    <option value="LA" <?php if ($country_code == 'LA')
+                                                        echo 'selected'; ?>>Laos</option>
+                                                    <option value="LV" <?php if ($country_code == 'LV')
+                                                        echo 'selected'; ?>>Latvia</option>
+                                                    <option value="LB" <?php if ($country_code == 'LB')
+                                                        echo 'selected'; ?>>Lebanon</option>
+                                                    <option value="LS" <?php if ($country_code == 'LS')
+                                                        echo 'selected'; ?>>Lesotho</option>
+                                                    <option value="LR" <?php if ($country_code == 'LR')
+                                                        echo 'selected'; ?>>Liberia</option>
+                                                    <option value="LY" <?php if ($country_code == 'LY')
+                                                        echo 'selected'; ?>>Libya</option>
+                                                    <option value="LI" <?php if ($country_code == 'LI')
+                                                        echo 'selected'; ?>>Liechtenstein</option>
+                                                    <option value="LT" <?php if ($country_code == 'LT')
+                                                        echo 'selected'; ?>>Lithuania</option>
+                                                    <option value="LU" <?php if ($country_code == 'LU')
+                                                        echo 'selected'; ?>>Luxembourg</option>
+                                                    <option value="MO" <?php if ($country_code == 'MO')
+                                                        echo 'selected'; ?>>Macao</option>
+                                                    <option value="MG" <?php if ($country_code == 'MG')
+                                                        echo 'selected'; ?>>Madagascar</option>
+                                                    <option value="MW" <?php if ($country_code == 'MW')
+                                                        echo 'selected'; ?>>Malawi</option>
+                                                    <option value="MY" <?php if ($country_code == 'MY')
+                                                        echo 'selected'; ?>>Malaysia</option>
+                                                    <option value="MV" <?php if ($country_code == 'MV')
+                                                        echo 'selected'; ?>>Maldives</option>
+                                                    <option value="ML" <?php if ($country_code == 'ML')
+                                                        echo 'selected'; ?>>Mali</option>
+                                                    <option value="MT" <?php if ($country_code == 'MT')
+                                                        echo 'selected'; ?>>Malta</option>
+                                                    <option value="MH" <?php if ($country_code == 'MH')
+                                                        echo 'selected'; ?>>Marshall Islands</option>
+                                                    <option value="MQ" <?php if ($country_code == 'MQ')
+                                                        echo 'selected'; ?>>Martinique</option>
+                                                    <option value="MR" <?php if ($country_code == 'MR')
+                                                        echo 'selected'; ?>>Mauritania</option>
+                                                    <option value="MU" <?php if ($country_code == 'MU')
+                                                        echo 'selected'; ?>>Mauritius</option>
+                                                    <option value="YT" <?php if ($country_code == 'YT')
+                                                        echo 'selected'; ?>>Mayotte</option>
+                                                    <option value="MX" <?php if ($country_code == 'MX')
+                                                        echo 'selected'; ?>>Mexico</option>
+                                                    <option value="FM" <?php if ($country_code == 'FM')
+                                                        echo 'selected'; ?>>Micronesia</option>
+                                                    <option value="MD" <?php if ($country_code == 'MD')
+                                                        echo 'selected'; ?>>Moldova</option>
+                                                    <option value="MC" <?php if ($country_code == 'MC')
+                                                        echo 'selected'; ?>>Monaco</option>
+                                                    <option value="MN" <?php if ($country_code == 'MN')
+                                                        echo 'selected'; ?>>Mongolia</option>
+                                                    <option value="ME" <?php if ($country_code == 'ME')
+                                                        echo 'selected'; ?>>Montenegro</option>
+                                                    <option value="MS" <?php if ($country_code == 'MS')
+                                                        echo 'selected'; ?>>Montserrat</option>
+                                                    <option value="MA" <?php if ($country_code == 'MA')
+                                                        echo 'selected'; ?>>Morocco</option>
+                                                    <option value="MZ" <?php if ($country_code == 'MZ')
+                                                        echo 'selected'; ?>>Mozambique</option>
+                                                    <option value="MM" <?php if ($country_code == 'MM')
+                                                        echo 'selected'; ?>>Myanmar</option>
+                                                    <option value="NA" <?php if ($country_code == 'NA')
+                                                        echo 'selected'; ?>>Namibia</option>
+                                                    <option value="NR" <?php if ($country_code == 'NR')
+                                                        echo 'selected'; ?>>Nauru</option>
+                                                    <option value="NP" <?php if ($country_code == 'NP')
+                                                        echo 'selected'; ?>>Nepal</option>
+                                                    <option value="NL" <?php if ($country_code == 'NL')
+                                                        echo 'selected'; ?>>Netherlands</option>
+                                                    <option value="NC" <?php if ($country_code == 'NC')
+                                                        echo 'selected'; ?>>New Caledonia</option>
+                                                    <option value="NZ" <?php if ($country_code == 'NZ')
+                                                        echo 'selected'; ?>>New Zealand</option>
+                                                    <option value="NI" <?php if ($country_code == 'NI')
+                                                        echo 'selected'; ?>>Nicaragua</option>
+                                                    <option value="NE" <?php if ($country_code == 'NE')
+                                                        echo 'selected'; ?>>Niger</option>
+                                                    <option value="NG" <?php if ($country_code == 'NG')
+                                                        echo 'selected'; ?>>Nigeria</option>
+                                                    <option value="NU" <?php if ($country_code == 'NU')
+                                                        echo 'selected'; ?>>Niue</option>
+                                                    <option value="NF" <?php if ($country_code == 'NF')
+                                                        echo 'selected'; ?>>Norfolk Island</option>
+                                                    <option value="KP" <?php if ($country_code == 'KP')
+                                                        echo 'selected'; ?>>North Korea</option>
+                                                    <option value="MK" <?php if ($country_code == 'MK')
+                                                        echo 'selected'; ?>>North Macedonia</option>
+                                                    <option value="MP" <?php if ($country_code == 'MP')
+                                                        echo 'selected'; ?>>Northern Mariana Islands</option>
+                                                    <option value="NO" <?php if ($country_code == 'NO')
+                                                        echo 'selected'; ?>>Norway</option>
+                                                    <option value="OM" <?php if ($country_code == 'OM')
+                                                        echo 'selected'; ?>>Oman</option>
+                                                    <option value="PK" <?php if ($country_code == 'PK')
+                                                        echo 'selected'; ?>>Pakistan</option>
+                                                    <option value="PS" <?php if ($country_code == 'PS')
+                                                        echo 'selected'; ?>>Palestinian Territory</option>
+                                                    <option value="PA" <?php if ($country_code == 'PA')
+                                                        echo 'selected'; ?>>Panama</option>
+                                                    <option value="PG" <?php if ($country_code == 'PG')
+                                                        echo 'selected'; ?>>Papua New Guinea</option>
+                                                    <option value="PY" <?php if ($country_code == 'PY')
+                                                        echo 'selected'; ?>>Paraguay</option>
+                                                    <option value="PE" <?php if ($country_code == 'PE')
+                                                        echo 'selected'; ?>>Peru</option>
+                                                    <option value="PH" <?php if ($country_code == 'PH')
+                                                        echo 'selected'; ?>>Philippines</option>
+                                                    <option value="PN" <?php if ($country_code == 'PN')
+                                                        echo 'selected'; ?>>Pitcairn</option>
+                                                    <option value="PL" <?php if ($country_code == 'PL')
+                                                        echo 'selected'; ?>>Poland</option>
+                                                    <option value="PT" <?php if ($country_code == 'PT')
+                                                        echo 'selected'; ?>>Portugal</option>
+                                                    <option value="PR" <?php if ($country_code == 'PR')
+                                                        echo 'selected'; ?>>Puerto Rico</option>
+                                                    <option value="QA" <?php if ($country_code == 'QA')
+                                                        echo 'selected'; ?>>Qatar</option>
+                                                    <option value="RE" <?php if ($country_code == 'RE')
+                                                        echo 'selected'; ?>>Reunion</option>
+                                                    <option value="RO" <?php if ($country_code == 'RO')
+                                                        echo 'selected'; ?>>Romania</option>
+                                                    <option value="RU" <?php if ($country_code == 'RU')
+                                                        echo 'selected'; ?>>Russia</option>
+                                                    <option value="RW" <?php if ($country_code == 'RW')
+                                                        echo 'selected'; ?>>Rwanda</option>
+                                                    <option value="ST" <?php if ($country_code == 'ST')
+                                                        echo 'selected'; ?>>S&atilde;o Tom&eacute; and Pr&iacute;ncipe
                                                     </option>
-                                                    <option value="BL">Saint Barth&eacute;lemy</option>
-                                                    <option value="SH">Saint Helena</option>
-                                                    <option value="KN">Saint Kitts and Nevis</option>
-                                                    <option value="LC">Saint Lucia</option>
-                                                    <option value="SX">Saint Martin (Dutch part)</option>
-                                                    <option value="MF">Saint Martin (French part)</option>
-                                                    <option value="PM">Saint Pierre and Miquelon</option>
-                                                    <option value="VC">Saint Vincent and the Grenadines</option>
-                                                    <option value="WS">Samoa</option>
-                                                    <option value="SM">San Marino</option>
-                                                    <option value="SA">Saudi Arabia</option>
-                                                    <option value="SN">Senegal</option>
-                                                    <option value="RS">Serbia</option>
-                                                    <option value="SC">Seychelles</option>
-                                                    <option value="SL">Sierra Leone</option>
-                                                    <option value="SG">Singapore</option>
-                                                    <option value="SK">Slovakia</option>
-                                                    <option value="SI">Slovenia</option>
-                                                    <option value="SB">Solomon Islands</option>
-                                                    <option value="SO">Somalia</option>
-                                                    <option value="ZA">South Africa</option>
-                                                    <option value="GS">South Georgia/Sandwich Islands</option>
-                                                    <option value="KR">South Korea</option>
-                                                    <option value="SS">South Sudan</option>
-                                                    <option value="ES">Spain</option>
-                                                    <option value="LK">Sri Lanka</option>
-                                                    <option value="SD">Sudan</option>
-                                                    <option value="SR">Suriname</option>
-                                                    <option value="SJ">Svalbard and Jan Mayen</option>
-                                                    <option value="SE">Sweden</option>
-                                                    <option value="CH">Switzerland</option>
-                                                    <option value="SY">Syria</option>
-                                                    <option value="TW">Taiwan</option>
-                                                    <option value="TJ">Tajikistan</option>
-                                                    <option value="TZ">Tanzania</option>
-                                                    <option value="TH">Thailand</option>
-                                                    <option value="TL">Timor-Leste</option>
-                                                    <option value="TG">Togo</option>
-                                                    <option value="TK">Tokelau</option>
-                                                    <option value="TO">Tonga</option>
-                                                    <option value="TT">Trinidad and Tobago</option>
-                                                    <option value="TN">Tunisia</option>
-                                                    <option value="TR">Turkey</option>
-                                                    <option value="TM">Turkmenistan</option>
-                                                    <option value="TC">Turks and Caicos Islands</option>
-                                                    <option value="TV">Tuvalu</option>
-                                                    <option value="UG">Uganda</option>
-                                                    <option value="UA">Ukraine</option>
-                                                    <option value="AE">United Arab Emirates</option>
-                                                    <option value="GB">United Kingdom (UK)</option>
-                                                    <option value="US" selected='selected'>United States (US)</option>
-                                                    <option value="UM">United States (US) Minor Outlying Islands
+                                                    <option value="BL" <?php if ($country_code == 'BL')
+                                                        echo 'selected'; ?>>Saint Barth&eacute;lemy</option>
+                                                    <option value="SH" <?php if ($country_code == 'SH')
+                                                        echo 'selected'; ?>>Saint Helena</option>
+                                                    <option value="KN" <?php if ($country_code == 'KN')
+                                                        echo 'selected'; ?>>Saint Kitts and Nevis</option>
+                                                    <option value="LC" <?php if ($country_code == 'LC')
+                                                        echo 'selected'; ?>>Saint Lucia</option>
+                                                    <option value="SX" <?php if ($country_code == 'SX')
+                                                        echo 'selected'; ?>>Saint Martin (Dutch part)</option>
+                                                    <option value="MF" <?php if ($country_code == 'MF')
+                                                        echo 'selected'; ?>>Saint Martin (French part)</option>
+                                                    <option value="PM" <?php if ($country_code == 'PM')
+                                                        echo 'selected'; ?>>Saint Pierre and Miquelon</option>
+                                                    <option value="VC" <?php if ($country_code == 'VC')
+                                                        echo 'selected'; ?>>Saint Vincent and the Grenadines</option>
+                                                    <option value="WS" <?php if ($country_code == 'WS')
+                                                        echo 'selected'; ?>>Samoa</option>
+                                                    <option value="SM" <?php if ($country_code == 'SM')
+                                                        echo 'selected'; ?>>San Marino</option>
+                                                    <option value="SA" <?php if ($country_code == 'SA')
+                                                        echo 'selected'; ?>>Saudi Arabia</option>
+                                                    <option value="SN" <?php if ($country_code == 'SN')
+                                                        echo 'selected'; ?>>Senegal</option>
+                                                    <option value="RS" <?php if ($country_code == 'RS')
+                                                        echo 'selected'; ?>>Serbia</option>
+                                                    <option value="SC" <?php if ($country_code == 'SC')
+                                                        echo 'selected'; ?>>Seychelles</option>
+                                                    <option value="SL" <?php if ($country_code == 'SL')
+                                                        echo 'selected'; ?>>Sierra Leone</option>
+                                                    <option value="SG" <?php if ($country_code == 'SG')
+                                                        echo 'selected'; ?>>Singapore</option>
+                                                    <option value="SK" <?php if ($country_code == 'SK')
+                                                        echo 'selected'; ?>>Slovakia</option>
+                                                    <option value="SI" <?php if ($country_code == 'SI')
+                                                        echo 'selected'; ?>>Slovenia</option>
+                                                    <option value="SB" <?php if ($country_code == 'SB')
+                                                        echo 'selected'; ?>>Solomon Islands</option>
+                                                    <option value="SO" <?php if ($country_code == 'SO')
+                                                        echo 'selected'; ?>>Somalia</option>
+                                                    <option value="ZA" <?php if ($country_code == 'ZA')
+                                                        echo 'selected'; ?>>South Africa</option>
+                                                    <option value="GS" <?php if ($country_code == 'GS')
+                                                        echo 'selected'; ?>>South Georgia/Sandwich Islands</option>
+                                                    <option value="KR" <?php if ($country_code == 'KR')
+                                                        echo 'selected'; ?>>South Korea</option>
+                                                    <option value="SS" <?php if ($country_code == 'SS')
+                                                        echo 'selected'; ?>>South Sudan</option>
+                                                    <option value="ES" <?php if ($country_code == 'ES')
+                                                        echo 'selected'; ?>>Spain</option>
+                                                    <option value="LK" <?php if ($country_code == 'LK')
+                                                        echo 'selected'; ?>>Sri Lanka</option>
+                                                    <option value="SD" <?php if ($country_code == 'SD')
+                                                        echo 'selected'; ?>>Sudan</option>
+                                                    <option value="SR" <?php if ($country_code == 'SR')
+                                                        echo 'selected'; ?>>Suriname</option>
+                                                    <option value="SJ" <?php if ($country_code == 'SJ')
+                                                        echo 'selected'; ?>>Svalbard and Jan Mayen</option>
+                                                    <option value="SE" <?php if ($country_code == 'SE')
+                                                        echo 'selected'; ?>>Sweden</option>
+                                                    <option value="CH" <?php if ($country_code == 'CH')
+                                                        echo 'selected'; ?>>Switzerland</option>
+                                                    <option value="SY" <?php if ($country_code == 'SY')
+                                                        echo 'selected'; ?>>Syria</option>
+                                                    <option value="TW" <?php if ($country_code == 'TW')
+                                                        echo 'selected'; ?>>Taiwan</option>
+                                                    <option value="TJ" <?php if ($country_code == 'TJ')
+                                                        echo 'selected'; ?>>Tajikistan</option>
+                                                    <option value="TZ" <?php if ($country_code == 'TZ')
+                                                        echo 'selected'; ?>>Tanzania</option>
+                                                    <option value="TH" <?php if ($country_code == 'TH')
+                                                        echo 'selected'; ?>>Thailand</option>
+                                                    <option value="TL" <?php if ($country_code == 'TL')
+                                                        echo 'selected'; ?>>Timor-Leste</option>
+                                                    <option value="TG" <?php if ($country_code == 'TG')
+                                                        echo 'selected'; ?>>Togo</option>
+                                                    <option value="TK" <?php if ($country_code == 'TK')
+                                                        echo 'selected'; ?>>Tokelau</option>
+                                                    <option value="TO" <?php if ($country_code == 'TO')
+                                                        echo 'selected'; ?>>Tonga</option>
+                                                    <option value="TT" <?php if ($country_code == 'TT')
+                                                        echo 'selected'; ?>>Trinidad and Tobago</option>
+                                                    <option value="TN" <?php if ($country_code == 'TN')
+                                                        echo 'selected'; ?>>Tunisia</option>
+                                                    <option value="TR" <?php if ($country_code == 'TR')
+                                                        echo 'selected'; ?>>Turkey</option>
+                                                    <option value="TM" <?php if ($country_code == 'TM')
+                                                        echo 'selected'; ?>>Turkmenistan</option>
+                                                    <option value="TC" <?php if ($country_code == 'TC')
+                                                        echo 'selected'; ?>>Turks and Caicos Islands</option>
+                                                    <option value="TV" <?php if ($country_code == 'TV')
+                                                        echo 'selected'; ?>>Tuvalu</option>
+                                                    <option value="UG" <?php if ($country_code == 'UG')
+                                                        echo 'selected'; ?>>Uganda</option>
+                                                    <option value="UA" <?php if ($country_code == 'UA')
+                                                        echo 'selected'; ?>>Ukraine</option>
+                                                    <option value="AE" <?php if ($country_code == 'AE')
+                                                        echo 'selected'; ?>>United Arab Emirates</option>
+                                                    <option value="GB" <?php if ($country_code == 'GB')
+                                                        echo 'selected'; ?>>United Kingdom (UK)</option>
+                                                    <option value="US" <?php if ($country_code == 'US')
+                                                        echo 'selected'; ?>>United States (US)</option>
+                                                    <option value="UM" <?php if ($country_code == 'UM')
+                                                        echo 'selected'; ?>>United States (US) Minor Outlying Islands
                                                     </option>
-                                                    <option value="UY">Uruguay</option>
-                                                    <option value="UZ">Uzbekistan</option>
-                                                    <option value="VU">Vanuatu</option>
-                                                    <option value="VA">Vatican</option>
-                                                    <option value="VE">Venezuela</option>
-                                                    <option value="VN">Vietnam</option>
-                                                    <option value="VG">Virgin Islands (British)</option>
-                                                    <option value="VI">Virgin Islands (US)</option>
-                                                    <option value="WF">Wallis and Futuna</option>
-                                                    <option value="EH">Western Sahara</option>
-                                                    <option value="YE">Yemen</option>
-                                                    <option value="ZM">Zambia</option>
-                                                    <option value="ZW">Zimbabwe</option>
-                                                </select><noscript><button type="submit"
-                                                        name="woocommerce_checkout_update_totals"
-                                                        value="Update country / region">Update country /
-                                                        region</button></noscript></span></p>
+                                                    <option value="UY" <?php if ($country_code == 'UY')
+                                                        echo 'selected'; ?>>Uruguay</option>
+                                                    <option value="UZ" <?php if ($country_code == 'UZ')
+                                                        echo 'selected'; ?>>Uzbekistan</option>
+                                                    <option value="VU" <?php if ($country_code == 'VU')
+                                                        echo 'selected'; ?>>Vanuatu</option>
+                                                    <option value="VA" <?php if ($country_code == 'VA')
+                                                        echo 'selected'; ?>>Vatican</option>
+                                                    <option value="VE" <?php if ($country_code == 'VE')
+                                                        echo 'selected'; ?>>Venezuela</option>
+                                                    <option value="VN" <?php if ($country_code == 'VN')
+                                                        echo 'selected'; ?>>Vietnam</option>
+                                                    <option value="VG" <?php if ($country_code == 'VG')
+                                                        echo 'selected'; ?>>Virgin Islands (British)</option>
+                                                    <option value="VI" <?php if ($country_code == 'VI')
+                                                        echo 'selected'; ?>>Virgin Islands (US)</option>
+                                                    <option value="WF" <?php if ($country_code == 'WF')
+                                                        echo 'selected'; ?>>Wallis and Futuna</option>
+                                                    <option value="EH" <?php if ($country_code == 'EH')
+                                                        echo 'selected'; ?>>Western Sahara</option>
+                                                    <option value="YE" <?php if ($country_code == 'YE')
+                                                        echo 'selected'; ?>>Yemen</option>
+                                                    <option value="ZM" <?php if ($country_code == 'ZM')
+                                                        echo 'selected'; ?>>Zambia</option>
+                                                    <option value="ZW" <?php if ($country_code == 'ZW')
+                                                        echo 'selected'; ?>>Zimbabwe</option>
+                                                </select>
+                                                <noscript>
+                                                    <button type="submit" name="woocommerce_checkout_update_totals"
+                                                        value="Update country / region">Update country / region</button>
+                                                </noscript>
+                                            </span>
+                                        </p>
                                         <p class="form-row form-row-wide address-field validate-required"
                                             id="billing_address_1_field" data-priority="50"><label
                                                 for="billing_address_1" class="">Street address&nbsp;<abbr
                                                     class="required" title="required">*</abbr></label><span
                                                 class="woocommerce-input-wrapper"><input type="text" class="input-text "
                                                     name="billing_address_1" id="billing_address_1"
-                                                    placeholder="House number and street name" value=""
+                                                    placeholder="House number and street name"
+                                                    value="<?php echo htmlspecialchars($user['address'] ?? '', ENT_QUOTES); ?>"
                                                     aria-required="true" autocomplete="address-line1" /></span></p>
                                         <p class="form-row form-row-wide address-field" id="billing_address_2_field"
                                             data-priority="60"><label for="billing_address_2"
@@ -4056,8 +4512,12 @@ include('../../../config/dbcon.php');
                                                 class="">Town / City&nbsp;<abbr class="required"
                                                     title="required">*</abbr></label><span
                                                 class="woocommerce-input-wrapper"><input type="text" class="input-text "
-                                                    name="billing_city" id="billing_city" placeholder="" value=""
+                                                    name="billing_city" id="billing_city" placeholder=""
+                                                    value="<?php echo htmlspecialchars($user['town_city'] ?? '', ENT_QUOTES); ?>"
                                                     aria-required="true" autocomplete="address-level2" /></span></p>
+                                        <?php
+                                        $selected_state = htmlspecialchars($user['state'] ?? '', ENT_QUOTES);
+                                        ?>
                                         <p class="form-row form-row-wide address-field validate-required validate-state"
                                             id="billing_state_field" data-priority="80"><label for="billing_state"
                                                 class="">State&nbsp;<abbr class="required"
@@ -4068,60 +4528,114 @@ include('../../../config/dbcon.php');
                                                     data-placeholder="Select an option&hellip;" data-input-classes=""
                                                     data-label="State">
                                                     <option value="">Select an option&hellip;</option>
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="CA" selected='selected'>California</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="DC">District Of Columbia</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="HI">Hawaii</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WA">Washington</option>
-                                                    <option value="WV">West Virginia</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                    <option value="WY">Wyoming</option>
-                                                    <option value="AA">Armed Forces (AA)</option>
-                                                    <option value="AE">Armed Forces (AE)</option>
-                                                    <option value="AP">Armed Forces (AP)</option>
+                                                    <option value="AL" <?php if ($selected_state == 'AL')
+                                                        echo 'selected'; ?>>Alabama</option>
+                                                    <option value="AK" <?php if ($selected_state == 'AK')
+                                                        echo 'selected'; ?>>Alaska</option>
+                                                    <option value="AZ" <?php if ($selected_state == 'AZ')
+                                                        echo 'selected'; ?>>Arizona</option>
+                                                    <option value="AR" <?php if ($selected_state == 'AR')
+                                                        echo 'selected'; ?>>Arkansas</option>
+                                                    <option value="CA" <?php if ($selected_state == 'CA')
+                                                        echo 'selected'; ?>>California</option>
+                                                    <option value="CO" <?php if ($selected_state == 'CO')
+                                                        echo 'selected'; ?>>Colorado</option>
+                                                    <option value="CT" <?php if ($selected_state == 'CT')
+                                                        echo 'selected'; ?>>Connecticut</option>
+                                                    <option value="DE" <?php if ($selected_state == 'DE')
+                                                        echo 'selected'; ?>>Delaware</option>
+                                                    <option value="DC" <?php if ($selected_state == 'DC')
+                                                        echo 'selected'; ?>>District Of Columbia</option>
+                                                    <option value="FL" <?php if ($selected_state == 'FL')
+                                                        echo 'selected'; ?>>Florida</option>
+                                                    <option value="GA" <?php if ($selected_state == 'GA')
+                                                        echo 'selected'; ?>>Georgia</option>
+                                                    <option value="HI" <?php if ($selected_state == 'HI')
+                                                        echo 'selected'; ?>>Hawaii</option>
+                                                    <option value="ID" <?php if ($selected_state == 'ID')
+                                                        echo 'selected'; ?>>Idaho</option>
+                                                    <option value="IL" <?php if ($selected_state == 'IL')
+                                                        echo 'selected'; ?>>Illinois</option>
+                                                    <option value="IN" <?php if ($selected_state == 'IN')
+                                                        echo 'selected'; ?>>Indiana</option>
+                                                    <option value="IA" <?php if ($selected_state == 'IA')
+                                                        echo 'selected'; ?>>Iowa</option>
+                                                    <option value="KS" <?php if ($selected_state == 'KS')
+                                                        echo 'selected'; ?>>Kansas</option>
+                                                    <option value="KY" <?php if ($selected_state == 'KY')
+                                                        echo 'selected'; ?>>Kentucky</option>
+                                                    <option value="LA" <?php if ($selected_state == 'LA')
+                                                        echo 'selected'; ?>>Louisiana</option>
+                                                    <option value="ME" <?php if ($selected_state == 'ME')
+                                                        echo 'selected'; ?>>Maine</option>
+                                                    <option value="MD" <?php if ($selected_state == 'MD')
+                                                        echo 'selected'; ?>>Maryland</option>
+                                                    <option value="MA" <?php if ($selected_state == 'MA')
+                                                        echo 'selected'; ?>>Massachusetts</option>
+                                                    <option value="MI" <?php if ($selected_state == 'MI')
+                                                        echo 'selected'; ?>>Michigan</option>
+                                                    <option value="MN" <?php if ($selected_state == 'MN')
+                                                        echo 'selected'; ?>>Minnesota</option>
+                                                    <option value="MS" <?php if ($selected_state == 'MS')
+                                                        echo 'selected'; ?>>Mississippi</option>
+                                                    <option value="MO" <?php if ($selected_state == 'MO')
+                                                        echo 'selected'; ?>>Missouri</option>
+                                                    <option value="MT" <?php if ($selected_state == 'MT')
+                                                        echo 'selected'; ?>>Montana</option>
+                                                    <option value="NE" <?php if ($selected_state == 'NE')
+                                                        echo 'selected'; ?>>Nebraska</option>
+                                                    <option value="NV" <?php if ($selected_state == 'NV')
+                                                        echo 'selected'; ?>>Nevada</option>
+                                                    <option value="NH" <?php if ($selected_state == 'NH')
+                                                        echo 'selected'; ?>>New Hampshire</option>
+                                                    <option value="NJ" <?php if ($selected_state == 'NJ')
+                                                        echo 'selected'; ?>>New Jersey</option>
+                                                    <option value="NM" <?php if ($selected_state == 'NM')
+                                                        echo 'selected'; ?>>New Mexico</option>
+                                                    <option value="NY" <?php if ($selected_state == 'NY')
+                                                        echo 'selected'; ?>>New York</option>
+                                                    <option value="NC" <?php if ($selected_state == 'NC')
+                                                        echo 'selected'; ?>>North Carolina</option>
+                                                    <option value="ND" <?php if ($selected_state == 'ND')
+                                                        echo 'selected'; ?>>North Dakota</option>
+                                                    <option value="OH" <?php if ($selected_state == 'OH')
+                                                        echo 'selected'; ?>>Ohio</option>
+                                                    <option value="OK" <?php if ($selected_state == 'OK')
+                                                        echo 'selected'; ?>>Oklahoma</option>
+                                                    <option value="OR" <?php if ($selected_state == 'OR')
+                                                        echo 'selected'; ?>>Oregon</option>
+                                                    <option value="PA" <?php if ($selected_state == 'PA')
+                                                        echo 'selected'; ?>>Pennsylvania</option>
+                                                    <option value="RI" <?php if ($selected_state == 'RI')
+                                                        echo 'selected'; ?>>Rhode Island</option>
+                                                    <option value="SC" <?php if ($selected_state == 'SC')
+                                                        echo 'selected'; ?>>South Carolina</option>
+                                                    <option value="SD" <?php if ($selected_state == 'SD')
+                                                        echo 'selected'; ?>>South Dakota</option>
+                                                    <option value="TN" <?php if ($selected_state == 'TN')
+                                                        echo 'selected'; ?>>Tennessee</option>
+                                                    <option value="TX" <?php if ($selected_state == 'TX')
+                                                        echo 'selected'; ?>>Texas</option>
+                                                    <option value="UT" <?php if ($selected_state == 'UT')
+                                                        echo 'selected'; ?>>Utah</option>
+                                                    <option value="VT" <?php if ($selected_state == 'VT')
+                                                        echo 'selected'; ?>>Vermont</option>
+                                                    <option value="VA" <?php if ($selected_state == 'VA')
+                                                        echo 'selected'; ?>>Virginia</option>
+                                                    <option value="WA" <?php if ($selected_state == 'WA')
+                                                        echo 'selected'; ?>>Washington</option>
+                                                    <option value="WV" <?php if ($selected_state == 'WV')
+                                                        echo 'selected'; ?>>West Virginia</option>
+                                                    <option value="WI" <?php if ($selected_state == 'WI')
+                                                        echo 'selected'; ?>>Wisconsin</option>
+                                                    <option value="WY" <?php if ($selected_state == 'WY')
+                                                        echo 'selected'; ?>>Wyoming</option>
+                                                    <option value="AA" <?php if ($selected_state == 'AA')
+                                                        echo 'selected'; ?>>Armed Forces (AA)</option>
+                                                    <option value="AE" <?php if ($selected_state == 'AE')
+                                                        echo 'selected'; ?>>Armed Forces (AE)</option>
+                                                    <option value="AP" <?php if ($selected_state == 'AP')
+                                                        echo 'selected'; ?>>Armed Forces (AP)</option>
                                                 </select></span></p>
                                         <p class="form-row form-row-wide address-field validate-required validate-postcode"
                                             id="billing_postcode_field" data-priority="90"><label for="billing_postcode"
@@ -4129,14 +4643,16 @@ include('../../../config/dbcon.php');
                                                     title="required">*</abbr></label><span
                                                 class="woocommerce-input-wrapper"><input type="text" class="input-text "
                                                     name="billing_postcode" id="billing_postcode" placeholder=""
-                                                    value="" aria-required="true" autocomplete="postal-code" /></span>
+                                                    value="<?php echo htmlspecialchars($user['pincode'] ?? '', ENT_QUOTES); ?>"
+                                                    aria-required="true" autocomplete="postal-code" /></span>
                                         </p>
                                         <p class="form-row form-row-wide validate-required validate-phone"
                                             id="billing_phone_field" data-priority="100"><label for="billing_phone"
                                                 class="">Phone&nbsp;<abbr class="required"
                                                     title="required">*</abbr></label><span
                                                 class="woocommerce-input-wrapper"><input type="tel" class="input-text "
-                                                    name="billing_phone" id="billing_phone" placeholder="" value=""
+                                                    name="billing_phone" id="billing_phone" placeholder=""
+                                                    value="<?php echo htmlspecialchars($user['phone'] ?? '', ENT_QUOTES); ?>"
                                                     aria-required="true" autocomplete="tel" /></span></p>
                                         <p class="form-row form-row-wide validate-required validate-email"
                                             id="billing_email_field" data-priority="110"><label for="billing_email"
@@ -4144,8 +4660,9 @@ include('../../../config/dbcon.php');
                                                     title="required">*</abbr></label><span
                                                 class="woocommerce-input-wrapper"><input type="email"
                                                     class="input-text " name="billing_email" id="billing_email"
-                                                    placeholder="" value="" aria-required="true"
-                                                    autocomplete="email username" /></span></p>
+                                                    placeholder=""
+                                                    value="<?php echo htmlspecialchars($user['email'] ?? '', ENT_QUOTES); ?>"
+                                                    aria-required="true" autocomplete="email username" /></span></p>
                                     </div>
 
                                 </div>
@@ -4862,24 +5379,30 @@ include('../../../config/dbcon.php');
                             <div class="wpb_wrapper">
                                 <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
                                 <div class="wpb_text_column wpb_content_element ">
-                                  <div class="wpb_wrapper">
+                                    <div class="wpb_wrapper">
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">HOME</a>
+                                            <a href="../index.php"
+                                                style="color: #ffffff; text-decoration: none;">HOME</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">ABOUT US</a>
+                                            <a href="../index.php" style="color: #ffffff; text-decoration: none;">ABOUT
+                                                US</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../services/index.php" style="color: #ffffff; text-decoration: none;">SERVICES</a>
+                                            <a href="../services/index.php"
+                                                style="color: #ffffff; text-decoration: none;">SERVICES</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../book-a-table/index.php" style="color: #ffffff; text-decoration: none;">BOOKING</a>
+                                            <a href="../book-a-table/index.php"
+                                                style="color: #ffffff; text-decoration: none;">BOOKING</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../menu-1/index.php" style="color: #ffffff; text-decoration: none;">MENU</a>
+                                            <a href="../menu-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">MENU</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../contact-1/index.php" style="color: #ffffff; text-decoration: none;">CONTACTS</a>
+                                            <a href="../contact-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">CONTACTS</a>
                                         </p>
                                     </div>
                                 </div>

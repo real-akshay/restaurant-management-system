@@ -4526,12 +4526,14 @@ include("../../../config/dbcon.php");
                                         class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
                                     <?php
-                                        $query = "SELECT name FROM users WHERE role='admin'";
+                                        $admin_id = $_SESSION['admin_session']['admin_id'];
+                                        $admin_email = $_SESSION['admin_session']['admin_email'];
+                                        $query = "SELECT first_name FROM users WHERE email='$admin_email' AND role='admin' AND id='$admin_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
                                         if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                            foreach ($query_run as $user) {
+                                            foreach ($query_run as $admin) {
                                                 ?>
-                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($user['name']) ?></h6>
+                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($admin['first_name']) ?></h6>
                                                 <p class="mb-0 caption-sub-title">Administrator</p>
                                                 <?php
                                             }
@@ -4717,7 +4719,7 @@ include("../../../config/dbcon.php");
 
 
                                                         <td><?php echo $row['id'] ?></td>
-                                                        <td><?php echo $row['name'] ?></td>
+                                                        <td><?php echo $row['first_name'] ?></td>
                                                         <td><?php echo $row['phone'] ?></td>
                                                         <td><?php echo $row['email'] ?></td>
                                                         <!-- for showing role of users -->

@@ -14,10 +14,16 @@ if (isset($_POST['category_save'])) {
     $category_query = "INSERT INTO categories (name,description,trending,status) VALUES ('$name','$description','$trending','$status')";
     $cate_query_run = mysqli_query($con, $category_query);
     if ($cate_query_run) {
-        $_SESSION['status'] = "Category inserted successfully";
+        $_SESSION['status'] = [
+            'type' => 'info', // ya 'error', 'info', 'warning'
+            'message' => 'Category inserted successfully'
+        ];
         header("Location:../dashboard/special-pages/item-category.php");
     } else {
-        $_SESSION['status'] = "Category insertion failed.!";
+        $_SESSION['status'] = [
+            'type' => 'warning', // ya 'error', 'info', 'warning'
+            'message' => 'Category insertion failed.!'
+        ];
         header("Location:../dashboard/special-pages/item-category.php");
     }
 
@@ -34,10 +40,16 @@ if (isset($_POST['category_update'])) {
     $query = "UPDATE categories SET name='$name', description='$description',trending='$trending',status='$status' WHERE id='$cate_id'";
     $query_run = mysqli_query($con, $query);
     if ($query_run) {
-        $_SESSION['status'] = "Category Updated successfully";
+        $_SESSION['status'] = [
+            'type' => 'success', // ya 'error', 'info', 'warning'
+            'message' => 'Category Updated successfully'
+        ];
         header("Location:../dashboard/special-pages/item-category.php");
     } else {
-        $_SESSION['status'] = "Category Updation failed.!";
+        $_SESSION['status'] = [
+            'type' => 'warning', // ya 'error', 'info', 'warning'
+            'message' => 'Category Updation failed.!'
+        ];
         header("Location:../dashboard/special-pages/item-category.php");
     }
 }
@@ -52,10 +64,16 @@ if (isset($_POST['cate_id_delete'])) {
     $query = "UPDATE categories SET is_deleted='1' WHERE id='$cate_id'";
     $query_run = mysqli_query($con, $query);
     if ($query_run) {
-        $_SESSION['status'] = "Category Delete successfully";
+        $_SESSION['status'] = [
+            'type' => 'info', // ya 'error', 'info', 'warning'
+            'message' => 'Category Delete successfully'
+        ];
         header("Location:../dashboard/special-pages/item-category.php");
     } else {
-        $_SESSION['status'] = "Category deletion failed.!";
+        $_SESSION['status'] = [
+            'type' => 'error', // ya 'error', 'info', 'warning'
+            'message' => 'Category deletion failed.!'
+        ];
         header("Location:../dashboard/special-pages/item-category.php");
     }
 }
@@ -340,8 +358,8 @@ if (isset($_POST['update_cart_quantity'])) {
 
 // 13. code for logout
 if (isset($_POST['logout_btn'])) {
-    unset($_SESSION['auth']);
-    unset($_SESSION['auth_user']);
+    unset($_SESSION['admin_session']);
+    unset($_SESSION['auth_admin']);
     $_SESSION['status'] = "Loged out successfully";
     header("Location:../dashboard/auth/sign-in.php");
     exit(0);
@@ -458,37 +476,43 @@ if (isset($_POST['addUser'])) {
     // }
 
 }
-
-// update user
-if (isset($_POST['UpdateUser'])) {
+// update user soial details 
+if (isset($_POST['updateUserSocial'])) {
     $user_id = $_POST['user_id'];
-    $profile_pic = $_POST['profile_pic'];
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $role = $_POST['role'];
+    $allowed_extensions = ['png', 'jpg', 'jpeg', 'gif'];
+    $profile_pic = '';
 
-    $allowed_extensions = array('png', 'jpg', 'jpeg', 'gif');
-    $update_profile_pic = $profile_pic;
+    // Get old image filename from DB
+    $old_image = '';
+    $get_user = mysqli_query($con, "SELECT profile_pic FROM users WHERE id='$user_id' LIMIT 1");
+    if ($get_user && mysqli_num_rows($get_user) > 0) {
+        $row = mysqli_fetch_assoc($get_user);
+        $old_image = $row['profile_pic'];
+    }
 
-    // Check if a new file is uploaded
-    if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['name'] != '') {
-        $image = $_FILES['profile_pic']['name'];
-        $file_extension = strtolower(pathinfo($image, PATHINFO_EXTENSION));
-        $filename = time() . '_' . uniqid() . '.' . $file_extension;
+    // Profile picture upload
+    if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['error'] === 0) {
+        $file_tmp = $_FILES["profile_pic"]["tmp_name"];
+        $file_name = uniqid() . "_" . basename($_FILES["profile_pic"]["name"]);
+        $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 
         // Validate extension
-        if (!in_array($file_extension, $allowed_extensions)) {
-            $_SESSION['status'] = "Only jpg, jpeg, png, gif images are allowed.";
-            header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
+        if (!in_array($file_ext, $allowed_extensions)) {
+            $_SESSION['status'] = [
+                'type' => 'error',
+                'message' => 'Only png, jpg, jpeg, gif images are allowed.'
+            ];
+            header("Location:../dashboard/app/user-list.php");
             exit();
         }
 
         // Validate file size (max 2MB)
-        if ($_FILES['profile_pic']['size'] > 2 * 1024 * 1024) {
-            $_SESSION['status'] = "Image size should not exceed 2MB.";
-            header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
+        if ($_FILES["profile_pic"]["size"] > 2 * 1024 * 1024) {
+            $_SESSION['status'] = [
+                'type' => 'error',
+                'message' => 'Image size should not exceed 2MB.'
+            ];
+            header("Location:../dashboard/app/user-list.php");
             exit();
         }
 
@@ -512,22 +536,79 @@ if (isset($_POST['UpdateUser'])) {
                 unlink($upload_path . $profile_pic);
             }
         } else {
-            $_SESSION['status'] = "Failed to upload image.";
-            header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
+            $_SESSION['status'] = [
+                'type' => 'error',
+                'message' => 'Failed to upload image.'
+            ];
+            header("Location:../dashboard/app/user-list.php");
             exit();
         }
     } else {
-        $update_profile_pic = $profile_pic;
+        $_SESSION['status'] = [
+            'type' => 'error',
+            'message' => 'No image selected or upload error.'
+        ];
+        header("Location:../dashboard/app/user-list.php");
+        exit();
     }
 
+    $query = "UPDATE users SET profile_pic='$profile_pic' WHERE id='$user_id'";
+    $query_run = mysqli_query($con, $query);
+    if ($query_run) {
+        $_SESSION['status'] = [
+            'type' => 'info',
+            'message' => 'User Updated Successfully'
+        ];
+        header("Location:../dashboard/app/user-list.php");
+    } else {
+        $_SESSION['status'] = [
+            'type' => 'error',
+            'message' => 'User Updatation failed.!'
+        ];
+        header("Location:../dashboard/app/user-list.php");
+    }
+}
+
+
+
+// update user
+if (isset($_POST['UpdateUser'])) {
+    $user_id = $_POST['user_id'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $address = $_POST['address'];
+    $company = $_POST['company'];
+    $country = $_POST['country'];
+    $country_code = $_POST['country_code'];
+    $state = $_POST['state'];
+    $pincode = $_POST['pincode'];
+    $town_city = $_POST['town_city'];
+    $description = $_POST['description'];
+    $role = $_POST['role'];
+
+
+
     // Sanitize other fields if needed
-    $name = mysqli_real_escape_string($con, $name);
+    $first_name = mysqli_real_escape_string($con, $first_name);
+    $last_name = mysqli_real_escape_string($con, $last_name);
     $phone = mysqli_real_escape_string($con, $phone);
     $email = mysqli_real_escape_string($con, $email);
+    $password = mysqli_real_escape_string($con, $password);
+    $address = mysqli_real_escape_string($con, $address);
+    $company = mysqli_real_escape_string($con, $company);
+    $country = mysqli_real_escape_string($con, $country);
+    $country_code = mysqli_real_escape_string($con, $country_code);
+    $state = mysqli_real_escape_string($con, $state);
+    $pincode = mysqli_real_escape_string($con, $pincode);
+    $town_city = mysqli_real_escape_string($con, $town_city);
+    $description = mysqli_real_escape_string($con, $description);
     $role = mysqli_real_escape_string($con, $role);
 
     // If password is not empty, hash it
-    if (!empty($password)) {
+    if (!empty($password || $role)) {
         if (strlen($password) < 8) {
             $_SESSION['status'] = "Password must be at least 8 characters long.";
             header("Location:../dashboard/app/user-edit.php?user_id=" . $user_id);
@@ -536,20 +617,27 @@ if (isset($_POST['UpdateUser'])) {
         $password = password_hash($password, PASSWORD_DEFAULT);
     } else {
         // Keep old password if not changed
-        $get_user = mysqli_query($con, "SELECT password FROM users WHERE id='$user_id' LIMIT 1");
+        $get_user = mysqli_query($con, "SELECT password,role FROM users WHERE id='$user_id' LIMIT 1");
         $row = mysqli_fetch_assoc($get_user);
         $password = $row['password'];
+        $role = $row['role'];
     }
 
-    $profile_pic = $update_profile_pic;
-    $query = "UPDATE users SET profile_pic='$profile_pic', name='$name', phone='$phone', email='$email', password='$password', role='$role' WHERE id='$user_id'";
+
+    $query = "UPDATE users SET profile_pic='$profile_pic', first_name='$first_name', last_name='$last_name', phone='$phone', email='$email', password='$password', address='$address', company='$company', country='$country', country_code='$country_code', state='$state', pincode='$pincode', town_city='$town_city', description='$description', role='$role' WHERE id='$user_id'";
     $query_run = mysqli_query($con, $query);
 
     if ($query_run) {
-        $_SESSION['status'] = "User Updated Successfully";
+        $_SESSION['status'] = [
+            'type' => 'info',
+            'message' => 'User Updated Successfully'
+        ];
         header("Location:../dashboard/app/user-list.php");
     } else {
-        $_SESSION['status'] = "User Updation failed";
+        $_SESSION['status'] = [
+            'type' => 'error',
+            'message' => 'User Updatation failed.!'
+        ];
         header("Location:../dashboard/app/user-list.php");
     }
 

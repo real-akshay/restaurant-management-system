@@ -1309,7 +1309,7 @@ include("../../../config/dbcon.php");
         </div>
     </div>
 
-   
+
     <main class="main-content">
         <div class="position-relative">
             <!--Nav Start-->
@@ -2764,13 +2764,16 @@ include("../../../config/dbcon.php");
                                     <img src="../../assets/images/avatars/01.png" alt="User-Profile"
                                         class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
-                                    <?php
-                                        $query = "SELECT name FROM users WHERE role='admin'";
+                                        <?php
+                                        $admin_id = $_SESSION['admin_session']['admin_id'];
+                                        $admin_email = $_SESSION['admin_session']['admin_email'];
+                                        $query = "SELECT first_name FROM users WHERE email='$admin_email' AND role='admin' AND id='$admin_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
                                         if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                            foreach ($query_run as $user) {
+                                            foreach ($query_run as $admin) {
                                                 ?>
-                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($user['name']) ?></h6>
+                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($admin['first_name']) ?>
+                                                </h6>
                                                 <p class="mb-0 caption-sub-title">Administrator</p>
                                                 <?php
                                             }
@@ -2812,17 +2815,34 @@ include("../../../config/dbcon.php");
                                 </div>
                             </div>
                             <div class="card-body">
-                                <form>
+                                <form action="../../php/code.php" method="POST" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <div class="profile-img-edit position-relative">
-                                            <img class="profile-pic rounded avatar-100"
-                                                src="../../assets/images/avatars/01.png" alt="profile-pic">
+                                            <?php
+                                            if (isset($_GET['user_id'])) {
+                                                $user_id = $_GET['user_id'];
+                                            }
+                                            $query = "SELECT profile_pic FROM users WHERE id='$user_id' LIMIT 1";
+                                            $query_run = mysqli_query($con, $query);
+                                            $user = mysqli_fetch_assoc($query_run);
+                                            $userImg = $user['profile_pic'];
+                                            if ($userImg) { ?>
+                                                <img class="profile-pic rounded avatar-100"
+                                                    src="../../uploads/profile_pics/<?= $userImg ?>" alt="profile-pic"> <?php
+                                            } else { ?>
+                                                <img class="profile-pic rounded avatar-100"
+                                                    src="../../assets/images/avatars/01.png" alt="profile-pic"> <?php
+                                            }
+                                            ?>
+
                                             <div class="upload-icone bg-primary">
                                                 <svg class="upload-button" width="14" height="14" viewBox="0 0 24 24">
                                                     <path fill="#ffffff"
                                                         d="M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z" />
                                                 </svg>
-                                                <input class="file-upload" name="profile_pic" type="file" accept="image/*">
+                                                <input type="hidden" name="user_id" value="<?= $user_id ?>">
+                                                <input class="file-upload" type="file" name="profile_pic"
+                                                    accept="image/*">
                                             </div>
                                         </div>
                                         <div class="img-extension mt-3">
@@ -2862,7 +2882,9 @@ include("../../../config/dbcon.php");
                                     <div class="form-group mb-0">
                                         <label class="form-label" for="lurl">Linkedin Url:</label>
                                         <input type="text" class="form-control" id="lurl" placeholder="Linkedin Url">
-                                    </div>
+                                    </div><br>
+                                    <button type="submit" class="btn btn-primary"
+                                        name="updateUserSocial">Update</button>
                                 </form>
                             </div>
                         </div>
@@ -2878,7 +2900,7 @@ include("../../../config/dbcon.php");
                             <div class="card-body">
                                 <div class="new-user-info">
                                     <form action="../../php/code.php" method="POST">
-                                        
+
                                         </script>
                                         <div class="row">
                                             <?php
@@ -2893,34 +2915,36 @@ include("../../../config/dbcon.php");
                                                         <input type="hidden" name="user_id" value="<?php echo $row['id'] ?>">
                                                         <div class="form-group col-md-6">
                                                             <label class="form-label" for="fname">First Name:</label>
-                                                            <input type="text" value="<?php echo $row['name'] ?>"
-                                                                class="form-control" id="fname" name="name"
+                                                            <input type="text" value="<?php echo $row['first_name'] ?>"
+                                                                class="form-control" id="fname" name="first_name"
                                                                 placeholder="First Name">
                                                             <small class="text-danger error-name"></small>
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label class="form-label" for="lname">Last Name:</label>
-                                                            <input type="text" class="form-control" id="lname"
+                                                            <input type="text" value="<?php echo $row['last_name'] ?>"
+                                                                name="last_name" class="form-control" id="lname"
                                                                 placeholder="Last Name">
                                                         </div>
-                                                        <div class="form-group col-md-6">
-                                                            <label class="form-label" for="add1">Street Address 1:</label>
-                                                            <input type="text" class="form-control" id="add1"
-                                                                placeholder="Street Address 1">
+                                                        <div class="form-group col-md-12">
+                                                            <label class="form-label" for="add1">Street Address :</label>
+                                                            <input type="text" value="<?php echo $row['address'] ?>" name="address"
+                                                                class="form-control" id="add1" placeholder="Street Address ">
                                                         </div>
-                                                        <div class="form-group col-md-6">
+                                                        <!-- <div class="form-group col-md-6">
                                                             <label class="form-label" for="add2">Street Address 2:</label>
                                                             <input type="text" class="form-control" id="add2"
                                                                 placeholder="Street Address 2">
-                                                        </div>
+                                                        </div> -->
                                                         <div class="form-group col-md-12">
                                                             <label class="form-label" for="cname">Company Name:</label>
-                                                            <input type="text" class="form-control" id="cname"
-                                                                placeholder="Company Name">
+                                                            <input type="text" value="<?php echo $row['company'] ?>" name="company"
+                                                                class="form-control" id="cname" placeholder="Company Name">
                                                         </div>
-                                                        <div class="form-group col-sm-12">
+                                                        <div class="form-group col-sm-6">
                                                             <label class="form-label">Country:</label>
-                                                            <select name="type" class="selectpicker form-control" data-style="py-0">
+                                                            <select name="country" class="selectpicker form-control"
+                                                                data-style="py-0">
                                                                 <option>Select Country</option>
                                                                 <option>Caneda</option>
                                                                 <option>Noida</option>
@@ -2929,17 +2953,33 @@ include("../../../config/dbcon.php");
                                                                 <option>Africa</option>
                                                             </select>
                                                         </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label class="form-label" for="countryCode">Country Code:</label>
+                                                            <input type="text" value="<?php echo $row['country_code'] ?>"
+                                                                name="country_code" class="form-control" id="countryCode"
+                                                                placeholder="Country Code">
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label class="form-label" for="state">State:</label>
+                                                            <input type="text" value="<?php echo $row['state'] ?>" name="state"
+                                                                class="form-control" id="state" placeholder="Enter State">
+                                                        </div>
+                                                        <div class="form-group col-md-6">
+                                                            <label class="form-label" for="pno">Pin Code:</label>
+                                                            <input type="text" value="<?php echo $row['pincode'] ?>" name="pincode"
+                                                                class="form-control" id="pno" placeholder="Pin Code">
+                                                        </div>
                                                         <div class="form-group col-md-6">
                                                             <label class="form-label" for="mobno">Mobile Number:</label>
                                                             <input type="text" name="phone" value="<?php echo $row['phone'] ?>"
                                                                 class="form-control" id="mobno" placeholder="Mobile Number">
                                                             <small class="text-danger error-phone"></small>
                                                         </div>
-                                                        <div class="form-group col-md-6">
+                                                        <!-- <div class="form-group col-md-6">
                                                             <label class="form-label" for="altconno">Alternate Contact:</label>
                                                             <input type="text" class="form-control" id="altconno"
                                                                 placeholder="Alternate Contact">
-                                                        </div>
+                                                        </div> -->
                                                         <div class="form-group col-md-6">
                                                             <label class="form-label" for="email">Email:</label>
 
@@ -2947,14 +2987,21 @@ include("../../../config/dbcon.php");
                                                                 class="form-control" id="email" placeholder="Email">
                                                             <small class="text-danger error-email"></small>
                                                         </div>
-                                                        <div class="form-group col-md-6">
+                                                        <!-- <div class="form-group col-md-6">
                                                             <label class="form-label" for="pno">Pin Code:</label>
-                                                            <input type="text" class="form-control" id="pno" placeholder="Pin Code">
-                                                        </div>
+                                                            <input type="text" value="<?php echo $row['pincode'] ?>" name="pincode" class="form-control" id="pno" placeholder="Pin Code">
+                                                        </div> -->
                                                         <div class="form-group col-md-12">
                                                             <label class="form-label" for="city">Town/City:</label>
-                                                            <input type="text" class="form-control" id="city"
+                                                            <input type="text" value="<?php echo $row['town_city'] ?>"
+                                                                name="town_city" class="form-control" id="city"
                                                                 placeholder="Town/City">
+                                                        </div>
+                                                        <div class="form-group col-md-12">
+                                                            <label class="form-label" for="city">Description:</label>
+                                                            <input type="text" value="<?php echo $row['description'] ?>"
+                                                                name="description" class="form-control" id="city"
+                                                                placeholder="Description">
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -2967,9 +3014,8 @@ include("../../../config/dbcon.php");
                                                         </div>
                                                         <div class="form-group col-md-6">
                                                             <label class="form-label" for="pass">Password:</label>
-                                                            <input type="password" name="password"
-                                                                value="<?php echo $row['password'] ?>" class="form-control"
-                                                                id="pass" placeholder="Password">
+                                                            <input type="password" name="password" class="form-control" id="pass"
+                                                                placeholder="Password">
                                                             <small class="text-danger error-password"></small>
                                                         </div>
                                                         <div class="form-group col-md-6">
@@ -3099,10 +3145,10 @@ include("../../../config/dbcon.php");
                 }
 
                 // Validate Password
-                if (password.length < 8) {
-                    $('.error-password').text('Password must be at least 8 characters long.');
-                    isValid = false;
-                }
+                // if (password.length < 8) {
+                //     $('.error-password').text('Password must be at least 8 characters long.');
+                //     isValid = false;
+                // }
                 // if (password !== confirmpassword) {
                 //     $('.error-confirmpassword').text('Passwords do not match.');
                 //     isValid = false;

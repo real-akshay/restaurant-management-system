@@ -1309,7 +1309,7 @@ include("../../../config/dbcon.php");
         </div>
     </div>
 
-    
+
     <main class="main-content">
         <div class="position-relative">
             <!--Nav Start-->
@@ -2765,15 +2765,16 @@ include("../../../config/dbcon.php");
                                         class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
                                         <?php
-                                        $query = "SELECT name FROM users WHERE role='admin'";
+                                        $admin_id = $_SESSION['admin_session']['admin_id'];
+                                        $query = "SELECT first_name FROM users WHERE role='admin' AND id='$admin_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
                                         if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                            foreach ($query_run as $user) {
-                                                ?>
-                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($user['name']) ?></h6>
-                                                <p class="mb-0 caption-sub-title">Administrator</p>
-                                                <?php
-                                            }
+                                            $admin = mysqli_fetch_assoc($query_run);
+                                            ?>
+                                            <h6 class="mb-0 caption-title"><?= htmlspecialchars($admin['first_name']) ?>
+                                            </h6>
+                                            <p class="mb-0 caption-sub-title">Administrator</p>
+                                            <?php
                                         } else {
                                             ?>
                                             <h1 class="fw-bold mb-4">
@@ -2844,7 +2845,7 @@ include("../../../config/dbcon.php");
                                         $query = "SELECT * FROM users";
                                         $query_run = mysqli_query($con, $query);
                                         foreach ($query_run as $user) {
-                                            echo "<option value='{$user['id']}'>{$user['name']}</option>";
+                                            echo "<option value='{$user['id']}'>{$user['first_name']}</option>";
                                         }
                                         ?>
                                     </select>
@@ -2855,9 +2856,10 @@ include("../../../config/dbcon.php");
                                 //     echo "No User Found.!";
                                 // }
                                 ?>
-                                
-                                <p class="mb-0"> <a href="cart.php" class="btn btn-light btn-sm rounded-pill float-end">Back</a></p>
-                                 
+
+                                <p class="mb-0"> <a href="cart.php"
+                                        class="btn btn-light btn-sm rounded-pill float-end">Back</a></p>
+
                             </div>
                             <div class="card-body px-10">
 
@@ -3051,7 +3053,7 @@ include("../../../config/dbcon.php");
                     // Fill form fields
                     // console.log(data); // Log the full data object to the browser console
                     document.getElementById("usersId").value = data.id;
-                    document.getElementById("fullName").value = data.name;
+                    document.getElementById("fullName").value = data.first_name;
                     document.getElementById("email").value = data.email;
                     document.getElementById("phone").value = data.phone;
                     document.getElementById("address").value = data.address;

@@ -387,6 +387,8 @@ include('../../../../config/dbcon.php');
             line-height: 1.6;
         }
     </style>
+    <!-- Bootstrap 5 CSS (add this line) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' id='nd_tds_style-css'
         href='https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/plugins/nd-theme-demos-switcher/css/style.css?ver=6.6.2'
         type='text/css' media='all' />
@@ -2406,7 +2408,9 @@ include('../../../../config/dbcon.php');
 
 <body id="start_nicdark_framework"
     class="page-template-default page page-id-873 theme-ristorante nd_options_customizer_fonts nd_options_customizer_forms woocommerce-checkout woocommerce-page woocommerce-order-received woocommerce-no-js wpb-js-composer js-comp-ver-5.6 vc_responsive">
-
+    <?php
+    include('../../../../message.php');
+    ?>
     <!--START theme-->
     <div class="nicdark_site nicdark_bg_white  ">
 
@@ -2703,19 +2707,16 @@ include('../../../../config/dbcon.php');
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-1313"
                                                         class="nd_options_hot_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1313">
-                                                        <a
-                                                            href="../book-a-table/index.php">Book
+                                                        <a href="../book-a-table/index.php">Book
                                                             a Table</a>
                                                     </li>
                                                     <li id="menu-item-1187"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1187">
-                                                        <a
-                                                            href="../delivery/index.php">Delivery</a>
+                                                        <a href="../delivery/index.php">Delivery</a>
                                                     </li>
                                                     <li id="menu-item-1024"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1024">
-                                                        <a
-                                                            href="../services/index.php">Services</a>
+                                                        <a href="../services/index.php">Services</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1240"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1240">
@@ -2738,8 +2739,7 @@ include('../../../../config/dbcon.php');
                                                     </li> -->
                                                     <li id="menu-item-1480"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1480">
-                                                        <a
-                                                            href="../menu-1/index.php">Menu</a>
+                                                        <a href="../menu-1/index.php">Menu</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1481"
                                                                 class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1481">
@@ -2785,8 +2785,7 @@ include('../../../../config/dbcon.php');
                                                     </li> -->
                                                     <li id="menu-item-1068"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1068">
-                                                        <a
-                                                            href="../contact-1/index.php">Contact</a>
+                                                        <a href="../contact-1/index.php">Contact</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1067"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1067">
@@ -2804,8 +2803,7 @@ include('../../../../config/dbcon.php');
                                                     </li>
                                                     <li id="menu-item-1082"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1082">
-                                                        <a
-                                                            href="../about-us-1/index.php">About
+                                                        <a href="../about-us-1/index.php">About
                                                             Us</a>
                                                         <!-- <ul class="sub-menu">
                                                             <li id="menu-item-1084"
@@ -2830,8 +2828,7 @@ include('../../../../config/dbcon.php');
                                                     </li>
                                                     <li id="menu-item-1296"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1296">
-                                                        <a
-                                                            href="../gallery/index.php">Gallery</a>
+                                                        <a href="../gallery/index.php">Gallery</a>
                                                     </li>
                                                     <li id="menu-item-1111"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1111">
@@ -2843,8 +2840,7 @@ include('../../../../config/dbcon.php');
                                             </li>
                                             <li id="menu-item-1474"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1474">
-                                                <a
-                                                    href="../menu-1/index.php">MENU</a>
+                                                <a href="../menu-1/index.php">MENU</a>
                                                 <!-- <ul class="sub-menu">
                                                     <li id="menu-item-1472"
                                                         class="nd_options_new_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1472">
@@ -2880,8 +2876,7 @@ include('../../../../config/dbcon.php');
                                             </li>
                                             <li id="menu-item-1225"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1225">
-                                                <a
-                                                    href="../delivery/index.php">SHOP</a>
+                                                <a href="../delivery/index.php">SHOP</a>
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-1188"
                                                         class="nd_options_hot_label menu-item menu-item-type-post_type menu-item-object-page menu-item-1188">
@@ -2889,8 +2884,7 @@ include('../../../../config/dbcon.php');
                                                     </li>
                                                     <li id="menu-item-1115"
                                                         class="menu-item menu-item-type-post_type menu-item-object-product menu-item-1115">
-                                                        <a
-                                                            href="../product/mixed-salad/index.php">Single
+                                                        <a href="../product/mixed-salad/index.php">Single
                                                             Product</a>
                                                     </li>
                                                     <li id="menu-item-1116"
@@ -2899,7 +2893,8 @@ include('../../../../config/dbcon.php');
                                                     </li>
                                                     <li id="menu-item-1117"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-873 current_page_item menu-item-1117">
-                                                        <a href="../../checkout/index.php" aria-current="page">Checkout</a>
+                                                        <a href="../../checkout/index.php"
+                                                            aria-current="page">Checkout</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -2972,8 +2967,7 @@ include('../../../../config/dbcon.php');
                                                     </li> -->
                                                     <li id="menu-item-1429"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1429">
-                                                        <a
-                                                            href="../open-table/index.php">Open
+                                                        <a href="../open-table/index.php">Open
                                                             Table</a>
                                                     </li>
                                                 </ul>
@@ -3682,213 +3676,314 @@ include('../../../../config/dbcon.php');
                 <!--automatic title-->
 
                 <!--start content-->
-                <div class="woocommerce">
-                    <div class="woocommerce-order">
-                        <button
-                            style="float: right; margin: 10px; padding: 10px 20px; background-color: #c0a58a; color: white; border: none; border-radius: 5px; cursor: pointer;"
-                            onclick="printReceipt()">Print Receipt</button>
-                        <div id="receipt-content">
-                            <?php
+                <!-- remove default checkout layout and add own -->
+                <?php
 
-                            $order_id = $_GET['order_id']; // Get the order ID from the URL
-                            $user_id = $_SESSION['auth_user']['user_id'];
+                $order_id = $_GET['order_id']; // Get the order ID from the URL
+                $user_id = $_SESSION['user_session']['user_id'];
 
-                            // Fetch order details from the database using the order ID
-                            $query_for_orderMaster = "SELECT * FROM order_master WHERE user_id='$user_id' AND id='$order_id'";
+                // Fetch order details from the database using the order ID
+                $query_for_orderMaster = "SELECT * FROM order_master WHERE user_id='$user_id' AND id='$order_id'";
 
-                            $query_for_orderMaster_run = mysqli_query($con, $query_for_orderMaster);
+                $query_for_orderMaster_run = mysqli_query($con, $query_for_orderMaster);
 
-                            if ($query_for_orderMaster_run) {
-                                $orderMaster = mysqli_fetch_assoc($query_for_orderMaster_run);
-                                $orderId = $orderMaster['id'];
-                                $order_date = $orderMaster['order_date'];
-                                $total_amount = $orderMaster['total_amount'];
-                                $payment_method = $orderMaster['payment_method'];
+                if ($query_for_orderMaster_run) {
+                    $orderMaster = mysqli_fetch_assoc($query_for_orderMaster_run);
+                    $orderId = $orderMaster['id'];
+                    $order_date = $orderMaster['order_date'];
+                    $total_amount = $orderMaster['total_amount'];
+                    $payment_method = $orderMaster['payment_method'];
 
-                                $name = $orderMaster['full_name'];
-                                $email = $orderMaster['email'];
-                                $phone = $orderMaster['phone'];
-                                $address = $orderMaster['address'];
-                                $city = $orderMaster['city'];
-                                $state = $orderMaster['state'];
-                                $country = $orderMaster['country'];
-                                $pincode = $orderMaster['pincode'];
-                                $order_status = $orderMaster['order_status'];
-                                ?>
-                                <p
-                                    class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">
-                                    Thank you. Your order has been received.</p>
+                    $name = $orderMaster['full_name'];
+                    $email = $orderMaster['email'];
+                    $phone = $orderMaster['phone'];
+                    $address = $orderMaster['address'];
+                    $city = $orderMaster['city'];
+                    $state = $orderMaster['state'];
+                    $country = $orderMaster['country'];
+                    $pincode = $orderMaster['pincode'];
+                    $order_status = $orderMaster['order_status'];
 
-                                <ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
-                                    <!-- for order master details -->
+                    $query_for_orderDetails = "SELECT * FROM order_details WHERE order_id='$orderId'";
 
+                    $query_for_orderDetails_run = mysqli_query($con, $query_for_orderDetails);
 
-
-
-                                    <li class="woocommerce-order-overview__order order">
-                                        Order number: <strong><?= $orderId ?></strong>
-                                    </li>
-
-                                    <li class="woocommerce-order-overview__date date">
-                                        Date: <strong><?= date('F j, Y', strtotime($order_date)) ?></strong>
-                                    </li>
-
-
-                                    <li class="woocommerce-order-overview__total total">
-                                        Total: <strong><span class="woocommerce-Price-amount amount"><bdi><span
-                                                        class="woocommerce-Price-currencySymbol">&#8377;</span><?= $total_amount ?></bdi></span></strong>
-                                    </li>
-
-                                    <li class="woocommerce-order-overview__payment-method method">
-                                        Payment method: <strong><?= $payment_method ?></strong>
-                                    </li>
-
-                                </ul>
-
-
-                                <p>Pay with cash upon delivery.</p>
-                                <section class="woocommerce-order-details">
-
-                                    <h2 class="woocommerce-order-details__title">Order details</h2>
-
-                                    <?php
-                                    $query_for_orderDetails = "SELECT * FROM order_details WHERE order_id='$orderId'";
-
-                                    $query_for_orderDetails_run = mysqli_query($con, $query_for_orderDetails);
-
-                                    if ($query_for_orderDetails_run) {
-                                        ?>
-                                        <table
-                                            class="woocommerce-table woocommerce-table--order-details shop_table order_details">
-
-                                            <thead>
-                                                <tr>
-                                                    <th class="woocommerce-table__product-name product-name">Product</th>
-                                                    <th class="woocommerce-table__product-table product-total">Total</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <?php
-                                                foreach ($query_for_orderDetails_run as $product_detail) {
-                                                    // $product_id = $product_detail['product_id'];
-                                                    // $product_name = $product_detail['product_name'];
-                                                    // $quantity = $product_detail['quantity'];
-                                                    // $price = $product_detail['price'];
-                                                    // $subtotal = $product_detail['subtotal'];
-                                        
-                                                    ?>
-                                                    <tr class="woocommerce-table__line-item order_item">
-                                                        <td class="woocommerce-table__product-name product-name">
-                                                            <a href=""><?= $product_detail['product_name'] ?></a> <strong
-                                                                class="product-quantity">&times;&nbsp;<?= $product_detail['quantity'] ?></strong>
-                                                        </td>
-
-                                                        <td class="woocommerce-table__product-total product-total">
-                                                            <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                        class="woocommerce-Price-currencySymbol">&#8377;</span><?= $product_detail['subtotal'] ?></bdi></span>
-                                                        </td>
-                                                    </tr>
-                                                <?php } ?>
-
-                                            </tbody>
-
-                                            <tfoot>
-                                                <tr>
-                                                    <th scope="row">Subtotal:</th>
-                                                    <td><span class="woocommerce-Price-amount amount"><span
-                                                                class="woocommerce-Price-currencySymbol">&#036;</span><?= $total_amount ?></span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Shipping:</th>
-                                                    <td><span class="woocommerce-Price-amount amount"><span
-                                                                class="woocommerce-Price-currencySymbol">&#8377;</span>50.00</span>&nbsp;<small
-                                                            class="shipped_via">via Flat rate</small></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Payment method:</th>
-                                                    <td><?= $payment_method ?></td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">Total:</th>
-                                                    <td><span class="woocommerce-Price-amount amount"><span
-                                                                class="woocommerce-Price-currencySymbol">&#8377;</span><?= $total_amount + 50 ?></span>
-                                                    </td>
-                                                </tr>
-                                            <?php } ?>
-                                        </tfoot>
-                                    </table>
-
-                                </section>
-
-                                <section class="woocommerce-customer-details">
-
-
-                                    <section
-                                        class="woocommerce-columns woocommerce-columns--2 woocommerce-columns--addresses col2-set addresses">
-                                        <div
-                                            class="woocommerce-column woocommerce-column--1 woocommerce-column--billing-address col-1">
-
-
-                                            <h2 class="woocommerce-column__title">Billing address</h2>
-
-                                            <address>
-                                                <?= $name ?><br /><?= $address ?><br /><?= $city ?>,<?= $pincode ?><br /><?= $state ?>,
-                                                <?= $country ?>
-                                                <p class="woocommerce-customer-details--phone"><?= $phone ?></p>
-
-                                                <p class="woocommerce-customer-details--email"><?= $email ?></p>
-
-                                            </address>
-
-
-                                        </div><!-- /.col-1 -->
-
-                                        <div
-                                            class="woocommerce-column woocommerce-column--2 woocommerce-column--shipping-address col-2">
-                                            <h2 class="woocommerce-column__title">Shipping address</h2>
-                                            <address>
-                                                <?= $name ?><br /><?= $address ?><br /><?= $city ?>,<?= $pincode ?><br /><?= $state ?>,
-                                                <?= $country ?>
-
-                                            </address>
-                                        </div><!-- /.col-2 -->
-
-                                    </section><!-- /.col2-set -->
-
-
-
-                                </section>
-                                <?php
-                            } else {
-                                echo "Error fetching order details: " . mysqli_error($con);
+                    if ($query_for_orderDetails_run) {
+                        ?>
+                        <!-- 2nd bill -->
+                        <style>
+                            .receipt-outer {
+                                background: linear-gradient(135deg, #fffbe6 0%, #fff 100%);
+                                min-height: 100vh;
+                                padding: 40px 0;
                             }
-                            ?>
 
+                            .receipt-card {
+                                max-width: 420px;
+                                margin: 0 auto;
+                                background: #fff;
+                                border-radius: 18px;
+                                box-shadow: 0 8px 32px rgba(192, 165, 138, 0.18), 0 1.5px 0 #c0a58a inset;
+                                padding: 36px 28px 28px 28px;
+                                font-family: 'Quicksand', Arial, sans-serif;
+                                border: 2px solid #f3e9d2;
+                                position: relative;
+                                overflow: hidden;
+                            }
+
+                            .receipt-card:before {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                height: 8px;
+                                background: linear-gradient(90deg, #c0a58a 0%, #fffbe6 100%);
+                                border-radius: 18px 18px 0 0;
+                            }
+
+                            .receipt-header {
+                                text-align: center;
+                                margin-bottom: 18px;
+                            }
+
+                            .receipt-header img {
+                                width: 70px;
+                                margin-bottom: 6px;
+                                filter: drop-shadow(0 2px 8px #c0a58a33);
+                            }
+
+                            .receipt-header h1 {
+                                font-size: 2.1rem;
+                                color: #c0a58a;
+                                margin: 0 0 2px 0;
+                                letter-spacing: 2px;
+                                font-weight: 700;
+                            }
+
+                            .receipt-header .address {
+                                color: #8a7c6e;
+                                font-size: 14px;
+                                margin-bottom: 2px;
+                            }
+
+                            .receipt-header .contact {
+                                color: #bfa77a;
+                                font-size: 13px;
+                                margin-bottom: 0;
+                            }
+
+                            .receipt-divider {
+                                border-top: 2px dashed #e7d7b9;
+                                margin: 18px 0 18px 0;
+                            }
+
+                            .order-summary {
+                                margin-bottom: 12px;
+                                font-size: 15px;
+                                color: #5a4a36;
+                            }
+
+                            .order-summary span {
+                                display: inline-block;
+                                min-width: 110px;
+                                color: #bfa77a;
+                                font-weight: 500;
+                            }
+
+                            .receipt-table {
+                                width: 100%;
+                                border-collapse: collapse;
+                                margin-bottom: 14px;
+                                font-size: 15px;
+                            }
+
+                            .receipt-table th,
+                            .receipt-table td {
+                                border-bottom: 1px solid #f3e9d2;
+                                padding: 8px 0;
+                            }
+
+                            .receipt-table th {
+                                background: #fffbe6;
+                                color: #c0a58a;
+                                font-weight: 700;
+                                font-size: 15px;
+                            }
+
+                            .receipt-table td {
+                                color: #5a4a36;
+                            }
+
+                            .receipt-table tfoot td {
+                                font-weight: bold;
+                                color: #c0a58a;
+                                background: #fffbe6;
+                            }
+
+                            .customer-details {
+                                background: #fffbe6;
+                                border-radius: 8px;
+                                padding: 10px 16px;
+                                font-size: 14px;
+                                color: #5a4a36;
+                                margin-bottom: 10px;
+                            }
+
+                            .thankyou {
+                                text-align: center;
+                                color: #bfa77a;
+                                margin-top: 18px;
+                                font-size: 17px;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                            }
+
+                            .signature {
+                                text-align: right;
+                                margin-top: 22px;
+                                color: #c0a58a;
+                                font-family: 'Kristi', cursive;
+                                font-size: 1.5rem;
+                                opacity: 0.7;
+                            }
+
+                            .coupon {
+                                background: #f9e7b7;
+                                border-radius: 8px;
+                                padding: 10px 14px;
+                                text-align: center;
+                                color: #a67c00;
+                                font-size: 15px;
+                                margin: 18px 0 0 0;
+                                border: 1px dashed #c0a58a;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                            }
+
+                            .qr-section {
+                                text-align: center;
+                                margin-top: 18px;
+                            }
+
+                            .qr-section img {
+                                width: 70px;
+                                opacity: 0.8;
+                            }
+
+                            @media print {
+                                body * {
+                                    visibility: hidden;
+                                }
+
+                                .receipt-card,
+                                .receipt-card * {
+                                    visibility: visible;
+                                }
+
+                                .receipt-card {
+                                    box-shadow: none;
+                                    border: none;
+                                }
+
+                                button {
+                                    display: none !important;
+                                }
+
+                                .receipt-outer {
+                                    background: #fff !important;
+                                }
+                            }
+                        </style>
+
+                        <div class="receipt-outer">
+                            <div class="receipt-card">
+                                <div class="receipt-header">
+                                    <img src="https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/logo.png"
+                                        alt="Restaurant Logo">
+                                    <h1>Akshay's Restaurant</h1>
+                                    <div class="address">123 Main Street, City, Country</div>
+                                    <div class="contact">+91 12345 67890 &nbsp;|&nbsp; info@restaurant.com</div>
+                                </div>
+                                <div class="receipt-divider"></div>
+                                <div class="order-summary">
+                                    <div><span>Order No:</span> <strong><?= $orderId ?></strong></div>
+                                    <div><span>Date:</span> <strong><?= date('F j, Y', strtotime($order_date)) ?></strong></div>
+                                    <div><span>Payment:</span> <strong><?= $payment_method ?></strong></div>
+                                    <div><span>Status:</span> <strong><?= ucfirst($order_status) ?></strong></div>
+                                </div>
+                                <table class="receipt-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th style="text-align:center;">Qty</th>
+                                            <th style="text-align:right;">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($query_for_orderDetails_run as $product_detail) { ?>
+                                            <tr>
+                                                <td><?= $product_detail['product_name'] ?></td>
+                                                <td style="text-align:center;"><?= $product_detail['quantity'] ?></td>
+                                                <td style="text-align:right;">&#8377;<?= $product_detail['subtotal'] ?></td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2">Subtotal</td>
+                                            <td style="text-align:right;">&#8377;<?= $total_amount ?></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Shipping</td>
+                                            <td style="text-align:right;">&#8377;50.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Total</td>
+                                            <td style="text-align:right;">&#8377;<?= $total_amount + 50 ?></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <div class="customer-details">
+                                    <div><strong>Customer:</strong> <?= $name ?></div>
+                                    <div><strong>Phone:</strong> <?= $phone ?></div>
+                                    <div><strong>Email:</strong> <?= $email ?></div>
+                                    <div><strong>Billing Address:</strong> <?= $address ?>, <?= $city ?>, <?= $state ?>,
+                                        <?= $country ?>
+                                        - <?= $pincode ?>
+                                    </div>
+                                </div>
+                                <div class="thankyou">
+                                    Thank you for your order!<br>
+                                    <span style="font-size:14px; color:#a67c00;">We hope you enjoy your meal.</span>
+                                </div>
+                                <div class="coupon">
+                                    🎁 Use code <b>WELCOME10</b> for 10% OFF on your next order!
+                                </div>
+                                <div class="qr-section">
+                                    <div style="font-size:13px; color:#bfa77a; margin-bottom:2px;">Scan for feedback or offers
+                                    </div>
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=https://restaurant.com/feedback"
+                                        alt="Feedback QR">
+                                </div>
+                                <div class="signature">
+                                    <span>Akshay</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <script>
-                        function printReceipt() {
-                            var receiptContent = document.getElementById('receipt-content').innerHTML;
-                            var originalContent = document.body.innerHTML;
+                        <!--end content--><?php
 
-                            document.body.innerHTML = receiptContent;
-                            window.print();
-                            document.body.innerHTML = originalContent;
-                        }
-                    </script>
-
-
-                </div>
-                <!--end content-->
-
+                    }
+                }
+                ?>
             </div>
             <!--#post-->
 
 
         </div>
         <!--end container-->
+
+
 
         <!--page margin-->
         <div class="nd_options_section nd_options_height_50"></div>
@@ -3988,24 +4083,30 @@ include('../../../../config/dbcon.php');
                             <div class="wpb_wrapper">
                                 <div style="background-color:; height: 20px;" class="nicdark_section  "></div>
                                 <div class="wpb_text_column wpb_content_element ">
-                                 <div class="wpb_wrapper">
+                                    <div class="wpb_wrapper">
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../../index.php" style="color: #ffffff; text-decoration: none;">HOME</a>
+                                            <a href="../../index.php"
+                                                style="color: #ffffff; text-decoration: none;">HOME</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../../index.php" style="color: #ffffff; text-decoration: none;">ABOUT US</a>
+                                            <a href="../../index.php"
+                                                style="color: #ffffff; text-decoration: none;">ABOUT US</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../../services/index.php" style="color: #ffffff; text-decoration: none;">SERVICES</a>
+                                            <a href="../../services/index.php"
+                                                style="color: #ffffff; text-decoration: none;">SERVICES</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../../book-a-table/index.php" style="color: #ffffff; text-decoration: none;">BOOKING</a>
+                                            <a href="../../book-a-table/index.php"
+                                                style="color: #ffffff; text-decoration: none;">BOOKING</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../../menu-1/index.php" style="color: #ffffff; text-decoration: none;">MENU</a>
+                                            <a href="../../menu-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">MENU</a>
                                         </p>
                                         <p style="text-align: center;letter-spacing: 2px">
-                                            <a href="../../contact-1/index.php" style="color: #ffffff; text-decoration: none;">CONTACTS</a>
+                                            <a href="../../contact-1/index.php"
+                                                style="color: #ffffff; text-decoration: none;">CONTACTS</a>
                                         </p>
                                     </div>
                                 </div>
@@ -4137,7 +4238,8 @@ include('../../../../config/dbcon.php');
         src="https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.6"
         id="wpb_composer_front_js-js"></script>
 
-
+    <!-- Bootstrap 5 Toast JS (if not already included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

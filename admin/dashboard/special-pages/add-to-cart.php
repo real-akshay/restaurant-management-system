@@ -2739,15 +2739,16 @@ include("../../../config/dbcon.php");
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link " href="../special-pages/item-category.php">
-                                   <i class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
+                                    <i class="icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24"
+                                            fill="currentColor">
                                             <g>
-                                            <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
+                                                <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
                                             </g>
                                         </svg>
                                     </i>
-                                   <i class="sidenav-mini-icon">A </i>
-                                   <span class="item-name">Menu category</span>
+                                    <i class="sidenav-mini-icon">A </i>
+                                    <span class="item-name">Menu category</span>
                                 </a>
                             </li>
                             <!-- <li class="nav-item">
@@ -5166,16 +5167,17 @@ include("../../../config/dbcon.php");
                                     <img src="../../assets/images/avatars/01.png" alt="User-Profile"
                                         class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
-                                    <?php
-                                        $query = "SELECT name FROM users WHERE role='admin'";
+                                        <?php
+                                        $admin_id = $_SESSION['admin_session']['admin_id'];
+                                        $query = "SELECT first_name FROM users WHERE role='admin' AND id='$admin_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
                                         if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                            foreach ($query_run as $user) {
-                                                ?>
-                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($user['name']) ?></h6>
-                                                <p class="mb-0 caption-sub-title">Administrator</p>
-                                                <?php
-                                            }
+                                            $admin = mysqli_fetch_assoc($query_run);
+                                            ?>
+                                            <h6 class="mb-0 caption-title"><?= htmlspecialchars($admin['first_name']) ?>
+                                            </h6>
+                                            <p class="mb-0 caption-sub-title">Administrator</p>
+                                            <?php
                                         } else {
                                             ?>
                                             <h1 class="fw-bold mb-4">
@@ -5307,17 +5309,17 @@ include("../../../config/dbcon.php");
                                             <small>welcome back</small>
                                         </span>
                                         <div class="banner-text">
-                                        <?php
-                                            $query = "SELECT name FROM users WHERE role='admin'";
+                                            <?php
+                                            $admin_id = $_SESSION['admin_session']['admin_id'];
+                                            $query = "SELECT first_name FROM users WHERE role='admin' AND id='$admin_id' LIMIT 1";
                                             $query_run = mysqli_query($con, $query);
                                             if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                                foreach ($query_run as $user) {
-                                                    ?>
-                                                    <h1 class="fw-bold mb-4">
-                                                        Hello, <?= htmlspecialchars($user['name']) ?>
-                                                    </h1>
-                                                    <?php
-                                                }
+                                                $admin = mysqli_fetch_assoc($query_run);
+                                                ?>
+                                                <h1 class="fw-bold mb-4">
+                                                    Hello, <?= htmlspecialchars($admin['first_name']) ?>
+                                                </h1>
+                                                <?php
                                             } else {
                                                 ?>
                                                 <h1 class="fw-bold mb-4">
@@ -5618,7 +5620,8 @@ include("../../../config/dbcon.php");
                                                                 <div class="d-flex align-items-center">
                                                                     <span
                                                                         class="text-primary fw-bolder me-2">₹<?= $prodct_item['price'] ?></span>
-                                                                    <small class="text-decoration-line-through">₹<?= intval($prodct_item['price']) + 50 ?></small>
+                                                                    <small
+                                                                        class="text-decoration-line-through">₹<?= intval($prodct_item['price']) + 50 ?></small>
                                                                 </div>
 
 

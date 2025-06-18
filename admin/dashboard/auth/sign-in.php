@@ -3,16 +3,21 @@ session_start();
 // 12.checking logged in user authenticated or not
 
 
-if (isset($_SESSION['auth']) && $_SESSION['auth'] == 'admin') {
-    header("Location: ../index.php"); // admin dashboard
+// Agar user already logged in hai as `user`, toh warning show karo lekin redirect mat karo
+if (isset($_SESSION['admin_session']) && $_SESSION['auth_admin'] == 'admin') {
+    // Agar admin already logged in hai, toh usko jis page se aaya tha waha redirect karo
+    $redirect_url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
+    // Agar referer khud sign-in.php hai, toh dashboard bhejo (infinite loop se bachne ke liye)
+    if (strpos($redirect_url, 'sign-in.php') !== false) {
+        $redirect_url = '../index.php';
+    }
+    $_SESSION['status'] = [
+        'type' => 'warning',
+        'message' => 'Already logged in, Please logout first.'
+    ];
+    header("Location: $redirect_url");
     exit();
 }
-
-// Agar user already logged in hai as `user`, toh warning show karo lekin redirect mat karo
-// if (isset($_SESSION['auth']) && $_SESSION['auth'] == 'user') {
-//     $_SESSION['status'] = "Already logged in as User. Admin login not allowed.";
-    // Don't redirect; let them see login form but disallow submit via backend (already handled)
-// }
 
 
 ?>

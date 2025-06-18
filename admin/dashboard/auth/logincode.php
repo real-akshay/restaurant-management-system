@@ -70,24 +70,34 @@ if (isset($_POST['login_btn'])) {
 
         // Verify the hashed password
         if (password_verify($password, $row['password']) || $password === $row['password']) {
-            $_SESSION['auth'] = "admin";
-            $_SESSION['auth_user'] = [
-                'user_id' => $row['id'],
-                'user_name' => $row['name'],
-                'user_email' => $row['email'],
-                'user_phone' => $row['phone']
+            $_SESSION['auth_admin'] = "admin";
+            $_SESSION['admin_session'] = [
+                'admin_id' => $row['id'],
+                'admin_name' => $row['name'],
+                'admin_email' => $row['email'],
+                'admin_phone' => $row['phone']
             ];
 
-            $_SESSION['status'] = "Logged In Successfully";
+            $_SESSION['status'] = [
+                'type' => 'success', // ya 'error', 'info', 'warning'
+                'message' => 'Logged In Successfully'
+            ];
             header("Location:../index.php"); // admin dashboard
             exit();
         } else {
-            $_SESSION['status'] = "Invalid Email or Password or Unauthorized Access!";
+            $_SESSION['status'] = [
+                'type' => 'error', // ya 'error', 'info', 'warning'
+                'message' => 'Invalid Email or Password or Unauthorized Access!'
+            ];
             header("Location: sign-in.php"); // back to admin login
             exit();
         }
     } else {
-        $_SESSION['status'] = "Invalid Email or Password or Unauthorized Access!!!!!!!!!!!!!";
+        $_SESSION['status'] = [
+                'type' => 'error', // ya 'error', 'info', 'warning'
+                'message' => 'Unauthorized Access.!'
+        ];
+
         header("Location: sign-in.php"); // back to admin login
         exit();
     }

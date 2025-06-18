@@ -4199,20 +4199,25 @@ include('../../authentication.php');
                                             </div>
 
                                             <!-- Details -->
+                                            <?php
+                                            // Get logged-in user details from session
+                                            $user_name = isset($_SESSION['auth_user']['user_name']) ? $_SESSION['auth_user']['user_name'] : '';
+                                            $user_email = isset($_SESSION['auth_user']['user_email']) ? $_SESSION['auth_user']['user_email'] : '';
+                                            $user_phone = isset($_SESSION['auth_user']['user_phone']) ? $_SESSION['auth_user']['user_phone'] : '';
+                                            ?>
                                             <div class="step2" style="display:none;">
                                                 <h2 class="details-title">Your Details</h2>
                                                 <div class="details-form-group">
                                                     <label for="name">Your Name<span style="color:red">*</span></label>
-                                                    <input type="text" name="name" id="name" required>
+                                                    <input type="text" name="name" id="name" required value="<?php echo htmlspecialchars($user_name); ?>">
                                                 </div>
                                                 <div class="details-form-group">
                                                     <label for="email">Email<span style="color:red">*</span></label>
-                                                    <input type="email" name="email" id="email" required>
+                                                    <input type="email" name="email" id="email" required value="<?php echo htmlspecialchars($user_email); ?>">
                                                 </div>
                                                 <div class="details-form-group">
-                                                    <label for="phone">Phone Number<span
-                                                            style="color:red">*</span></label>
-                                                    <input type="tel" name="phone" id="phone" required>
+                                                    <label for="phone">Phone Number<span style="color:red">*</span></label>
+                                                    <input type="tel" name="phone" id="phone" required value="<?php echo htmlspecialchars($user_phone); ?>">
                                                 </div>
                                                 <div class="details-form-group">
                                                     <label for="dish">Preferred Dish (optional)</label>
@@ -4220,8 +4225,7 @@ include('../../authentication.php');
                                                 </div>
                                                 <div class="details-form-group">
                                                     <label for="special_request">Special Requests</label>
-                                                    <textarea name="special_request" id="special_request"
-                                                        rows="3"></textarea>
+                                                    <textarea name="special_request" id="special_request" rows="3"></textarea>
                                                 </div>
                                                 <!-- Step Navigation Buttons -->
                                                 <div class="details-nav-btns">

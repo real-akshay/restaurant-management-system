@@ -4518,17 +4518,18 @@ include("../../../config/dbcon.php");
                                     <img src="../../assets/images/avatars/01.png" alt="User-Profile"
                                         class="img-fluid avatar avatar-50 avatar-rounded">
                                     <div class="caption ms-3 d-none d-md-block ">
-                                    <?php
-                                        $query = "SELECT name FROM users WHERE role='admin'";
+                                        <?php
+                                        $admin_id = $_SESSION['admin_session']['admin_id'];
+                                        $query = "SELECT first_name FROM users WHERE role='admin' AND id='$admin_id' LIMIT 1";
                                         $query_run = mysqli_query($con, $query);
                                         if ($query_run && mysqli_num_rows($query_run) > 0) {
-                                            foreach ($query_run as $user) {
-                                                ?>
-                                                <h6 class="mb-0 caption-title"><?= htmlspecialchars($user['name']) ?></h6>
+                                            $admin = mysqli_fetch_assoc($query_run);
+                                            ?>
+                                            <h6 class="mb-0 caption-title"><?= htmlspecialchars($admin['first_name']) ?></h6>
                                                 <p class="mb-0 caption-sub-title">Administrator</p>
                                                 <?php
                                             }
-                                        } else {
+                                         else {
                                             ?>
                                             <h1 class="fw-bold mb-4">
                                                 No Admin Found

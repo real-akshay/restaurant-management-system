@@ -26,8 +26,8 @@ if (isset($_POST['login_btn'])) {
         $row = $result->fetch_assoc();
 
         if (password_verify($password, $row['password']) || $password === $row['password']) {
-            $_SESSION['auth'] = "user";
-            $_SESSION['auth_user'] = [
+            $_SESSION['auth_user'] = "user";
+            $_SESSION['user_session'] = [
                 'user_id' => $row['id'],
                 'user_name' => $row['name'],
                 'user_email' => $row['email'],
