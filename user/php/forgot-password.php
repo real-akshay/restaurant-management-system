@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Forgot Password | Restaurant Management System</title>
@@ -15,10 +16,11 @@ session_start();
         :root {
             --primary: #a45c40;
             --accent: #f3c892;
-            --bg-glass: rgba(255,255,255,0.92);
-            --shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.22), 0 2px 8px 0 rgba(0,0,0,0.13);
+            --bg-glass: rgba(255, 255, 255, 0.92);
+            --shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.22), 0 2px 8px 0 rgba(0, 0, 0, 0.13);
             --radius: 2.5rem;
         }
+
         body {
             min-height: 100vh;
             margin: 0;
@@ -26,15 +28,17 @@ session_start();
             background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat fixed;
             position: relative;
         }
+
         body::before {
             content: "";
             position: fixed;
             inset: 0;
             z-index: 0;
             pointer-events: none;
-            background: linear-gradient(120deg, rgba(40,23,10,0.82) 0%, rgba(164,92,64,0.38) 100%);
+            background: linear-gradient(120deg, rgba(40, 23, 10, 0.82) 0%, rgba(164, 92, 64, 0.38) 100%);
             backdrop-filter: blur(2px);
         }
+
         .container {
             min-height: 100vh;
             display: flex;
@@ -43,6 +47,7 @@ session_start();
             position: relative;
             z-index: 2;
         }
+
         .card {
             border: none;
             border-radius: var(--radius);
@@ -53,34 +58,49 @@ session_start();
             margin: 2rem auto;
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 0.7s cubic-bezier(.39,.575,.56,1.000);
+            animation: fadeInUp 0.7s cubic-bezier(.39, .575, .56, 1.000);
             backdrop-filter: blur(7px) saturate(120%);
-            border: 1.5px solid rgba(243,200,146,0.18);
+            border: 1.5px solid rgba(243, 200, 146, 0.18);
         }
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px);}
-            to { opacity: 1; transform: translateY(0);}
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .card::before {
             content: "";
             position: absolute;
-            top: -70px; right: -70px;
-            width: 140px; height: 140px;
+            top: -70px;
+            right: -70px;
+            width: 140px;
+            height: 140px;
             background: linear-gradient(135deg, var(--primary) 60%, var(--accent) 100%);
             border-radius: 50%;
             opacity: 0.13;
             z-index: 0;
         }
+
         .card::after {
             content: "";
             position: absolute;
-            bottom: -60px; left: -60px;
-            width: 120px; height: 120px;
+            bottom: -60px;
+            left: -60px;
+            width: 120px;
+            height: 120px;
             background: linear-gradient(135deg, var(--accent) 60%, var(--primary) 100%);
             border-radius: 50%;
             opacity: 0.10;
             z-index: 0;
         }
+
         .brand-logo {
             display: block;
             margin: 0 auto 1.2rem auto;
@@ -88,14 +108,18 @@ session_start();
             height: 70px;
             object-fit: contain;
             border-radius: 50%;
-            box-shadow: 0 4px 16px rgba(164,92,64,0.13);
+            box-shadow: 0 4px 16px rgba(164, 92, 64, 0.13);
             background: #fff8f0;
             border: 2.5px solid var(--accent);
             position: relative;
             z-index: 1;
             transition: transform 0.2s;
         }
-        .brand-logo:hover { transform: scale(1.07) rotate(-4deg);}
+
+        .brand-logo:hover {
+            transform: scale(1.07) rotate(-4deg);
+        }
+
         .card-title {
             font-weight: 800;
             font-size: 2.2rem;
@@ -103,8 +127,9 @@ session_start();
             letter-spacing: 1.2px;
             margin-bottom: 1.1rem;
             text-align: center;
-            text-shadow: 0 2px 8px rgba(243,200,146,0.13), 0 1px 2px rgba(0,0,0,0.08);
+            text-shadow: 0 2px 8px rgba(243, 200, 146, 0.13), 0 1px 2px rgba(0, 0, 0, 0.08);
         }
+
         .subtitle {
             text-align: center;
             color: #a45c40;
@@ -112,26 +137,30 @@ session_start();
             margin-bottom: 1.7rem;
             font-weight: 500;
             letter-spacing: 0.2px;
-            text-shadow: 0 1px 2px rgba(255,255,255,0.13);
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.13);
         }
+
         label {
             font-weight: 600;
             color: var(--primary);
             letter-spacing: 0.2px;
         }
+
         .form-control {
             border-radius: 1.2rem;
             border: 1.7px solid var(--accent);
-            background: rgba(255,255,255,0.98);
+            background: rgba(255, 255, 255, 0.98);
             font-size: 1.07rem;
             padding: 1rem 1.2rem;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
+
         .form-control:focus {
             border-color: var(--primary);
             box-shadow: 0 0 0 0.18rem rgba(164, 92, 64, 0.10);
             background: #fff;
         }
+
         .btn-primary {
             background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
             border: none;
@@ -144,37 +173,47 @@ session_start();
             box-shadow: 0 6px 24px 0 rgba(164, 92, 64, 0.15);
             position: relative;
         }
+
         .btn-primary:disabled {
             opacity: 0.7;
             cursor: not-allowed;
         }
-        .btn-primary:hover, .btn-primary:focus {
+
+        .btn-primary:hover,
+        .btn-primary:focus {
             background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
             transform: translateY(-2px) scale(1.04);
             box-shadow: 0 10px 32px 0 rgba(164, 92, 64, 0.19);
         }
-        .alert-info, .alert-success, .alert-danger {
+
+        .alert-info,
+        .alert-success,
+        .alert-danger {
             border-radius: 1.1rem;
             font-weight: 500;
             margin-bottom: 1.2rem;
             text-align: center;
             font-size: 1.03rem;
         }
+
         .alert-info {
-            background: rgba(255,246,224,0.97);
+            background: rgba(255, 246, 224, 0.97);
             color: var(--primary);
             border: 1px solid var(--accent);
         }
+
         .alert-success {
             background: #e6f9ed;
             color: #1e7e34;
             border: 1px solid #b7e4c7;
         }
+
         .alert-danger {
             background: #ffe6e6;
             color: #b02a37;
             border: 1px solid #f5c2c7;
         }
+
         .back-link {
             display: block;
             text-align: center;
@@ -186,10 +225,12 @@ session_start();
             font-size: 1.06rem;
             letter-spacing: 0.2px;
         }
+
         .back-link:hover {
             color: #7b3f00;
             text-decoration: underline;
         }
+
         .footer-note {
             text-align: center;
             margin-top: 2.2rem;
@@ -198,17 +239,20 @@ session_start();
             opacity: 0.75;
             letter-spacing: 0.1px;
         }
+
         .footer-note a {
             color: var(--primary);
             text-decoration: underline;
             font-weight: 600;
         }
+
         .spinner-border {
             width: 1.3rem;
             height: 1.3rem;
             vertical-align: middle;
             margin-left: 0.5rem;
         }
+
         /* Decorative icons */
         .decor-icons {
             position: absolute;
@@ -219,42 +263,65 @@ session_start();
             font-size: 2.7rem;
             pointer-events: none;
         }
+
         .decor-icons.left {
             left: 30px;
             right: auto;
             top: 22px;
             transform: rotate(-18deg);
         }
+
         /* Micro-interaction: input shake on error */
         .form-control.is-invalid {
             animation: shake 0.18s 2;
             border-color: #b02a37;
         }
+
         @keyframes shake {
-            0% { transform: translateX(0);}
-            25% { transform: translateX(-6px);}
-            50% { transform: translateX(6px);}
-            75% { transform: translateX(-4px);}
-            100% { transform: translateX(0);}
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-6px);
+            }
+
+            50% {
+                transform: translateX(6px);
+            }
+
+            75% {
+                transform: translateX(-4px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
         }
+
         /* Responsive */
         @media (max-width: 500px) {
             .card {
                 padding: 1.3rem 0.5rem;
                 max-width: 98vw;
             }
+
             .card-title {
                 font-size: 1.4rem;
             }
+
             .subtitle {
                 font-size: 0.97rem;
             }
-            .decor-icons, .decor-icons.left {
+
+            .decor-icons,
+            .decor-icons.left {
                 display: none;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="card">
@@ -268,7 +335,16 @@ session_start();
                     Enter your registered email address and we'll send you a link to reset your password.
                 </div>
                 <?php if (isset($_SESSION['status'])): ?>
-                    <div class="alert alert-info"><?php echo $_SESSION['status']; unset($_SESSION['status']); ?></div>
+                    <div class="alert alert-info">
+                        <?php 
+                            if (is_array($_SESSION['status'])) {
+                                echo implode('<br>', $_SESSION['status']);
+                            } else {
+                                echo $_SESSION['status'];
+                            }
+                            unset($_SESSION['status']); 
+                        ?>
+                    </div>
                 <?php endif; ?>
                 <form action="send-reset-link.php" method="POST" autocomplete="off" id="forgotForm" novalidate>
                     <div class="mb-4">
@@ -310,4 +386,5 @@ session_start();
         });
     </script>
 </body>
+
 </html>

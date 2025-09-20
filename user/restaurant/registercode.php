@@ -38,7 +38,7 @@ if (isset($_POST['register_btn'])) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert user (using prepared statement)
-    $stmt = $con->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
+    $stmt = $con->prepare("INSERT INTO users (first_name, email, password) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $name, $email, $hashed_password);
     if ($stmt->execute()) {
         $_SESSION['status'] = [

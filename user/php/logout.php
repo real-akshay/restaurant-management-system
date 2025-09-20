@@ -7,7 +7,7 @@ session_start();
                 'type' => 'info', // ya 'error', 'info', 'warning'
                 'message' => 'Logged out Successfully'
             ];
-    header("Location:../restaurant/index.php");
+    header("Location:../restaurant/login.php");
     exit(0);
 // }
 

@@ -1,30 +1,15 @@
+
 <?php
 session_start();
 include_once '../../authentication.php';
 include_once '../../../config/dbcon.php';
 
+if (!isset($_SESSION['user_session'])) {
+    header('Location: ../../login.php');
+    exit();
+}
+
 $user_id = $_SESSION['user_session']['user_id'];
-// fetch user id for user table from user_id 
-$user_sql = "SELECT id FROM order_master WHERE user_id = ?";
-$user_stmt = $con->prepare($user_sql);
-if (!$user_stmt) {
-    die("Prepare failed for user query: " . $con->error);
-}
-$user_stmt->bind_param("s", $user_id);
-$user_stmt->execute();
-$user_stmt->bind_result($fetched_id);
-
-$order_ids = [];
-while ($user_stmt->fetch()) {
-    $order_ids[] = $fetched_id;
-}
-$user_stmt->close();
-
-
-// If you want to use these IDs in an IN clause later:
-$order_ids_str = implode(',', array_map('intval', $order_ids));
-$user_stmt = $con->prepare($user_sql);
-
 
 // Handle search/filter/pagination
 $search = $_GET['search'] ?? '';
@@ -33,43 +18,39 @@ $page = max(1, intval($_GET['page'] ?? 1));
 $per_page = 8;
 $offset = ($page - 1) * $per_page;
 
-$where = "order_id = ?";
-$params = [$order_ids];
+// Build WHERE clause
+$where = "user_id = ?";
+$params = [$user_id];
 $types = "i";
 
 if ($search) {
-    $where .= " AND (order_id LIKE ? OR order_date LIKE ?)";
+    $where .= " AND (id LIKE ? OR order_date LIKE ?)";
     $params[] = "%$search%";
     $params[] = "%$search%";
     $types .= "ss";
 }
 if ($status_filter) {
-    $where .= " AND status = ?";
+    $where .= " AND order_status = ?";
     $params[] = $status_filter;
     $types .= "s";
 }
 
 // Get total count for pagination
-$count_sql = "SELECT COUNT(*) FROM order_details WHERE $where";
+$count_sql = "SELECT COUNT(*) FROM order_master WHERE $where";
 $count_stmt = $con->prepare($count_sql);
-if (!$count_stmt) {
-    die("Prepare failed for count query: " . $con->error);
-}
 $count_stmt->bind_param($types, ...$params);
 $count_stmt->execute();
 $count_stmt->bind_result($total_orders);
 $count_stmt->fetch();
 $count_stmt->close();
 
-$list_sql = "SELECT * FROM order_details WHERE $where ORDER BY order_date DESC LIMIT ? OFFSET ?";
-$stmt = $con->prepare($list_sql);
-if (!$stmt) {
-    die("Prepare failed for list query: " . $con->error);
-}
+// Get paginated orders
+$list_sql = "SELECT * FROM order_master WHERE $where ORDER BY order_date DESC LIMIT ? OFFSET ?";
 $params_with_limit = $params;
 $params_with_limit[] = $per_page;
 $params_with_limit[] = $offset;
 $types_with_limit = $types . "ii";
+$stmt = $con->prepare($list_sql);
 $stmt->bind_param($types_with_limit, ...$params_with_limit);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -86,10 +67,10 @@ function status_badge($status) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Order History | Gourmet Palace</title>
+    <title>Order History | Akshay's Restaurant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order_history.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <style>
         body {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
@@ -281,9 +262,248 @@ function status_badge($status) {
         }
     </style>
 </head>
+
+
+<?php
+// ...existing code...
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order History | Akshay's Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Premium font and icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f8fafc 0%, #e2e8f0 100%);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #23213a;
+            min-height: 100vh;
+        }
+        .order-history-container {
+            max-width: 1050px;
+            margin: 48px auto 32px auto;
+            background: rgba(255,255,255,0.98);
+            border-radius: 22px;
+            box-shadow: 0 10px 40px rgba(60, 60, 90, 0.13);
+            padding: 48px 52px 36px 52px;
+            position: relative;
+            overflow: hidden;
+        }
+        .order-history-container:before {
+            content: "";
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 180px; height: 180px;
+            background: radial-gradient(circle, #e0c3fc 0%, #8ec5fc 100%);
+            opacity: 0.18;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .restaurant-title {
+            font-size: 2.7rem;
+            font-weight: 800;
+            color: #5f4b8b;
+            letter-spacing: 2.5px;
+            margin-bottom: 6px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+        .subtitle {
+            font-size: 1.18rem;
+            color: #7c7c7c;
+            text-align: center;
+            margin-bottom: 30px;
+            z-index: 1;
+            position: relative;
+        }
+        .actions-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            z-index: 1;
+            position: relative;
+        }
+        .search-box input, .filter-select {
+            padding: 10px 16px;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            outline: none;
+            background: #f7f7fa;
+            transition: border 0.2s;
+        }
+        .search-box input:focus, .filter-select:focus {
+            border-color: #b39ddb;
+        }
+        .filter-select {
+            background: #f3f0ff;
+            color: #5f4b8b;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 14px;
+            z-index: 1;
+            position: relative;
+        }
+        th, td {
+            padding: 18px 20px;
+            text-align: left;
+        }
+        th {
+            background: #f3f0ff;
+            color: #5f4b8b;
+            font-size: 1.13rem;
+            font-weight: 800;
+            border-radius: 10px 10px 0 0;
+            letter-spacing: 0.5px;
+        }
+        tr {
+            background: #f8f7fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(95, 75, 139, 0.05);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        tr:hover {
+            box-shadow: 0 6px 18px rgba(95, 75, 139, 0.13);
+            transform: translateY(-2px) scale(1.01);
+        }
+        td {
+            font-size: 1.04rem;
+            color: #23213a;
+            border-radius: 0 0 10px 10px;
+        }
+        .status-badge {
+            padding: 7px 22px;
+            border-radius: 22px;
+            font-size: 1.01rem;
+            font-weight: 700;
+            display: inline-block;
+            letter-spacing: 0.5px;
+            box-shadow: 0 1px 4px rgba(95,75,139,0.06);
+        }
+        .status-completed { background: #d1fae5; color: #065f46; }
+        .status-pending { background: #fef9c3; color: #92400e; }
+        .status-cancelled { background: #fee2e2; color: #991b1b; }
+        .status-delivered { background: #e0e7ff; color: #3730a3; }
+        .order-actions button, .order-actions a {
+            background: linear-gradient(90deg, #5f4b8b 60%, #8ec5fc 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 16px;
+            margin-right: 7px;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 1px 4px rgba(95,75,139,0.08);
+        }
+        .order-actions button:hover, .order-actions a:hover {
+            background: linear-gradient(90deg, #3c2466 60%, #b39ddb 100%);
+            box-shadow: 0 2px 8px rgba(95,75,139,0.13);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 32px;
+            z-index: 1;
+            position: relative;
+        }
+        .pagination a, .pagination span {
+            padding: 8px 18px;
+            border-radius: 8px;
+            background: #f3f0ff;
+            color: #5f4b8b;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.07rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        .pagination .active {
+            background: linear-gradient(90deg, #5f4b8b 60%, #8ec5fc 100%);
+            color: #fff;
+        }
+        .no-orders, .empty-message {
+            text-align: center;
+            color: #7c7c7c;
+            font-size: 1.23rem;
+            margin-top: 48px;
+            z-index: 1;
+            position: relative;
+        }
+        .no-orders img, .empty-message img {
+            opacity: 0.5;
+            margin-bottom: 18px;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0; width: 100vw; height: 100vh;
+            background: rgba(60,60,90,0.18);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: #fff;
+            border-radius: 18px;
+            padding: 36px 30px;
+            max-width: 440px;
+            width: 96vw;
+            box-shadow: 0 8px 32px rgba(60, 60, 90, 0.18);
+            position: relative;
+        }
+        .modal-close {
+            position: absolute;
+            right: 18px;
+            top: 12px;
+            font-size: 1.7rem;
+            color: #5f4b8b;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .modal-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+            color: #5f4b8b;
+        }
+        .modal-body {
+            font-size: 1.05rem;
+            color: #23213a;
+        }
+        @media (max-width: 900px) {
+            .order-history-container { padding: 24px 4px; }
+            th, td { padding: 10px 6px; }
+            .modal-content { padding: 18px 6px; }
+        }
+        @media (max-width: 600px) {
+            .order-history-container { padding: 8px 2px; }
+            .restaurant-title { font-size: 2rem; }
+            .subtitle { font-size: 1rem; }
+        }
+    </style>
+</head>
 <body>
     <div class="order-history-container" aria-label="Order History">
-        <div class="restaurant-title">Akshay's restaurant</div>
+        <div class="restaurant-title">Akshay's Restaurant</div>
         <div class="subtitle">Your Order History</div>
         <form class="actions-bar" method="get" autocomplete="off" role="search" aria-label="Search and filter orders">
             <div class="search-box">
@@ -292,13 +512,16 @@ function status_badge($status) {
             <select name="status" class="filter-select" aria-label="Filter by status">
                 <option value="">All Status</option>
                 <option value="pending" <?php if($status_filter=='pending') echo 'selected'; ?>>Pending</option>
-                <option value="delivered" <?php if($status_filter=='') echo 'selected'; ?>>Delivered</option>
+                <option value="delivered" <?php if($status_filter=='delivered') echo 'selected'; ?>>Delivered</option>
                 <option value="completed" <?php if($status_filter=='completed') echo 'selected'; ?>>Completed</option>
                 <option value="cancelled" <?php if($status_filter=='cancelled') echo 'selected'; ?>>Cancelled</option>
             </select>
-            <button type="submit" style="background:#5f4b8b;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:1rem;cursor:pointer;">
+            <button type="submit" style="background:linear-gradient(90deg,#5f4b8b 60%,#8ec5fc 100%);color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:1.07rem;cursor:pointer;font-weight:700;">
                 <i class="ri-search-line"></i> Search
             </button>
+            <a href="../index.php" style="background:linear-gradient(90deg,#8ec5fc 60%,#5f4b8b 100%);color:#fff;border:none;border-radius:10px;padding:10px 22px;font-size:1.07rem;cursor:pointer;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:5px;">
+                <i class="ri-home-4-line"></i> Home
+            </a>
         </form>
         <?php if ($result->num_rows > 0): ?>
             <table aria-label="Order history table">
@@ -315,23 +538,21 @@ function status_badge($status) {
                     <?php while ($order = $result->fetch_assoc()): ?>
                         <tr>
                             <td>
-                                <a href="#" class="view-details" data-order-id="<?php echo $order['order_id']; ?>" aria-label="View order details">
-                                    <?php echo htmlspecialchars($order['order_id']); ?>
+                                <a href="#" class="view-details" data-order-id="<?php echo $order['id']; ?>" aria-label="View order details" style="color:#5f4b8b;font-weight:700;text-decoration:underline;">
+                                    <?php echo htmlspecialchars($order['id']); ?>
                                 </a>
                             </td>
                             <td><?php echo date('d M Y, h:i A', strtotime($order['order_date'])); ?></td>
-                            <td>₹<?php echo number_format($order['subtotal'], 2); ?></td>
+                            <td>₹<?php echo number_format($order['total_amount'], 2); ?></td>
                             <td>
-                                <span class="status-badge <?php echo status_badge($order['status']); ?>">
-                                    <?php echo ucfirst($order['status']); ?>
+                                <span class="status-badge <?php echo status_badge($order['order_status']); ?>">
+                                    <?php echo ucfirst($order['order_status']); ?>
                                 </span>
                             </td>
                             <td class="order-actions">
-                                <button class="view-details" data-order-id="<?php echo $order['order_id']; ?>" aria-label="View details"><i class="ri-eye-line"></i></button>
-                                <a href="reorder.php?order_id=<?php echo $order['order_id']; ?>" aria-label="Reorder"><i class="ri-repeat-line"></i></a>
-                                <a href="download-invoice.php?order_id=<?php echo $order['order_id']; ?>" aria-label="Download invoice"><i class="ri-download-2-line"></i></a>
-                                <button class="rate-order" data-order-id="<?php echo $order['order_id']; ?>" aria-label="Rate order"><i class="ri-star-line"></i></button>
-                            </td>
+                                <button class="view-details" data-order-id="<?php echo $order['id']; ?>" aria-label="View details"><i class="ri-eye-line"></i></button>
+                                <a href="reorder.php?order_id=<?php echo $order['id']; ?>" aria-label="Reorder"><i class="ri-repeat-line"></i></a>
+                                <a href="download-invoice.php?order_id=<?php echo $order['id']; ?>" aria-label="Download Invoice" target="_blank" rel="noopener"><i class="ri-download-2-line"></i></a>  </td>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>
@@ -357,8 +578,8 @@ function status_badge($status) {
             </div>
             <?php endif; ?>
         <?php else: ?>
-            <div class="no-orders">
-                <img src="https://cdn-icons-png.flaticon.com/512/4076/4076549.png" alt="No Orders" width="90" style="opacity:0.5; margin-bottom: 18px;">
+            <div class="empty-message">
+                <img src="https://cdn-icons-png.flaticon.com/512/4076/4076549.png" alt="No Orders" width="90">
                 <br>
                 You have not placed any orders yet.<br>
                 <a href="../../menu.php" style="color:#5f4b8b; text-decoration:underline;">Order Now</a>
@@ -367,35 +588,13 @@ function status_badge($status) {
     </div>
 
     <!-- Order Details Modal -->
-    <div class="modal" id="orderDetailsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="orderDetailsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" style="display:none;">
         <div class="modal-content">
             <button class="modal-close" aria-label="Close">&times;</button>
             <div class="modal-title" id="modalTitle">Order Details</div>
             <div class="modal-body" id="modalBody">
                 <!-- Order details will be loaded here via AJAX -->
                 <div style="text-align:center;"><i class="ri-loader-4-line ri-spin" style="font-size:2rem;"></i></div>
-            </div>
-        </div>
-    </div>
-    <!-- Rate Order Modal -->
-    <div class="modal" id="rateOrderModal" role="dialog" aria-modal="true" aria-labelledby="rateModalTitle">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close">&times;</button>
-            <div class="modal-title" id="rateModalTitle">Rate Your Order</div>
-            <div class="modal-body">
-                <form id="rateOrderForm">
-                    <input type="hidden" name="order_id" id="rateOrderId">
-                    <div class="star-rating" aria-label="Star rating">
-                        <i class="ri-star-fill" data-value="1"></i>
-                        <i class="ri-star-fill" data-value="2"></i>
-                        <i class="ri-star-fill" data-value="3"></i>
-                        <i class="ri-star-fill" data-value="4"></i>
-                        <i class="ri-star-fill" data-value="5"></i>
-                    </div>
-                    <textarea name="review" rows="3" placeholder="Write your review..." style="width:100%;margin-top:10px;border-radius:8px;padding:8px;border:1px solid #d1d5db;"></textarea>
-                    <button type="submit" style="margin-top:12px;background:#5f4b8b;color:#fff;border:none;border-radius:8px;padding:8px 18px;font-size:1rem;cursor:pointer;">Submit</button>
-                </form>
-                <div id="rateOrderMsg" style="margin-top:10px;color:#5f4b8b;"></div>
             </div>
         </div>
     </div>
@@ -433,51 +632,6 @@ function status_badge($status) {
                 .catch(() => document.getElementById('modalBody').innerHTML = 'Failed to load order details.');
         }
     });
-
-    // Rate order modal
-    document.querySelectorAll('.rate-order').forEach(btn => {
-        btn.onclick = function(e) {
-            e.preventDefault();
-            var orderId = this.getAttribute('data-order-id');
-            document.getElementById('rateOrderId').value = orderId;
-            document.querySelectorAll('.star-rating i').forEach(star => star.classList.remove('selected'));
-            document.getElementById('rateOrderMsg').innerText = '';
-            openModal('rateOrderModal');
-        }
-    });
-    // Star rating logic
-    document.querySelectorAll('.star-rating i').forEach(star => {
-        star.onclick = function() {
-            var val = this.getAttribute('data-value');
-            document.querySelectorAll('.star-rating i').forEach(s => s.classList.remove('selected'));
-            for (let i = 0; i < val; i++) {
-                document.querySelectorAll('.star-rating i')[i].classList.add('selected');
-            }
-            document.getElementById('rateOrderForm').setAttribute('data-rating', val);
-        }
-    });
-    // Submit rating (AJAX)
-    document.getElementById('rateOrderForm').onsubmit = function(e) {
-        e.preventDefault();
-        var order_id = document.getElementById('rateOrderId').value;
-        var rating = this.getAttribute('data-rating') || 0;
-        var review = this.review.value;
-        if (rating < 1) {
-            document.getElementById('rateOrderMsg').innerText = 'Please select a rating.';
-            return;
-        }
-        fetch('rate-order.php', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: 'order_id=' + encodeURIComponent(order_id) + '&rating=' + encodeURIComponent(rating) + '&review=' + encodeURIComponent(review)
-        })
-        .then(res => res.text())
-        .then(msg => {
-            document.getElementById('rateOrderMsg').innerText = msg;
-            setTimeout(() => closeModal('rateOrderModal'), 1200);
-        })
-        .catch(() => document.getElementById('rateOrderMsg').innerText = 'Failed to submit rating.');
-    };
     </script>
 </body>
 </html>

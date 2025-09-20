@@ -21,9 +21,106 @@ include('../../authentication.php');
         href="../comments/feed/index.html" />
     <script type="text/javascript">
         /* <![CDATA[ */
-        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2" } };
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"
+            }
+        };
         /*! This file is auto-generated */
-        !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
+        ! function(i, n) {
+            var o, s, e;
+
+            function c(e) {
+                try {
+                    var t = {
+                        supportTests: e,
+                        timestamp: (new Date).valueOf()
+                    };
+                    sessionStorage.setItem(o, JSON.stringify(t))
+                } catch (e) {}
+            }
+
+            function p(e, t, n) {
+                e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0);
+                var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data),
+                    r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data));
+                return t.every(function(e, t) {
+                    return e === r[t]
+                })
+            }
+
+            function u(e, t, n) {
+                switch (t) {
+                    case "flag":
+                        return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");
+                    case "emoji":
+                        return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b")
+                }
+                return !1
+            }
+
+            function f(e, t, n) {
+                var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"),
+                    a = r.getContext("2d", {
+                        willReadFrequently: !0
+                    }),
+                    o = (a.textBaseline = "top", a.font = "600 32px Arial", {});
+                return e.forEach(function(e) {
+                    o[e] = t(a, e, n)
+                }), o
+            }
+
+            function t(e) {
+                var t = i.createElement("script");
+                t.src = e, t.defer = !0, i.head.appendChild(t)
+            }
+            "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = {
+                everything: !0,
+                everythingExceptFlag: !0
+            }, e = new Promise(function(e) {
+                i.addEventListener("DOMContentLoaded", e, {
+                    once: !0
+                })
+            }), new Promise(function(t) {
+                var n = function() {
+                    try {
+                        var e = JSON.parse(sessionStorage.getItem(o));
+                        if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests
+                    } catch (e) {}
+                    return null
+                }();
+                if (!n) {
+                    if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try {
+                        var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));",
+                            r = new Blob([e], {
+                                type: "text/javascript"
+                            }),
+                            a = new Worker(URL.createObjectURL(r), {
+                                name: "wpTestEmojiSupports"
+                            });
+                        return void(a.onmessage = function(e) {
+                            c(n = e.data), a.terminate(), t(n)
+                        })
+                    } catch (e) {}
+                    c(n = f(s, u, p))
+                }
+                t(n)
+            }).then(function(e) {
+                for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]);
+                n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function() {
+                    n.DOMReady = !0
+                }
+            }).then(function() {
+                return e
+            }).then(function() {
+                var e;
+                n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji)))
+            }))
+        }((window, document), window._wpemojiSettings);
         /* ]]> */
     </script>
     <style id='wp-emoji-styles-inline-css' type='text/css'>
@@ -446,7 +543,14 @@ include('../../authentication.php');
         id="jquery-blockui-js" data-wp-strategy="defer"></script>
     <script type="text/javascript" id="wc-add-to-cart-js-extra">
         /* <![CDATA[ */
-        var wc_add_to_cart_params = { "ajax_url": "\/themes\/restaurant\/wp\/demo\/restaurant\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/themes\/restaurant\/wp\/demo\/restaurant\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
+        var wc_add_to_cart_params = {
+            "ajax_url": "\/themes\/restaurant\/wp\/demo\/restaurant\/wp-admin\/admin-ajax.php",
+            "wc_ajax_url": "\/themes\/restaurant\/wp\/demo\/restaurant\/?wc-ajax=%%endpoint%%",
+            "i18n_view_cart": "View cart",
+            "cart_url": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/cart\/",
+            "is_cart": "",
+            "cart_redirect_after_add": "no"
+        };
         /* ]]> */
     </script>
     <script type="text/javascript"
@@ -457,7 +561,10 @@ include('../../authentication.php');
         id="js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript" id="woocommerce-js-extra">
         /* <![CDATA[ */
-        var woocommerce_params = { "ajax_url": "\/themes\/restaurant\/wp\/demo\/restaurant\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/themes\/restaurant\/wp\/demo\/restaurant\/?wc-ajax=%%endpoint%%" };
+        var woocommerce_params = {
+            "ajax_url": "\/themes\/restaurant\/wp\/demo\/restaurant\/wp-admin\/admin-ajax.php",
+            "wc_ajax_url": "\/themes\/restaurant\/wp\/demo\/restaurant\/?wc-ajax=%%endpoint%%"
+        };
         /* ]]> */
     </script>
     <script type="text/javascript"
@@ -2248,12 +2355,38 @@ include('../../authentication.php');
     <link rel="apple-touch-icon" href="../wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" />
     <meta name="msapplication-TileImage"
         content="https://www.nicdark-themes.com/themes/restaurant/wp/demo/restaurant/wp-content/uploads/sites/2/2019/01/ristorante-thumbnail.jpg" />
-    <script type="text/javascript">function setREVStartSize(e) {
+    <script type="text/javascript">
+        function setREVStartSize(e) {
             try {
-                e.c = jQuery(e.c); var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
-                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) { f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e) }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) { var u = (e.c.width(), jQuery(window).height()); if (void 0 != e.fullScreenOffsetContainer) { var c = e.fullScreenOffsetContainer.split(","); if (c) jQuery.each(c, function (e, i) { u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0)) } f = u } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight); e.c.closest(".rev_slider_wrapper").css({ height: f })
-            } catch (d) { console.log("Failure at Presize of Slider:" + d) }
-        };</script>
+                e.c = jQuery(e.c);
+                var i = jQuery(window).width(),
+                    t = 9999,
+                    r = 0,
+                    n = 0,
+                    l = 0,
+                    f = 0,
+                    s = 0,
+                    h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) {
+                        f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e)
+                    }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) {
+                    var u = (e.c.width(), jQuery(window).height());
+                    if (void 0 != e.fullScreenOffsetContainer) {
+                        var c = e.fullScreenOffsetContainer.split(",");
+                        if (c) jQuery.each(c, function(e, i) {
+                            u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u
+                        }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0))
+                    }
+                    f = u
+                } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({
+                    height: f
+                })
+            } catch (d) {
+                console.log("Failure at Presize of Slider:" + d)
+            }
+        };
+    </script>
     <style type="text/css" id="wp-custom-css">
         /*HEADER BTN*/
         .book_a_table_btn>a {
@@ -3000,35 +3133,45 @@ include('../../authentication.php');
                                 <script type="text/javascript">
                                     //<![CDATA[
 
-                                    jQuery(document).ready(function () {
+                                    jQuery(document).ready(function() {
 
 
                                         //START
-                                        jQuery(function ($) {
+                                        jQuery(function($) {
 
                                             //OPEN sidebar content ( navigation 2 )
-                                            $(".nd_options_open_sidebar_966").on("click", function (event) {
+                                            $(".nd_options_open_sidebar_966").on("click", function(event) {
 
                                                 //add rule to main container only if the component is in header
                                                 if ($("#nd_options_header_5 .nd_options_open_sidebar_content_966, #nd_options_header_5_mobile .nd_options_open_sidebar_content_966").length) {
-                                                    $(".nicdark_site > .nd_options_container").css({ "position": "relative", "z-index": "0" });
+                                                    $(".nicdark_site > .nd_options_container").css({
+                                                        "position": "relative",
+                                                        "z-index": "0"
+                                                    });
                                                 }
 
                                                 //open sidebar
-                                                $(".nd_options_open_sidebar_content_966").css({ "right": "0px", });
+                                                $(".nd_options_open_sidebar_content_966").css({
+                                                    "right": "0px",
+                                                });
 
                                             });
 
                                             //CLOSE sidebar content ( navigation 2 )
-                                            $(".nd_options_close_sidebar_966").on("click", function (event) {
+                                            $(".nd_options_close_sidebar_966").on("click", function(event) {
 
-                                                $(".nd_options_open_sidebar_content_966").css({ "right": "-300px" });
+                                                $(".nd_options_open_sidebar_content_966").css({
+                                                    "right": "-300px"
+                                                });
 
                                                 //add rule to main container only if the component is in header
                                                 if ($("#nd_options_header_5 .nd_options_open_sidebar_content_966, #nd_options_header_5_mobile .nd_options_open_sidebar_content_966").length) {
 
                                                     function nd_options_remove_style() {
-                                                        $(".nicdark_site > .nd_options_container").css({ "position": "", "z-index": "" });
+                                                        $(".nicdark_site > .nd_options_container").css({
+                                                            "position": "",
+                                                            "z-index": ""
+                                                        });
                                                     }
                                                     setTimeout(nd_options_remove_style, 1000);
 
@@ -3589,10 +3732,10 @@ include('../../authentication.php');
                                 <!-- Toast JS -->
                                 <script>
                                     <?php if ($show_toast): ?>
-                                        window.addEventListener('DOMContentLoaded', function () {
+                                        window.addEventListener('DOMContentLoaded', function() {
                                             var toast = document.getElementById('toast');
                                             toast.classList.add('show');
-                                            setTimeout(function () {
+                                            setTimeout(function() {
                                                 toast.classList.remove('show');
                                             }, 4000); // Toast will disappear after 4 seconds
                                         });
@@ -3643,20 +3786,19 @@ include('../../authentication.php');
 
                                                             <!--START RESTAURANT-->
                                                             <script type="text/javascript">
+                                                                jQuery(document).ready(function() {
 
-                                                                jQuery(document).ready(function () {
-
-                                                                    jQuery(function ($) {
+                                                                    jQuery(function($) {
 
 
-                                                                        $(".nd_rst_rest_single").click(function () {
+                                                                        $(".nd_rst_rest_single").click(function() {
 
                                                                             $(".nd_rst_ul_restaurant").removeClass("nd_rst_display_none");
 
                                                                         });
 
 
-                                                                        $(".nd_rst_ulli_restaurant").click(function () {
+                                                                        $(".nd_rst_ulli_restaurant").click(function() {
 
                                                                             $(".nd_rst_rest_single").removeClass("nd_rst_display_block");
                                                                             $(".nd_rst_ulli_restaurant").removeClass("nd_rst_bg_color_blue");
@@ -3675,7 +3817,6 @@ include('../../authentication.php');
                                                                     });
 
                                                                 });
-
                                                             </script>
 
                                                             <div id="nd_rst_section_restaurant"
@@ -3789,13 +3930,12 @@ include('../../authentication.php');
 
                                                                 </div>
                                                                 <script type="text/javascript">
+                                                                    jQuery(document).ready(function() {
 
-                                                                    jQuery(document).ready(function () {
-
-                                                                        jQuery(function ($) {
+                                                                        jQuery(function($) {
 
                                                                             // Jab "Add" button pe click hota hai
-                                                                            $(".nd_rst_guests_increase").click(function () {
+                                                                            $(".nd_rst_guests_increase").click(function() {
                                                                                 // Current value le lo
                                                                                 var value = $(".nd_rst_guests_number").text();
 
@@ -3814,7 +3954,7 @@ include('../../authentication.php');
                                                                             });
 
                                                                             // Jab "Remove" button pe click hota hai
-                                                                            $(".nd_rst_guests_decrease").click(function () {
+                                                                            $(".nd_rst_guests_decrease").click(function() {
                                                                                 // Current value le lo
                                                                                 var value = $(".nd_rst_guests_number").text();
 
@@ -3835,7 +3975,6 @@ include('../../authentication.php');
                                                                         });
 
                                                                     });
-
                                                                 </script>
                                                                 <!--END GUESTS-->
 
@@ -3872,9 +4011,9 @@ include('../../authentication.php');
 
                                                             <script type="text/javascript">
                                                                 //<![CDATA[
-                                                                jQuery(document).ready(function () {
+                                                                jQuery(document).ready(function() {
 
-                                                                    jQuery(function ($) {
+                                                                    jQuery(function($) {
 
                                                                         $("#nd_rst_datepicker_dev").datepicker({
                                                                             defaultDate: "2025-04-11",
@@ -3916,20 +4055,19 @@ include('../../authentication.php');
 
                                                             <!--START OCCASION-->
                                                             <script type="text/javascript">
+                                                                jQuery(document).ready(function() {
 
-                                                                jQuery(document).ready(function () {
-
-                                                                    jQuery(function ($) {
+                                                                    jQuery(function($) {
 
 
-                                                                        $(".nd_rst_occas_single").click(function () {
+                                                                        $(".nd_rst_occas_single").click(function() {
 
                                                                             $(".nd_rst_ul_occasion").removeClass("nd_rst_display_none");
 
                                                                         });
 
 
-                                                                        $(".nd_rst_ulli_occasion").click(function () {
+                                                                        $(".nd_rst_ulli_occasion").click(function() {
 
                                                                             $(".nd_rst_occas_single").removeClass("nd_rst_display_block");
                                                                             $(".nd_rst_ulli_occasion").removeClass("nd_rst_bg_color_blue");
@@ -3947,7 +4085,6 @@ include('../../authentication.php');
                                                                     });
 
                                                                 });
-
                                                             </script>
                                                             <div id="nd_rst_occasion_section" class="nd_rst_section">
                                                                 <div id="nd_rst_occasion_cont" class="nd_rst_section  ">
@@ -4002,12 +4139,11 @@ include('../../authentication.php');
 
                                                         <!--START TIME-->
                                                         <script type="text/javascript">
+                                                            jQuery(document).ready(function() {
 
-                                                            jQuery(document).ready(function () {
+                                                                jQuery(function($) {
 
-                                                                jQuery(function ($) {
-
-                                                                    $(".nd_rst_time").click(function () {
+                                                                    $(".nd_rst_time").click(function() {
 
                                                                         $(".nd_rst_time").removeClass("nd_rst_bg_color_blue");
                                                                         var nd_rst_calendar_time_select = $(this).attr("data-time");
@@ -4020,7 +4156,6 @@ include('../../authentication.php');
                                                                 });
 
                                                             });
-
                                                         </script>
 
                                                         <div id="nd_rst_time_section" class="nd_rst_section">
@@ -4115,10 +4250,9 @@ include('../../authentication.php');
 
 
                                                                     <script type="text/javascript">
+                                                                        jQuery(document).ready(function() {
 
-                                                                        jQuery(document).ready(function () {
-
-                                                                            jQuery(function ($) {
+                                                                            jQuery(function($) {
 
                                                                                 $("#nd_rst_btn_go_to_booking").removeClass("nd_rst_display_none_important");
 
@@ -4127,7 +4261,6 @@ include('../../authentication.php');
                                                                             });
 
                                                                         });
-
                                                                     </script>
                                                                 </div>
                                                             </ul>
@@ -4154,14 +4287,14 @@ include('../../authentication.php');
                                                         </div>
                                                         <script>
                                                             // Step navigation logic
-                                                            document.addEventListener('DOMContentLoaded', function () {
+                                                            document.addEventListener('DOMContentLoaded', function() {
                                                                 let currentStep = 1;
 
                                                                 function showStep(step) {
                                                                     document.querySelector('.step1').style.display = 'none';
                                                                     document.querySelector('.step2').style.display = 'none';
                                                                     document.querySelector('.step3').style.display = 'none';
-                                                                    document.querySelectorAll('.step-tab').forEach(function (tab) {
+                                                                    document.querySelectorAll('.step-tab').forEach(function(tab) {
                                                                         tab.classList.remove('nd_rst_step_active');
                                                                     });
                                                                     document.querySelector('.step-tab[data-step="' + step + '"]').classList.add('nd_rst_step_active');
@@ -4169,8 +4302,8 @@ include('../../authentication.php');
                                                                 }
 
                                                                 // Attach event listeners to all navigation buttons
-                                                                document.querySelectorAll('.step-next-btn').forEach(function (btn) {
-                                                                    btn.addEventListener('click', function () {
+                                                                document.querySelectorAll('.step-next-btn').forEach(function(btn) {
+                                                                    btn.addEventListener('click', function() {
                                                                         if (currentStep < 3) {
                                                                             currentStep++;
                                                                             showStep(currentStep);
@@ -4178,8 +4311,8 @@ include('../../authentication.php');
                                                                     });
                                                                 });
 
-                                                                document.querySelectorAll('.step-prev-btn').forEach(function (btn) {
-                                                                    btn.addEventListener('click', function () {
+                                                                document.querySelectorAll('.step-prev-btn').forEach(function(btn) {
+                                                                    btn.addEventListener('click', function() {
                                                                         if (currentStep > 1) {
                                                                             currentStep--;
                                                                             showStep(currentStep);
@@ -4361,8 +4494,8 @@ include('../../authentication.php');
                                                 <div class="confirm-nav-btns">
                                                     <button type="button"
                                                         class="step-prev-btn confirm-btn">Previous</button>
-                                                    <button type="button"
-                                                        class="step-next-btn confirm-btn">Next</button>
+                                                    <!-- <button type="button"
+                                                        class="step-next-btn confirm-btn">Next</button> -->
                                                 </div>
                                                 <style>
                                                     .step3 {
@@ -4455,7 +4588,7 @@ include('../../authentication.php');
                                                 </style>
                                                 <script>
                                                     // Populate confirmation tab with step1 and step2 data
-                                                    document.addEventListener('DOMContentLoaded', function () {
+                                                    document.addEventListener('DOMContentLoaded', function() {
                                                         function fillConfirmation() {
                                                             document.getElementById('confirm_name').textContent = document.getElementById('name').value;
                                                             document.getElementById('confirm_email').textContent = document.getElementById('email').value;
@@ -4469,8 +4602,8 @@ include('../../authentication.php');
                                                             document.getElementById('confirm_time').textContent = document.getElementById('nd_rst_time').value;
                                                         }
                                                         // Attach to all next buttons that go to step3
-                                                        document.querySelectorAll('.step-next-btn').forEach(function (btn) {
-                                                            btn.addEventListener('click', function () {
+                                                        document.querySelectorAll('.step-next-btn').forEach(function(btn) {
+                                                            btn.addEventListener('click', function() {
                                                                 // If step2 is visible, fill confirmation
                                                                 if (document.querySelector('.step2') && document.querySelector('.step2').style.display !== 'none') {
                                                                     setTimeout(fillConfirmation, 100);
@@ -4478,8 +4611,8 @@ include('../../authentication.php');
                                                             });
                                                         });
                                                         // Also fill if user clicks directly on step3 tab
-                                                        document.querySelectorAll('.step-tab[data-step="3"]').forEach(function (tab) {
-                                                            tab.addEventListener('click', function () {
+                                                        document.querySelectorAll('.step-tab[data-step="3"]').forEach(function(tab) {
+                                                            tab.addEventListener('click', function() {
                                                                 setTimeout(fillConfirmation, 100);
                                                             });
                                                         });
@@ -4489,7 +4622,7 @@ include('../../authentication.php');
 
                                             <!-- script for navigation -->
                                             <script>
-                                                document.addEventListener('DOMContentLoaded', function () {
+                                                document.addEventListener('DOMContentLoaded', function() {
                                                     // Step navigation logic
                                                     let currentStep = 1;
 
@@ -4499,7 +4632,7 @@ include('../../authentication.php');
                                                         document.querySelector('.step2').style.display = 'none';
                                                         document.querySelector('.step3').style.display = 'none';
                                                         // Remove active class from all tabs
-                                                        document.querySelectorAll('.step-tab').forEach(function (tab) {
+                                                        document.querySelectorAll('.step-tab').forEach(function(tab) {
                                                             tab.classList.remove('nd_rst_step_active');
                                                         });
                                                         // Show selected step
@@ -4515,16 +4648,16 @@ include('../../authentication.php');
                                                     showStep(1);
 
                                                     // Tab click event
-                                                    document.querySelectorAll('.step-tab').forEach(function (tab) {
-                                                        tab.addEventListener('click', function () {
+                                                    document.querySelectorAll('.step-tab').forEach(function(tab) {
+                                                        tab.addEventListener('click', function() {
                                                             var step = parseInt(this.getAttribute('data-step'));
                                                             showStep(step);
                                                         });
                                                     });
 
                                                     // Step navigation buttons
-                                                    document.querySelectorAll('.step-next-btn').forEach(function (btn) {
-                                                        btn.addEventListener('click', function () {
+                                                    document.querySelectorAll('.step-next-btn').forEach(function(btn) {
+                                                        btn.addEventListener('click', function() {
                                                             if (currentStep === 2) {
                                                                 // Populate confirmation step before showing it
                                                                 document.getElementById('confirm_name').textContent = document.getElementById('name').value;
@@ -4543,8 +4676,8 @@ include('../../authentication.php');
                                                             }
                                                         });
                                                     });
-                                                    document.querySelectorAll('.step-prev-btn').forEach(function (btn) {
-                                                        btn.addEventListener('click', function () {
+                                                    document.querySelectorAll('.step-prev-btn').forEach(function(btn) {
+                                                        btn.addEventListener('click', function() {
                                                             if (currentStep > 1) {
                                                                 showStep(currentStep - 1);
                                                             }
@@ -5186,7 +5319,10 @@ include('../../authentication.php');
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49425562-23"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-49425562-23');
@@ -5195,7 +5331,7 @@ include('../../authentication.php');
 
 
     <script type='text/javascript'>
-        (function () {
+        (function() {
             var c = document.body.className;
             c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
             document.body.className = c;
@@ -5216,14 +5352,21 @@ include('../../authentication.php');
         id="wp-i18n-js"></script>
     <script type="text/javascript" id="wp-i18n-js-after">
         /* <![CDATA[ */
-        wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+        wp.i18n.setLocaleData({
+            'text direction\u0004ltr': ['ltr']
+        });
         /* ]]> */
     </script>
     <script type="text/javascript" src="../wp-content/plugins/contact-form-7/includes/swv/js/indexe2db.js?ver=5.9.8"
         id="swv-js"></script>
     <script type="text/javascript" id="contact-form-7-js-extra">
         /* <![CDATA[ */
-        var wpcf7 = { "api": { "root": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/", "namespace": "contact-form-7\/v1" } };
+        var wpcf7 = {
+            "api": {
+                "root": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-json\/",
+                "namespace": "contact-form-7\/v1"
+            }
+        };
         /* ]]> */
     </script>
     <script type="text/javascript" src="../wp-content/plugins/contact-form-7/includes/js/indexe2db.js?ver=5.9.8"
@@ -5237,7 +5380,34 @@ include('../../authentication.php');
         id="sourcebuster-js-js"></script>
     <script type="text/javascript" id="wc-order-attribution-js-extra">
         /* <![CDATA[ */
-        var wc_order_attribution = { "params": { "lifetime": 1.0000000000000000818030539140313095458623138256371021270751953125e-5, "session": 30, "base64": false, "ajaxurl": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-admin\/admin-ajax.php", "prefix": "wc_order_attribution_", "allowTracking": true }, "fields": { "source_type": "current.typ", "referrer": "current_add.rf", "utm_campaign": "current.cmp", "utm_source": "current.src", "utm_medium": "current.mdm", "utm_content": "current.cnt", "utm_id": "current.id", "utm_term": "current.trm", "utm_source_platform": "current.plt", "utm_creative_format": "current.fmt", "utm_marketing_tactic": "current.tct", "session_entry": "current_add.ep", "session_start_time": "current_add.fd", "session_pages": "session.pgs", "session_count": "udata.vst", "user_agent": "udata.uag" } };
+        var wc_order_attribution = {
+            "params": {
+                "lifetime": 1.0000000000000000818030539140313095458623138256371021270751953125e-5,
+                "session": 30,
+                "base64": false,
+                "ajaxurl": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-admin\/admin-ajax.php",
+                "prefix": "wc_order_attribution_",
+                "allowTracking": true
+            },
+            "fields": {
+                "source_type": "current.typ",
+                "referrer": "current_add.rf",
+                "utm_campaign": "current.cmp",
+                "utm_source": "current.src",
+                "utm_medium": "current.mdm",
+                "utm_content": "current.cnt",
+                "utm_id": "current.id",
+                "utm_term": "current.trm",
+                "utm_source_platform": "current.plt",
+                "utm_creative_format": "current.fmt",
+                "utm_marketing_tactic": "current.tct",
+                "session_entry": "current_add.ep",
+                "session_start_time": "current_add.fd",
+                "session_pages": "session.pgs",
+                "session_count": "udata.vst",
+                "user_agent": "udata.uag"
+            }
+        };
         /* ]]> */
     </script>
     <script type="text/javascript"
@@ -5249,7 +5419,9 @@ include('../../authentication.php');
     <script type="text/javascript" src="https://js.stripe.com/v3/?ver=6.6.2" id="nd_rst_stripe_script-js"></script>
     <script type="text/javascript" id="nd_rst_calendar_script-js-extra">
         /* <![CDATA[ */
-        var nd_rst_my_vars_calendar = { "nd_rst_ajaxurl_calendar": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-admin\/admin-ajax.php" };
+        var nd_rst_my_vars_calendar = {
+            "nd_rst_ajaxurl_calendar": "https:\/\/www.nicdark-themes.com\/themes\/restaurant\/wp\/demo\/restaurant\/wp-admin\/admin-ajax.php"
+        };
         /* ]]> */
     </script>
     <script type="text/javascript"

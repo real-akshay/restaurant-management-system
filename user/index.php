@@ -2829,7 +2829,7 @@ include('../config/dbcon.php');
                                                     <a href="profile.php">Profile</a>
                                                     <a href="order-history.php">Order History</a>
                                                     <!-- <form action="../php/code.php"> -->
-                                                    <a href="../php/logout.php">Logout</a>
+                                                    <a href="restaurant/login.php">Login</a>
                                                     <!-- </form> -->
                                                 </div>
                                             </div>

@@ -14,7 +14,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../../PHPMailer/PHPMailer.php';
 require '../../PHPMailer/SMTP.php';
-require '../../PHPMailer/Exception.php';
+require '../../PHPMailer/Exception.php';       
 
 if (isset($_POST['add-to-cart'])) {
     $for_user = $_POST['for_user'];
@@ -174,7 +174,7 @@ if (isset($_POST['update_cart'])) {
 // booking confirmation
 if (isset($_POST['confirm_btn'])) {
     // $booking_id = $_POST['booking_id'];
-    $user_id = $_SESSION['auth_user']['user_id'];
+    $user_id = $_SESSION['user_session']['user_id'];
     // $table_id = $_POST['table_id'];
 
     $restaurant = $_POST['nd_rst_restaurant'];

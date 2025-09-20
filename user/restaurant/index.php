@@ -2827,7 +2827,8 @@ include('../../config/dbcon.php');
                                                 </button>
                                                 <div class="user-dropdown-menu" id="userDropdownMenu">
                                                     <a href="profile/profile.php">Profile</a>
-                                                    <a href="order-history\order-history.php">Order History</a>
+                                                    <a href="order-history\order-history.php">My Orders</a>
+                                                    <a href="order-history\booking-history.php">My Bookings</a>
                                                     <!-- <form action="../php/code.php"> -->
                                                     <a href="../php/logout.php">Logout</a>
                                                     <!-- </form> -->
