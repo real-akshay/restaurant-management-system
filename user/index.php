@@ -2644,7 +2644,7 @@ include('../config/dbcon.php');
                             <div class="wpb_wrapper">
                                 <div class="wpb_text_column wpb_content_element ">
                                     <div class="wpb_wrapper">
-                                        <div style="margin:;"
+                                        <div 
                                             class=" top_header_text nd_options_display_table nd_options_float_left">
 
 
@@ -2660,7 +2660,7 @@ include('../config/dbcon.php');
 
                                             <div
                                                 class="nd_options_display_table_cell nd_options_vertical_align_middle    ">
-                                                <a style="color:;" class="nd_options_margin_right_20 nd_options__font "
+                                                <a  class="nd_options_margin_right_20 nd_options__font "
                                                     href="#">LANGUAGES</a>
                                             </div>
 
@@ -2669,7 +2669,7 @@ include('../config/dbcon.php');
 
 
 
-                                        <div style="margin:;" class="  nd_options_display_table nd_options_float_left">
+                                        <div  class="  nd_options_display_table nd_options_float_left">
 
 
 
