@@ -16,7 +16,7 @@ include('../../config/dbcon.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Restaurant DEMO &#8211; Restaurant WordPress Demo</title>
+    <title>Restaurant &#8211; Restaurantzx</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
     <link rel="alternate" type="application/rss+xml" title="Restaurant DEMO &raquo; Feed" href="feed/index.html" />
