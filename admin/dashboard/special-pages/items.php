@@ -4527,7 +4527,7 @@ include("../../../config/dbcon.php");
                                             ?>
                                             <h6 class="mb-0 caption-title"><?= htmlspecialchars($admin['first_name']) ?></h6>
                                                 <p class="mb-0 caption-sub-title">Administrator</p>
-                                                <?php
+                                                <?php   
                                             }
                                          else {
                                             ?>
